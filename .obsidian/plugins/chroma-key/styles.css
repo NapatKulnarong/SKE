@@ -1,0 +1,29 @@
+/* Chroma Key Modal – preview container */
+.chroma-preview-container {
+	display: flex;
+	justify-content: center;
+	margin-bottom: 20px;
+	max-height: 300px;
+	overflow: hidden;
+	border-radius: 8px;
+	border: 1px solid var(--background-modifier-border);
+	/* Checkered background to indicate transparency */
+	background-image:
+		linear-gradient(45deg, #ccc 25%, transparent 25%),
+		linear-gradient(-45deg, #ccc 25%, transparent 25%),
+		linear-gradient(45deg, transparent 75%, #ccc 75%),
+		linear-gradient(-45deg, transparent 75%, #ccc 75%);
+	background-size: 20px 20px;
+	background-position: 0 0, 0 10px, 10px -10px, -10px 0px;
+}
+
+/* Chroma Key Modal – preview canvas */
+.chroma-preview-canvas {
+	max-width: 100%;
+	object-fit: contain;
+}
+
+/* Crosshair cursor when eyedropper is active */
+.chroma-preview-canvas.chroma-eyedropper-active {
+	cursor: crosshair;
+}

@@ -5,6 +5,11 @@
 - **Data**: Raw facts/figures, unorganized (e.g., a number, a picture)
 - **Information**: Data with context — organized, categorized, calculated
 - **Knowledge**: Understanding built from experience, insight, and contextualized information — the "know-how"
+  
+  **Example**
+	**Data:** Exam scores: 85, 42, 90, 55, 39...
+	**Information:** "Section A average = 65; 40% scored below passing."
+	**Knowledge:** "Low scores likely stem from fast-paced teaching before the midterm — based on past semesters, these students need remedial sessions to catch up."
 
 **2. Types of Knowledge**
 

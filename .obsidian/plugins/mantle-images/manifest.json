@@ -1,0 +1,10 @@
+{
+  "id": "mantle-images",
+  "name": "Mantle Images",
+  "version": "1.0.0",
+  "description": "Professional image resizing and cropping tools for Obsidian, designed for the Mantle ecosystem.",
+  "author": "Ryan Bakker",
+  "authorUrl": "https://ryanbakker.vercel.app/",
+  "isDesktopOnly": true,
+  "minAppVersion": "1.12.7"
+}

@@ -1,0 +1,10 @@
+{
+	"id": "chroma-key",
+	"name": "Chroma Key Paste",
+	"version": "1.3.0",
+	"minAppVersion": "1.4.0",
+	"description": "Automatically removes the background color from pasted images.",
+	"author": "Aziz Zahran",
+	"authorUrl": "https://github.com/Aziz-Zahran",
+	"isDesktopOnly": false
+}
