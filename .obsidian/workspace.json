@@ -11,10 +11,14 @@
             "id": "d0e75e6ac72dbc94",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "KE/Lectures/1 - Introduction.md",
+                "mode": "source",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "New tab"
+              "title": "1 - Introduction"
             }
           }
         ]
@@ -95,6 +99,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "KE/Lectures/1 - Introduction.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -113,6 +118,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "KE/Lectures/1 - Introduction.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
@@ -155,6 +161,7 @@
             "state": {
               "type": "outline",
               "state": {
+                "file": "KE/Lectures/1 - Introduction.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
@@ -182,5 +189,16 @@
     }
   },
   "active": "d0e75e6ac72dbc94",
-  "lastOpenFiles": []
+  "lastOpenFiles": [
+    "KE/assets/knowledgePyramid.png",
+    "KE/Lectures/1 - Introduction.md",
+    "KE/assets/knowledge-pyramid-removebg-preview(1).png",
+    "KE/knowledge-pyramid-removebg-preview(1).png",
+    "385E9BC1-FAA5-49D7-884E-299DAB792D47_4_5005_c Background Removed.png",
+    "385E9BC1-FAA5-49D7-884E-299DAB792D47_4_5005_c.jpeg",
+    "knowledge-pyramid.png",
+    "KE/assets",
+    "KE/Untitled.md",
+    "KE/Lectures"
+  ]
 }
