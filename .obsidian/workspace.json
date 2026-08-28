@@ -25,12 +25,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "KE/Lectures/3 - Ontology Development Using Protégé.md",
+                "file": "Software Development Security (01219325)/Course Syllabus.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "3 - Ontology Development Using Protégé"
+              "title": "Course Syllabus"
             }
           }
         ],
@@ -201,28 +201,30 @@
       "bases:Create new base": false
     }
   },
-  "active": "0b4a0868e6b4b652",
+  "active": "a4d275beef8853ef",
   "lastOpenFiles": [
-    "Security",
+    "Artificial Intelligence (01204461)/Course Syllabus.md",
+    "Software Development Security (01219325)/Course Syllabus.md",
+    "Knowledge Engineering (01219366)/Course Syllabus.md",
+    "Knowledge Engineering (01219366)/Lectures/3 - Ontology Development Using Protégé.md",
+    "Software Development Security (01219325)",
     "untitled folder",
-    "AI",
-    "KE/Lectures/2 - Ontology Overview.md",
-    "KE/Lectures/3 - Ontology Development Using Protégé.md",
-    "KE/assets/ontologyNotations.png",
-    "KE/assets/knowledgePyramid.png",
+    "Artificial Intelligence (01204461)",
+    "Knowledge Engineering (01219366)/Lectures/2 - Ontology Overview.md",
+    "Knowledge Engineering (01219366)/Assets/ontologyNotations.png",
+    "Knowledge Engineering (01219366)/Assets/knowledgePyramid.png",
     "chroma/Screenshot 2026-08-28 at 15.11.37-chroma-2026-08-28T08-11-48-221Z.png",
     "Screenshot 2026-08-28 at 15.11.37.png",
-    "KE/assets/ontologyPencil1.png",
-    "KE/assets/ontologyPencil2.png",
+    "Knowledge Engineering (01219366)/Assets/ontologyPencil1.png",
+    "Knowledge Engineering (01219366)/Assets/ontologyPencil2.png",
     "Screenshot 2026-08-28 at 14.55.45.png",
     "Screenshot 2026-08-28 at 15.01.58.png",
-    "KE/assets/ontologyComponents.png",
-    "KE/Lectures/1 - Introduction.md",
+    "Knowledge Engineering (01219366)/Assets/ontologyComponents.png",
+    "Knowledge Engineering (01219366)/Lectures/1 - Introduction.md",
     "chroma",
     "KE/Lectures/KE.md",
     "2026-08-28.md",
-    "KE/assets",
-    "KE/Untitled.md",
-    "KE/Lectures"
+    "Knowledge Engineering (01219366)/Assets",
+    "Knowledge Engineering (01219366)/Lectures"
   ]
 }
