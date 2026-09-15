@@ -25,12 +25,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Software Development Security (01219325)/Course Syllabus.md",
+                "file": "Communication Skill for SKE/Lectures/4.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Course Syllabus"
+              "title": "4"
             }
           }
         ],
@@ -68,7 +68,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "**SCA**",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -96,7 +96,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 232.37434005737305
   },
   "right": {
     "id": "9ea7aa4702829111",
@@ -203,28 +203,51 @@
   },
   "active": "a4d275beef8853ef",
   "lastOpenFiles": [
-    "Artificial Intelligence (01204461)/Course Syllabus.md",
-    "Software Development Security (01219325)/Course Syllabus.md",
-    "Knowledge Engineering (01219366)/Course Syllabus.md",
-    "Knowledge Engineering (01219366)/Lectures/3 - Ontology Development Using Protégé.md",
-    "Software Development Security (01219325)",
-    "untitled folder",
-    "Artificial Intelligence (01204461)",
+    "Communication Skill for SKE/Lectures/3 -  Team Status Updates..md",
+    "Communication Skill for SKE/Lectures/2 - How to Explain a Software Library.md",
+    "Communication Skill for SKE/Lectures/1 - Communication Skil.md",
+    "Communication Skill for SKE/Lectures/0 - Course Syllabus.md",
+    "Communication Skill for SKE/Assets/_preview_lec02/page_52.png",
+    "Communication Skill for SKE/Assets/_preview_lec02/page_51.png",
+    "Communication Skill for SKE/Assets/_preview_lec02/page_46.png",
+    "Communication Skill for SKE/Assets/_preview_lec02/page_26.png",
+    "Communication Skill for SKE/Assets/_preview_lec02/page_25.png",
+    "Communication Skill for SKE/Assets/_preview_lec02/page_14.png",
+    "Communication Skill for SKE/Assets/_preview_lec02/page_02.png",
+    "Communication Skill for SKE/Assets/_preview_lec02/CommunicationSkillForSKE02-1.pdf.png",
+    "Communication Skill for SKE/Assets/_preview_lec02",
+    "Communication Skill for SKE/Lectures/5.md",
+    "Communication Skill for SKE/Lectures/4.md",
+    "Software Development Security (01219325)/Lectures/6.1 - Capstone Exercise.md",
+    "Communication Skill for SKE/Lectures",
+    "Communication Skill for SKE/Assets",
+    "Communication Skill for SKE/Re",
+    "Communication Skill for SKE/References/CommunicationSkillForSKE05.pdf",
+    "Communication Skill for SKE/References/CommunicationSkillForSKE04-1.pdf",
+    "Communication Skill for SKE/References/CommunicationSkillForSKE03.pdf",
+    "Communication Skill for SKE/References/CommunicationSkillForSKE02-1.pdf",
+    "Communication Skill for SKE/References/CommunicationSkillForSKE01.pdf",
+    "Communication Skill for SKE/References",
+    "Software Development Security (01219325)/Lectures/6 - Threat Modeling.md",
+    "Software Development Security (01219325)/Lectures/3.1 - Software Security Requirements & Security Standards.md",
+    "Software Development Security (01219325)/Lectures/3 - Intro to Security Standards.md",
+    "Screenshot 2026-09-14 at 14.13.20.png",
+    "6 - Threat Modeling^SAST.md",
+    "Software Development Security (01219325)/Assets/implementation_steps.png",
+    "Software Development Security (01219325)/Lectures/5 - Risk Assessment Workshop.md",
+    "Software Development Security (01219325)/Lectures/4 - Cryptography & Public Key Infrastructure.md",
+    "Software Development Security (01219325)/Lectures/2 - Laws Relevant to Information Security.md",
+    "Software Development Security (01219325)/Lectures/1 - Principles of Information Security.md",
+    "Software Development Security (01219325)/Lectures/0 - Course Syllabus.md",
+    "**CIA Triad**.md",
     "Knowledge Engineering (01219366)/Lectures/2 - Ontology Overview.md",
-    "Knowledge Engineering (01219366)/Assets/ontologyNotations.png",
-    "Knowledge Engineering (01219366)/Assets/knowledgePyramid.png",
-    "chroma/Screenshot 2026-08-28 at 15.11.37-chroma-2026-08-28T08-11-48-221Z.png",
-    "Screenshot 2026-08-28 at 15.11.37.png",
-    "Knowledge Engineering (01219366)/Assets/ontologyPencil1.png",
-    "Knowledge Engineering (01219366)/Assets/ontologyPencil2.png",
-    "Screenshot 2026-08-28 at 14.55.45.png",
-    "Screenshot 2026-08-28 at 15.01.58.png",
-    "Knowledge Engineering (01219366)/Assets/ontologyComponents.png",
-    "Knowledge Engineering (01219366)/Lectures/1 - Introduction.md",
-    "chroma",
-    "KE/Lectures/KE.md",
-    "2026-08-28.md",
-    "Knowledge Engineering (01219366)/Assets",
-    "Knowledge Engineering (01219366)/Lectures"
+    "Knowledge Engineering (01219366)/Lectures/4.1 - Ontology Intro.md",
+    "CarJai/frontend/README.md",
+    "CarJai/docs/User-Documentation.md",
+    "CarJai/docs/Test-Documentation.md",
+    "CarJai/docs/System-Documentation.md",
+    "CarJai/docs/Docker-Documentation.md",
+    "CarJai/docs/Developer-Documentation.md",
+    "CarJai/docs/API-Documentation.md"
   ]
 }

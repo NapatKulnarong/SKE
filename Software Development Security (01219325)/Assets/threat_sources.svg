@@ -1,0 +1,66 @@
+<svg width="100%" viewBox="0 0 1040 306" role="img" xmlns="http://www.w3.org/2000/svg" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif">
+<title>Threats are not just hackers</title>
+<desc>Five threat sources shown as panels: malicious outsider, malicious insider, compromised insider, mistaken user, and system or process failure, with a note that the middle three arrive holding valid credentials.</desc>
+
+<text x="20" y="30" font-size="15" font-weight="600" fill="rgb(40,40,40)">Model undesirable outcomes &#8212; not only villainous intent.</text>
+
+<!-- Panel 1: Malicious outsider -->
+<rect x="21" y="54" width="6" height="156" rx="3" fill="rgb(153,60,29)"/>
+<rect x="37" y="54" width="166" height="156" rx="12" fill="rgb(250,236,231)" stroke="rgb(153,60,29)" stroke-width="0.75"/>
+<text x="51" y="82" font-size="14.5" font-weight="700" fill="rgb(133,50,22)">Malicious</text>
+<text x="51" y="100" font-size="14.5" font-weight="700" fill="rgb(133,50,22)">outsider</text>
+<g font-size="13" fill="rgb(62,66,72)">
+  <text x="51" y="134">credential theft,</text>
+  <text x="51" y="154">exploitation, fraud</text>
+</g>
+
+<!-- Panel 2: Malicious insider -->
+<rect x="225" y="54" width="6" height="156" rx="3" fill="rgb(153,60,29)"/>
+<rect x="241" y="54" width="166" height="156" rx="12" fill="rgb(250,236,231)" stroke="rgb(153,60,29)" stroke-width="0.75"/>
+<text x="255" y="82" font-size="14.5" font-weight="700" fill="rgb(133,50,22)">Malicious</text>
+<text x="255" y="100" font-size="14.5" font-weight="700" fill="rgb(133,50,22)">insider</text>
+<g font-size="13" fill="rgb(62,66,72)">
+  <text x="255" y="134">abuse of</text>
+  <text x="255" y="154">legitimate access</text>
+</g>
+
+<!-- Panel 3: Compromised insider -->
+<rect x="429" y="54" width="6" height="156" rx="3" fill="rgb(176,120,24)"/>
+<rect x="445" y="54" width="166" height="156" rx="12" fill="rgb(253,245,231)" stroke="rgb(176,120,24)" stroke-width="0.75"/>
+<text x="459" y="82" font-size="14.5" font-weight="700" fill="rgb(120,78,10)">Compromised</text>
+<text x="459" y="100" font-size="14.5" font-weight="700" fill="rgb(120,78,10)">insider</text>
+<g font-size="13" fill="rgb(62,66,72)">
+  <text x="459" y="134">legitimate identity</text>
+  <text x="459" y="154">controlled by</text>
+  <text x="459" y="174">attacker</text>
+</g>
+
+<!-- Panel 4: Mistaken user -->
+<rect x="633" y="54" width="6" height="156" rx="3" fill="rgb(45,85,140)"/>
+<rect x="649" y="54" width="166" height="156" rx="12" fill="rgb(235,241,250)" stroke="rgb(45,85,140)" stroke-width="0.75"/>
+<text x="663" y="82" font-size="14.5" font-weight="700" fill="rgb(28,62,105)">Mistaken user</text>
+<g font-size="13" fill="rgb(62,66,72)">
+  <text x="663" y="134">wrong target,</text>
+  <text x="663" y="154">wrong scope,</text>
+  <text x="663" y="174">misunderstanding</text>
+</g>
+
+<!-- Panel 5: System / process failure -->
+<rect x="837" y="54" width="6" height="156" rx="3" fill="rgb(15,110,86)"/>
+<rect x="853" y="54" width="166" height="156" rx="12" fill="rgb(226,245,238)" stroke="rgb(15,110,86)" stroke-width="0.75"/>
+<text x="867" y="82" font-size="14.5" font-weight="700" fill="rgb(8,80,65)">System /</text>
+<text x="867" y="100" font-size="14.5" font-weight="700" fill="rgb(8,80,65)">process failure</text>
+<g font-size="13" fill="rgb(62,66,72)">
+  <text x="867" y="134">bad defaults,</text>
+  <text x="867" y="154">race, outage,</text>
+  <text x="867" y="174">dependency</text>
+  <text x="867" y="194">failure</text>
+</g>
+
+<!-- Bracket: the middle three arrive authenticated -->
+<path d="M241 216 L241 226 L815 226 L815 216" fill="none" stroke="rgb(150,150,150)" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="528" y="244" font-size="12" font-style="italic" fill="rgb(120,120,120)" text-anchor="middle">all three arrive holding valid credentials</text>
+
+<rect x="20" y="258" width="1000" height="32" rx="8" fill="rgb(244,244,244)"/>
+<text x="520" y="279" font-size="13" fill="rgb(80,80,80)" text-anchor="middle">A security objective can fail <tspan font-weight="700">even when nobody intended harm</tspan>.</text>
+</svg>

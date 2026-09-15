@@ -6,7 +6,7 @@
 - **Goal:** Model concepts, relations, properties, axioms, and restrictions in a way that's easy to extend, share, and reuse.
 ---
 ## 2. What is Ontology?
-![[ontologyExample.png|495]]
+![[knowledge_graph_company_project.svg|563]]
 ##### **Philosophy**: 
 studies the nature of being/existence and categories of things
 ##### **CS/Information Science**: 

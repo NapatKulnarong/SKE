@@ -1,0 +1,63 @@
+<svg width="100%" viewBox="0 0 1040 340" role="img" xmlns="http://www.w3.org/2000/svg" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif">
+<title>STRIDE as prompts</title>
+<desc>The six STRIDE categories shown as a two-row grid, each phrased as a question: spoofing, tampering, repudiation, information disclosure, denial of service, and elevation of privilege.</desc>
+
+<text x="20" y="30" font-size="15" font-weight="600" fill="rgb(40,40,40)">Use categories to ask better questions about components and boundaries.</text>
+
+<!-- Row 1, col 1: Spoofing -->
+<rect x="21" y="54" width="6" height="100" rx="3" fill="rgb(45,85,140)"/>
+<rect x="37" y="54" width="301" height="100" rx="12" fill="rgb(235,241,250)" stroke="rgb(45,85,140)" stroke-width="0.75"/>
+<text x="53" y="82" font-size="15" font-weight="700" fill="rgb(28,62,105)">S &#8212; Spoofing</text>
+<g font-size="13.5" fill="rgb(62,66,72)">
+  <text x="53" y="112">Can someone pretend to be</text>
+  <text x="53" y="132">another identity?</text>
+</g>
+
+<!-- Row 1, col 2: Tampering -->
+<rect x="362" y="54" width="6" height="100" rx="3" fill="rgb(15,110,86)"/>
+<rect x="378" y="54" width="301" height="100" rx="12" fill="rgb(226,245,238)" stroke="rgb(15,110,86)" stroke-width="0.75"/>
+<text x="394" y="82" font-size="15" font-weight="700" fill="rgb(8,80,65)">T &#8212; Tampering</text>
+<g font-size="13.5" fill="rgb(62,66,72)">
+  <text x="394" y="112">Can data or code be modified</text>
+  <text x="394" y="132">improperly?</text>
+</g>
+
+<!-- Row 1, col 3: Repudiation -->
+<rect x="703" y="54" width="6" height="100" rx="3" fill="rgb(176,120,24)"/>
+<rect x="719" y="54" width="301" height="100" rx="12" fill="rgb(253,245,231)" stroke="rgb(176,120,24)" stroke-width="0.75"/>
+<text x="735" y="82" font-size="15" font-weight="700" fill="rgb(120,78,10)">R &#8212; Repudiation</text>
+<g font-size="13.5" fill="rgb(62,66,72)">
+  <text x="735" y="112">Can an action become difficult to</text>
+  <text x="735" y="132">attribute or prove?</text>
+</g>
+
+<!-- Row 2, col 1: Information disclosure -->
+<rect x="21" y="178" width="6" height="100" rx="3" fill="rgb(45,85,140)"/>
+<rect x="37" y="178" width="301" height="100" rx="12" fill="rgb(235,241,250)" stroke="rgb(45,85,140)" stroke-width="0.75"/>
+<text x="53" y="206" font-size="15" font-weight="700" fill="rgb(28,62,105)">I &#8212; Information disclosure</text>
+<g font-size="13.5" fill="rgb(62,66,72)">
+  <text x="53" y="236">Can information reach someone</text>
+  <text x="53" y="256">who should not receive it?</text>
+</g>
+
+<!-- Row 2, col 2: Denial of service -->
+<rect x="362" y="178" width="6" height="100" rx="3" fill="rgb(15,110,86)"/>
+<rect x="378" y="178" width="301" height="100" rx="12" fill="rgb(226,245,238)" stroke="rgb(15,110,86)" stroke-width="0.75"/>
+<text x="394" y="206" font-size="15" font-weight="700" fill="rgb(8,80,65)">D &#8212; Denial of service</text>
+<g font-size="13.5" fill="rgb(62,66,72)">
+  <text x="394" y="236">Can legitimate use be made</text>
+  <text x="394" y="256">unavailable?</text>
+</g>
+
+<!-- Row 2, col 3: Elevation of privilege -->
+<rect x="703" y="178" width="6" height="100" rx="3" fill="rgb(176,120,24)"/>
+<rect x="719" y="178" width="301" height="100" rx="12" fill="rgb(253,245,231)" stroke="rgb(176,120,24)" stroke-width="0.75"/>
+<text x="735" y="206" font-size="15" font-weight="700" fill="rgb(120,78,10)">E &#8212; Elevation of privilege</text>
+<g font-size="13.5" fill="rgb(62,66,72)">
+  <text x="735" y="236">Can someone gain capabilities</text>
+  <text x="735" y="256">they should not have?</text>
+</g>
+
+<rect x="20" y="292" width="1000" height="32" rx="8" fill="rgb(244,244,244)"/>
+<text x="520" y="313" font-size="13" fill="rgb(80,80,80)" text-anchor="middle">STRIDE is <tspan font-weight="700">a prompt for question 2</tspan> &#8212; not the definition of threat modeling.</text>
+</svg>

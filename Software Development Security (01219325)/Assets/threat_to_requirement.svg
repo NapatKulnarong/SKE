@@ -1,0 +1,68 @@
+<svg width="100%" viewBox="0 0 1110 276" role="img" xmlns="http://www.w3.org/2000/svg" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif">
+<title>From threat to requirement</title>
+<desc>A four-stage flow turning one threat into a testable control: the threat scenario, its risk score, the resulting security requirement, and the negative test that verifies it.</desc>
+
+<defs>
+  <marker id="arrowhead" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+    <path d="M2 1L8 5L2 9" fill="none" stroke="rgb(130,130,130)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+  </marker>
+</defs>
+
+<text x="20" y="30" font-size="15" font-weight="600" fill="rgb(40,40,40)">The analysis is useful only when it changes what we build or verify.</text>
+
+<!-- Stage 1: Threat -->
+<rect x="21" y="54" width="6" height="160" rx="3" fill="rgb(153,60,29)"/>
+<rect x="37" y="54" width="208" height="160" rx="12" fill="rgb(250,236,231)" stroke="rgb(153,60,29)" stroke-width="0.75"/>
+<text x="53" y="82" font-size="15" font-weight="700" fill="rgb(133,50,22)">Threat</text>
+<g font-size="13" fill="rgb(62,66,72)">
+  <text x="53" y="116">Authenticated user</text>
+  <text x="53" y="136">changes an object</text>
+  <text x="53" y="156">identifier and requests</text>
+  <text x="53" y="176">another user's record.</text>
+</g>
+
+<line x1="255" y1="140" x2="291" y2="140" stroke="rgb(130,130,130)" stroke-width="1.4" marker-end="url(#arrowhead)"/>
+<text x="273" y="120" font-size="11" font-style="italic" fill="rgb(145,145,145)" text-anchor="middle">score</text>
+
+<!-- Stage 2: Risk -->
+<rect x="301" y="54" width="6" height="160" rx="3" fill="rgb(176,120,24)"/>
+<rect x="317" y="54" width="208" height="160" rx="12" fill="rgb(253,245,231)" stroke="rgb(176,120,24)" stroke-width="0.75"/>
+<text x="333" y="82" font-size="15" font-weight="700" fill="rgb(120,78,10)">Risk</text>
+<g font-size="13" fill="rgb(62,66,72)">
+  <text x="333" y="116">Probability: plausible</text>
+  <text x="333" y="136">Exposure: high</text>
+  <text x="333" y="162" font-weight="600" fill="rgb(120,78,10)">&#8594; prioritize mitigation</text>
+</g>
+
+<line x1="535" y1="140" x2="571" y2="140" stroke="rgb(130,130,130)" stroke-width="1.4" marker-end="url(#arrowhead)"/>
+<text x="553" y="120" font-size="11" font-style="italic" fill="rgb(145,145,145)" text-anchor="middle">specify</text>
+
+<!-- Stage 3: Requirement -->
+<rect x="581" y="54" width="6" height="160" rx="3" fill="rgb(45,85,140)"/>
+<rect x="597" y="54" width="208" height="160" rx="12" fill="rgb(235,241,250)" stroke="rgb(45,85,140)" stroke-width="0.75"/>
+<text x="613" y="82" font-size="15" font-weight="700" fill="rgb(28,62,105)">Requirement</text>
+<g font-size="13" fill="rgb(62,66,72)">
+  <text x="613" y="116">Every protected-object</text>
+  <text x="613" y="136">request must verify</text>
+  <text x="613" y="156">authorization for the</text>
+  <text x="613" y="176">authenticated principal</text>
+  <text x="613" y="196">and requested object.</text>
+</g>
+
+<line x1="815" y1="140" x2="851" y2="140" stroke="rgb(130,130,130)" stroke-width="1.4" marker-end="url(#arrowhead)"/>
+<text x="833" y="120" font-size="11" font-style="italic" fill="rgb(145,145,145)" text-anchor="middle">test</text>
+
+<!-- Stage 4: Verification -->
+<rect x="861" y="54" width="6" height="160" rx="3" fill="rgb(15,110,86)"/>
+<rect x="877" y="54" width="208" height="160" rx="12" fill="rgb(226,245,238)" stroke="rgb(15,110,86)" stroke-width="0.75"/>
+<text x="893" y="82" font-size="15" font-weight="700" fill="rgb(8,80,65)">Verification</text>
+<g font-size="13" fill="rgb(62,66,72)">
+  <text x="893" y="116">Negative test: request</text>
+  <text x="893" y="136">another user's object</text>
+  <text x="893" y="156">and confirm access is</text>
+  <text x="893" y="176">denied.</text>
+</g>
+
+<rect x="20" y="228" width="1070" height="32" rx="8" fill="rgb(244,244,244)"/>
+<text x="555" y="249" font-size="13" fill="rgb(80,80,80)" text-anchor="middle">A requirement you <tspan font-weight="700">cannot write a failing test for</tspan> is not a requirement.</text>
+</svg>
