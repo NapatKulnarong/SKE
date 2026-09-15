@@ -1,6 +1,3 @@
-**Source:** `References/CommunicationSkillForSKE05.pdf`  
-Logistics: [[0 - Course Syllabus]]
-
 ## Outline
 
 1. Why engineers must pitch
@@ -12,22 +9,13 @@ Logistics: [[0 - Course Syllabus]]
 
 ---
 
-Opens with the **research presentation** workshop, then: **how to pitch a product**.
-
----
-
 ## 1. Why pitching matters
 
-Engineers are builders, often not storytellers. Technically sound work still dies when:
-
-- There is too much detail and no context
-- There is no **so what?** (no value proposition)
-- It doesn’t line up with business goals or user needs
-
-> Great tech doesn’t sell itself — clear communication does.
-
-Stakeholders (execs, PMs, clients) do **not** grade your code. They ask: Does it solve a real problem? Will it save time or money? Is it better than what we have? Communication is often the difference between a **greenlight** and a dead end.
-
+- **Engineers build, but don't always tell the story**: technically sound work can still fail to land
+- **Common pitfalls**: too much detail with no context, no clear "so what?", misalignment with business goals or user needs
+- **Great tech doesn't sell itself**, clear communication does
+- **Stakeholders don't grade your code**: they ask "does it solve a real problem, save time or money, and beat what we already have?"
+- **Communication is often the difference** between a greenlight and a dead end
 ---
 
 ## 2. Audience
@@ -36,15 +24,15 @@ Stakeholders (execs, PMs, clients) do **not** grade your code. They ask: Does it
 
 Same product, different pitch. Fail and you get glazed execs, misaligned PMs, confused engineers, indifferent customers.
 
-**AI bug-prediction tool — four rooms:**
+**Example: AI bug-prediction tool**
 
-| Audience | They care about | Emphasize | Example line |
-| --- | --- | --- | --- |
-| **Executives** | ROI, growth, differentiation | KPIs, cost, competitive edge | “35% fewer production incidents, ~$300K/year.” |
-| **PMs** | Timelines, users, roadmap | Scope, feasibility, priority | “Early visibility into delays; better sprint planning.” |
-| **Engineers** | Architecture, scale, APIs | Stack, modularity, integration | “Hooks GitHub Actions; flags risky PRs with a trained model.” |
-| **Customers** | Simplicity, outcomes | Benefits, usability, onboarding | “Catch bugs earlier → fewer crashes for users.” |
-| **Designers** (optional) | Workflow, UX consistency | UI flexibility, handoff, a11y | — |
+| Audience                 | They care about              | Emphasize                       | Example line                                                  |
+| ------------------------ | ---------------------------- | ------------------------------- | ------------------------------------------------------------- |
+| **Executives**           | ROI, growth, differentiation | KPIs, cost, competitive edge    | “35% fewer production incidents, ~$300K/year.”                |
+| **PMs**                  | Timelines, users, roadmap    | Scope, feasibility, priority    | “Early visibility into delays; better sprint planning.”       |
+| **Engineers**            | Architecture, scale, APIs    | Stack, modularity, integration  | “Hooks GitHub Actions; flags risky PRs with a trained model.” |
+| **Customers**            | Simplicity, outcomes         | Benefits, usability, onboarding | “Catch bugs earlier → fewer crashes for users.”               |
+| **Designers** (optional) | Workflow, UX consistency     | UI flexibility, handoff         | —                                                             |
 
 Who is in the room? For mixed rooms: start **broad**, go deeper on questions. Keep **multiple versions** of the same solution.
 
@@ -54,7 +42,8 @@ Who is in the room? For mixed rooms: start **broad**, go deeper on questions. Ke
 
 > Facts tell, but stories sell.
 
-People don’t buy specs. They remember (and act on) a story: **tension** (problem) → **hero** (product) → **stakes** (why now) → **uniqueness** (your edge).
+People don’t buy specs. They remember (and act on) a story: 
+![[pitch_narrative_arc.svg|640]]
 
 | Part | Job | Deck example (data sync) |
 | --- | --- | --- |
@@ -63,13 +52,11 @@ People don’t buy specs. They remember (and act on) a story: **tension** (probl
 | **3. Why now?** | Trend or shift that makes it urgent | “Remote teams → data fragmentation is scaling fast.” |
 | **4. Differentiator** | Your edge. Don’t trash competitors | “Unlike Zapier or scripts: no setup, handles schema drift, real time.” |
 
-**Why now** on the slides is the *Wolf of Wall Street* “Sell me this pen” beat: you don’t start with the object — you create **need** first. A pitch without urgency is just a feature list.
-
 **Anchors** so it sticks:
 
-- Numbers: “2× faster,” “$50K/year,” “<30 min setup”
-- Analogies: “Calendly, but for cross-tool data sync”
-- Visuals: before/after, side-by-side
+- **Numbers**: “2× faster,” “$50K/year,” “<30 min setup”
+- **Analogies**: “Calendly, but for cross-tool data sync”
+- **Visuals**: before/after, side-by-side
 
 Put together (from the deck):
 
@@ -111,14 +98,14 @@ They support the story. Overload, lost attention, and missed impact come from co
 | **Metrics / before–after** | “Before: 6 hours/week manual. After: 10 min/month.” Side-by-side, bars, % drop, red→green |
 | **Code sparingly** | Only for a technical room. Outcome, not syntax. Don’t paste `requests.get(...)`. Say: “One API call → all active customers in <100ms.” Caption: “JSON with status, last activity, flags.” |
 
-| Element | Recommendation |
-| --- | --- |
-| Font | Min 24pt (headlines 32pt+) |
-| Color | 1–2 base + 1 highlight |
-| Consistency | One font, one layout |
-| Space | Empty space is fine |
-| Contrast | Dark on light (or reverse) |
-| Avoid | Red/green (colorblind), dense paragraphs, clipart / mixed icons |
+|                 | Recommendation                                                  |
+| --------------- | --------------------------------------------------------------- |
+| **Font**        | Min 24pt (headlines 32pt+)                                      |
+| **Color**       | 1–2 base + 1 highlight                                          |
+| **Consistency** | One font, one layout                                            |
+| **Space**       | Empty space is fine                                             |
+| **Contrast**    | Dark on light (or reverse)                                      |
+| **Avoid**       | Red/green (colorblind), dense paragraphs, clipart / mixed icons |
 
 ---
 
@@ -126,14 +113,14 @@ They support the story. Overload, lost attention, and missed impact come from co
 
 In a pitch, questions are not interruptions. They show **concerns and priorities**. A good answer wins buy-in; a bad one kills trust. Engineers don’t just answer — they **reframe and persuade**.
 
-| Type | They ask | Hidden concern |
-| --- | --- | --- |
-| Comparison | How is this different from X? | Redundancy |
-| Scale / tech | Will it work at our scale? | Reliability |
-| Cost / ROI | Money or effort? | Budget |
-| Adoption | Work with our stack? | Compatibility, disruption |
-| Outcome | What if no one uses it? | Low impact |
-| Security | How secure is the transfer? | Legal / risk |
+|                  | They ask                      | Hidden concern            |
+| ---------------- | ----------------------------- | ------------------------- |
+| **Comparison**   | How is this different from X? | Redundancy                |
+| **Scale / tech** | Will it work at our scale?    | Reliability               |
+| **Cost / ROI**   | Money or effort?              | Budget                    |
+| **Adoption**     | Work with our stack?          | Compatibility, disruption |
+| **Outcome**      | What if no one uses it?       | Low impact                |
+| **Security**     | How secure is the transfer?   | Legal / risk              |
 
 **C-A-R:** Clarify → Address → Reconnect
 

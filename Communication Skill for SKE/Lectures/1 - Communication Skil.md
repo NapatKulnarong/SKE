@@ -92,11 +92,11 @@ Reference: [Tell me about yourself (mmmEnglish)](https://www.youtube.com/watch?v
 
 Include: name (“I’m …”), place, study/role, one fact that invites a follow-up.
 
-| Format | Job | Length / tone |
-| --- | --- | --- |
-| **Resume** | One role | ~1 page, selective |
-| **CV** | Full record | Longer, comprehensive |
-| **Presentation** | Live first impression | ~1–2 min, one story |
+| Format           | Job                   | Length / tone         |
+| ---------------- | --------------------- | --------------------- |
+| **Resume**       | One role              | ~1 page, selective    |
+| **CV**           | Full record           | Longer, comprehensive |
+| **Presentation** | Live first impression | ~1–2 min, one story   |
 
 Do not read a resume off slides. Same structure as §4: open → 2–3 points → close.
 

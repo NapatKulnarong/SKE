@@ -3,19 +3,24 @@ Logistics: [[0 - Course Syllabus]]
 
 ## Outline
 
-1. Why explaining a library well matters
-2. What you must know before you explain
-3. Audience
-4. Four-layer explanation
-5. Clarity tools and Pandas / PyPI
+1. [[#1. Why explaining a library well matters]]
+2. [[#2. What you must know before you explain]]
+	1. [[#2.1 Purpose - Why does it exist?]]
+	2. [[#2.2 Pieces - What is it made of?]]
+	3. [[#2.3 Requirements - What does it need to run?]]
+	4. [[#2.4 Output - What does it return?]]
+	5. [[#2.5 Maturity - How stable is the version?]]
+3. [[#3. Audience]]
+4. [[#4. Four-layer explanation]]
+	1. [[#4.1 Motivation - Why should I care?]]
+	2. [[#4.2 Core concept - What's the mental model?]]
+	3. [[#4.3 API / usage - How do I actually use this?]]
+	4. [[#4.4 Gotchas - What can go wrong?]]
+5. [[#5. Clarity tools and Pandas / PyPI]]
 
 ---
 
-Opens with the **self-introduction** workshop, then: explain a software library so someone else can **decide to use it, integrate it, or contribute**.
-
----
-
-## 1. Why it matters
+## 1. Why explaining a library well matters
 
 A library nobody can follow does not get used. Explanation is how the library reaches people — for this audience, docs *are* marketing.
 
@@ -29,36 +34,71 @@ Skip explanation and you pay in support load, slow onboarding, and a library tha
 
 ---
 
-## 2. Know the library before you talk
+## 2. What you must know before you explain
 
-Do not start with syntax. Start with a model you could defend in Q&A.
+![[five_question_template_boxes.svg|478]]
 
-### Purpose and design goals
+Do not open with `import` and a function list. First be able to answer the five boxes: **Purpose, Pieces, Requirements, Output, Maturity**. If you cannot defend those in Q&A, you are not ready to present.
+
+### ♦️ 2.1 Purpose - Why does it exist?
 
 Answer in order: Why does it exist? What **problem**? Main **use cases**? Compared to **alternatives**? **Philosophy** — the slide’s trio is simplicity, performance, flexibility.
 
-**NumPy:** efficient numerical work on arrays; it replaces slow Python loops with **vectorized** operations. That one sentence is purpose + philosophy (performance) + contrast.
+![[numpy.png|204]]
+**NumPy:** efficient numerical work on arrays; it replaces slow Python loops with *vectorized* operations. That one sentence is purpose + philosophy (performance) + contrast.
 
-### Building blocks
+### ♦️ 2.2 Pieces - What is it made of?
 
-| Ask | Meaning |
-| --- | --- |
-| **Functions** | What do people actually call most? |
-| **Classes** | Key abstractions (`Model`, `Request`, `Layer`) |
-| **Modules** | How the package is split |
-| **Patterns** | Idioms you *must* follow or you will misuse it |
+Name the **few things a new user must hold in their head** — not the whole API.
 
-**Requests:** `requests.get()`, `requests.post()`; objects `Response`, `Session`; pattern: use a **Session** for persistent headers/auth, not a fresh `get()` every time.
+| Piece                 | What it is                                   | What you say in the talk                        |
+| --------------------- | -------------------------------------------- | ----------------------------------------------- |
+| **Functions**         | The calls people actually make               | The 2–3 entry points, not every helper          |
+| **Classes / objects** | The main nouns (`Model`, `Request`, `Layer`) | What you *get back* or *keep around*            |
+| **Modules**           | How the package is split                     | Where those pieces live if the library is large |
+| **Patterns**          | The intended way to combine them             | The idiom you must follow or you will misuse it |
+>**Example: Requests** — explain only these four facts, in this order:
+>
+>1. **Functions (entry points):** `requests.get()` and `requests.post()` send an HTTP request. That is how most people first use the library.
+>
+>2. **Objects (nouns you keep):** the call gives you a **`Response`** (status, body). If you talk to the same site many times, you keep a **`Session`** — a reusable client, not a one-off call.
+>
+>3. **Pattern (how to combine them):** headers and auth belong on the **`Session`**, then you `get`/`post` through it. Calling `requests.get()` again and again does **not** keep that state and is slower.
+>
+>A talk that only lists `get`/`post` is incomplete: the pattern is the part people get wrong.
 
-### Dependencies, output, version
+**2.1–2.2** = what it *is*. **2.3–2.5** = whether it will *run for this listener*.
 
-**Dependencies** — other libraries, OS/language/hardware, Jupyter vs web. If you don’t know this, the demo dies in Q&A. **Matplotlib** depends on **NumPy** and works best in **Jupyter** for visual output.
+### ♦️ 2.3 Requirements - What does it need to run?
 
-**Output** — what it returns (objects, text, plots, logs), whether that’s predictable, and **side effects** (file writes, network). **scikit-learn:** `fit` returns a trained **model object**; `predict` returns **NumPy arrays**. Say the types, not only “it trains a model.”
+If they cannot install or import it, the rest of the talk is unused. Say, up front:
 
-**Stability** — “how do I use it?” is incomplete without “which version?” Semver: **v1.x ≈ stable**, **v0.x ≈ evolving**. Production vs experimental; how often APIs break; where the **changelog / roadmap** lives.
+- Other libraries it depends on
+- OS, language version, hardware
+- Where it actually runs (Jupyter vs a web app)
 
-**TensorFlow:** v1.x vs v2.x is a real break — v1 code can fail on v2. The deck then shows GitHub, not slogans: the [tensorflow/tensorflow](https://github.com/tensorflow/tensorflow) repo (releases — the slide had 216, latest **2.19.0** on the overview) and **2.18.1** notes with CVEs plus **Breaking Changes** (`tf.lite.Interpreter` renamed). Stability is the tag and the breaking-changes list, not a vibe.
+> **Matplotlib:** needs **NumPy**. Plots show up most easily in **Jupyter**. A “just `pip install matplotlib`” demo dies in Q&A if you skip this.
+
+### ♦️ 2.4 Output - What does it return?
+
+**2.2 Pieces** names the calls; this names **what comes back**. Cover:
+
+- Return type (object, text, plot, log, array)
+- Whether that result is predictable
+- Side effects (writes a file, hits the network)
+
+> **scikit-learn:** `fit` → trained **model object**; `predict` → **NumPy arrays**. “It trains a model” is not an explanation — the types are.
+
+### ♦️ 2.5 Maturity - How stable is the version?
+
+“How do I use it?” still needs **which version**. Cover:
+
+- Semver: **v1.x ≈ stable**, **v0.x ≈ still changing**
+- Production-ready vs experimental
+- How often the API breaks
+- Where the **changelog / roadmap** lives
+
+> **TensorFlow:** v1 code can **fail on v2**. Do not say “it’s stable” — open [tensorflow/tensorflow](https://github.com/tensorflow/tensorflow) **Releases** (slide: 216 releases, latest **2.19.0** on the overview; **2.18.1** listed CVEs and **Breaking Changes**, e.g. `tf.lite.Interpreter` renamed). Maturity = the tag + the breaking-changes list.
 
 ---
 
@@ -68,17 +108,10 @@ A great explanation is not one-size-fits-all. Wrong level → confusion or bored
 
 ### By experience (Requests)
 
-| Level | They ask | How you talk | Example |
-| --- | --- | --- | --- |
-| **Beginner** | What is it? Why should I care? | Motivation, big picture. Analogies, diagrams, almost no code. | “Requests lets you send data to websites and get responses — like a browser, but in Python.” |
-| **Intermediate** | How do I use this well? | API patterns, mistakes, performance, real examples. | “Keep cookies across calls with a `Session` — cheaper than repeating `get()`.” |
-| **Advanced** | How does it work under the hood? | Architecture, extensibility, edge cases. They may customize or contribute. | “`requests` wraps **urllib3**; pooling, SSL, redirects go through a layered adapter system.” |
-
-| Level | Focus | Method | They take home |
-| --- | --- | --- | --- |
-| Beginner | Concept and motivation | Diagrams, analogies, one-liners | “This makes HTTP easy” |
-| Intermediate | Practical usage | Code snippets | A working script |
-| Advanced | Internals, customization | Source, design diagrams | Custom components / hooks |
+![[explaining_requests_by_level.svg|640]]
+- **Beginner** — asks "what is it, why care?" You use analogies and diagrams, almost no code. Method: diagrams/one-liners. They walk away with a one-sentence mental model ("this makes HTTP easy").
+- **Intermediate** — asks "how do I use this well?" You show API patterns, common mistakes, real examples. Method: code snippets. They walk away with a working script.
+- **Advanced** — asks "how does it work under the hood?" You cover architecture, extensibility, edge cases — they may want to customize or contribute. Method: source/design diagrams. They walk away with custom components or hooks.
 
 ### By role
 
@@ -90,25 +123,40 @@ A great explanation is not one-size-fits-all. Wrong level → confusion or bored
 
 ---
 
-## 4. Four layers: why → what → how → what if
 
-Walk that order. Skipping a layer leaves a hole: motivation with no API, or code with no mental model.
+## 4. Four-layer explanation
 
-### Layer 1 — Motivation
+Walk **why → what → how → what if**. Skip a layer and you get motivation with no API, or code with no mental model.
 
-*Why should I care? What pain does this solve?* Start from a real scenario. Optionally show **before vs after**.
+![[four_layer_explanation_stack 1.svg|640]]
 
-Pandas: messy sales CSVs in raw Python are slow and verbose; Pandas gives a fast, spreadsheet-like structure in code.
+### 4.1 Motivation - Why should I care?
 
-### Layer 2 — Core concept
+Open with a real pain, not a feature list.
 
-*What’s the mental model?* Name the key objects (`DataFrame`, `Request`, `Layer`). Use an analogy. Don’t only list features — say **how to think**.
+- What **problem** do users (or you) actually hit?
+- Why is the current way slow, messy, or error-prone?
+- Optional: **before** (without the library) vs **after** (with it)
 
-Flask: a Flask app is a **restaurant**; **routes are the menu** — each URL is a function that serves a response.
+> **Pandas:** messy sales CSVs in raw Python are slow and verbose. Pandas gives a fast, spreadsheet-like structure in code.
 
-### Layer 3 — API / usage
+### 4.2 Core concept - What's the mental model?
 
-*How do I actually use this?* Short snippets, common workflows, not a full app. Walk the lines out loud.
+Name the one idea they should think with — not a feature dump.
+
+- The key object (`DataFrame`, `Request`, `Layer`, `Component`)
+- One analogy for how to *think* about it
+- Stay with that analogy (don’t switch metaphors mid-talk)
+
+> **Flask:** the app is a **restaurant**; **routes are the menu** — each URL is a function that serves a response.
+
+### 4.3 API / usage - How do I actually use this?
+
+Show the common path in a few lines. Not a full app.
+
+- Short snippet; walk each line out loud
+- Happy path only (gotchas come next)
+- Import → one call → look at the result
 
 ```python
 import requests
@@ -117,19 +165,23 @@ print(response.status_code)
 print(response.json())
 ```
 
-Import → one call → inspect status → inspect body. That is the whole layer-3 story, not a production client.
+> Import → `get` → `status_code` → `.json()`. That is the whole layer-3 story, not a production client.
 
-### Layer 4 — Gotchas
+### 4.4 Gotchas - What can go wrong?
 
-*What can go wrong?* Beginner mistakes, silent failures, performance traps, version quirks. Give a safe default.
+The layer people skip — and the one that saves them in production.
 
-Pandas: `df[df.col > 0]['col'] = 1` may **not** write back (chained assignment). Use `.loc[]`.
+- Beginner mistakes and **silent** failures
+- Performance traps and version quirks
+- A safe default or the one-line fix
 
-If you stop at layer 3, people copy the happy path and fail in production.
+> **Pandas:** `df[df.col > 0]['col'] = 1` may **not** write back (chained assignment). Use `.loc[]`.
+
+Stop at layer 3 and they copy the happy path, then fail in production.
 
 ---
 
-## 5. Clarity, Pandas, PyPI
+## 5. Clarity tools and Pandas / PyPI
 
 **Visuals:** architecture diagrams (internal flow), flowcharts (user/data path), before/after (code without the library vs with it).
 
