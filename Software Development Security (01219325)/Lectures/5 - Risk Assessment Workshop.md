@@ -53,7 +53,8 @@ Everything before the `Q` columns is **PII** **(personally identifiable informat
 ## 3. People Involved (Stakeholder Map)
 
 You cannot assess risk without knowing *who touches the data* and *who decides things*.
-![[research_project_org_chart.svg|640]]**What to read out of this map:**
+![[research_project_org_chart.svg|640]]
+**What to read out of this map:**
 - The **students** are the data subjects, but they are the **furthest from every decision**, and the only ones with no institutional power.
 - The **infrastructure belongs to a third party** (another university's Google Workspace). Whoever owns the account owns the access logs, the admin console, and effectively the data.
 - **Teachers** are the ones physically collecting answers, and also the people students see every day. That is a **coercion channel** and a **confidentiality leak** at the same time.

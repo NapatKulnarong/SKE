@@ -20,11 +20,11 @@ It maps onto the **CIA Triad**: cryptography contributes to **Confidentiality** 
 
 ## 2. Classical Ciphers (pre-computer)
 
-| Cipher                                                        | How it works                                         | Key type          | Notes                                                                                                              |
-| ------------------------------------------------------------- | ---------------------------------------------------- | ----------------- | ------------------------------------------------------------------------------------------------------------------ |
-| **Basic substitution**                                        | *Swap each letter for another*, via a lookup table   | Fixed table       | Monoalphabetic                                                                                                     |
-| **Caesar cipher**                                             | *Shift every letter* by a *fixed number*             | A number (e.g. 3) | First used by Julius Caesar; **ROT13** = Caesar with key 13 (self-inverse: applying it twice returns the original) |
-| **Vigenère cipher**![[Screenshot 2026-09-13 at 23.56.03.png]] | Shift each letter by a _repeating keyword's_ letters | A word/phrase     | Polyalphabetic each letter shifts differently, much harder to break                                                |
+| Cipher                 | How it works                                         | Key type          | Notes                                                                                                              |
+| ---------------------- | ---------------------------------------------------- | ----------------- | ------------------------------------------------------------------------------------------------------------------ |
+| **Basic substitution** | *Swap each letter for another*, via a lookup table   | Fixed table       | Monoalphabetic                                                                                                     |
+| **Caesar cipher**      | *Shift every letter* by a *fixed number*             | A number (e.g. 3) | First used by Julius Caesar; **ROT13** = Caesar with key 13 (self-inverse: applying it twice returns the original) |
+| **Vigenère cipher**    | Shift each letter by a _repeating keyword's_ letters | A word/phrase     | Polyalphabetic each letter shifts differently, much harder to break                                                |
 ![[basic_substitution.png|349]]
 
   ![[caesar_3.png|212]]
@@ -44,8 +44,7 @@ All three are "alphabetic ciphers" — modern cryptography instead works on **bi
 **Applications:**
 - **Managing your own user account**: the same key encrypts and decrypts your own data, since you're both the sender and receiver.
 - **File & disk storage**: e.g. BitLocker, VeraCrypt encrypting your files; you use the same key to lock and unlock them.
-- **Secure network protocols**: e.g. WPA (Wifi Protected Access), where your device and the router share the same key to encrypt traffic between them.
-![[Screenshot 2026-09-14 at 00.12.50-chroma-2026-09-13T17-13-07-409Z.png|508]]
+- **Secure network protocols**: e.g. WPA (Wifi Protected Access), where your device and the router share the same key to encrypt traffic between them
 
 |                  | Block ciphers                                        | Stream ciphers                              |
 | ---------------- | ---------------------------------------------------- | ------------------------------------------- |

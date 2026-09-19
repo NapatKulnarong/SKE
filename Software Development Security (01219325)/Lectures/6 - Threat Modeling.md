@@ -212,7 +212,7 @@ Different mechanisms answer **different questions**. Picking one and calling it 
 | ==**Security tests**== | Do **specific security requirements** hold?                    |
 | **Pen test**           | What **attack paths** can skilled adversarial testing uncover? |
 |                        |                                                                |
-[[3.1 - Software Security Requirements & Security Standards#3. Analysis Techniques|See 3.1 - 3. Analysis Techniques]]
+[[3.2 - Software Security Requirements & Security Standards#3. Analysis Techniques|See 3.1 - 3. Analysis Techniques]]
 
 🔑 **Only 2/6 can tell you your requirement was met**: *review and security tests.* The scanners find *classes of defect*; they have no idea what your system was supposed to guarantee. No SAST tool will ever tell you "you forgot to check that the requested object belongs to the caller" — that's the negative test from §7.
 

@@ -1,5 +1,6 @@
 {
-  "cssTheme": "Primary",
-  "theme": "moonstone",
-  "accentColor": "#8bbba2"
+  "cssTheme": "ObOrange",
+  "theme": "system",
+  "accentColor": "",
+  "textFontFamily": "Helvetica Neue"
 }

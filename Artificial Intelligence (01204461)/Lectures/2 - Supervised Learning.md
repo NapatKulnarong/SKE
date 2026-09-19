@@ -28,11 +28,15 @@
     1. [[#How CART grows a tree]]
     2. [[#Impurity — how mixed is a node?]]
 7. [[#2.7 k-Nearest Neighbors (k-NN)]]
-    1. [[#2.7.1 Distance-Weighted Voting]]
-    2. [[#2.7.2 Role of k & Hyperparameter Tuning]]
-    3. [[#2.7.3 Distance Metrics]]
-    4. [[#2.7.4 Computational Complexity & Spatial Indexing]]
+    1. [[#How it works]]
+    2. [[#2.7.1 Distance-Weighted Voting]]
+    3. [[#2.7.2 Role of $k$]]
+    4. [[#2.7.3 Distance Metrics]]
+    5. [[#2.7.4 Computational Complexity & Spatial Indexing]]
 8. [[#2.8 Support Vector Machines (SVM)]]
+    1. [[#Hard margin]]
+    2. [[#Soft margin]]
+    3. [[#Kernel trick]]
 9. [[#2.9 Model Evaluation, Validation, and Generalization]]
     1. [[#2.9.1 Generalization & Bias-Variance Tradeoff]]
 10. [[#2.10 Validation Protocols & Regularization]]
@@ -42,6 +46,8 @@
     1. [[#2.11.1 Classification Metrics Framework]]
     2. [[#2.11.2 Regression Metrics Framework]]
 12. [[#2.12 Chapter Summary]]
+13. [[#2.13 Practice Questions]]
+14. [[#2.14 Solutions]]
 
 ---
 
@@ -215,12 +221,12 @@ Each loss below only lists the symbols *it* adds; these appear in all of them. (
 
 **Which loss goes where**
 
-| Loss | Task | Role |
-| --- | --- | --- |
-| MSE | Regression | train (smooth) |
-| MAE | Regression | train (needs subgradient at $e=0$) |
-| BCE | Binary classification | train (smooth) |
-| 0–1 | Classification | **report only** — cannot use GD |
+| Loss | Task                  | Role                               |
+| ---- | --------------------- | ---------------------------------- |
+| MSE  | Regression            | train (smooth)                     |
+| MAE  | Regression            | train (needs subgradient at $e=0$) |
+| BCE  | Binary classification | train (smooth)                     |
+| 0–1  | Classification        | **report only** — cannot use GD    |
 
 ---
 
@@ -302,6 +308,7 @@ So the loss always reads: *"how much probability did you assign to the correct c
 | $0.9$    | $0.105$           | confident and **right** |
 | $0.5$    | $0.693$           | pure guess              |
 | $0.1$    | $2.303$           | confident and **wrong** |
+
 **Constraint**: $\hat y$ must stay inside $(0,1)$, so never feed a raw $w^\top x$ into BCE — squash it with a sigmoid first. That pairing (sigmoid + BCE) is exactly logistic regression: $\nabla_w R_{\mathrm{emp}} = \frac1n X^\top(\hat y-y)$ (§2.5). For $C>2$ classes it generalizes to softmax + categorical cross-entropy.
 ![[graph_bce.png]]
 
@@ -539,46 +546,45 @@ $$\hat{\mathbf{y}}_{\text{test}} = X_{\text{test}}\, w^*$$
 
 Because only $w^*$ is needed here, the training set can be discarded after fitting — the **parametric** property from §2.3.0.1.
 
-
+![[linear_regression_inference.png]]
 ## 2.5 Logistic Regression
 
-**Main idea:** estimate $P(y=1\mid x)$ for a binary label $y\in\{0,1\}$ by taking a linear score (same as linear regression) and **squashing it into $(0,1)$** with a sigmoid.
+**Main idea:** Logistic Regression is a parametric ***classification*** model that predicts the probability that something belongs to class 0 or 1 — it uses a formula (linear combo of inputs) but squashes the result through the ***Sigmoid function*** so the output is always a valid probability.
 
-**Why we need it:** linear regression is the wrong tool for classes. $w^\top x$ can be any real number (not a probability), and MSE is a bad loss for 0/1 labels — one wild $x$ can warp the whole line. Logistic regression keeps $\hat y$ strictly inside $(0,1)$ and trains with BCE (§2.2.1.3 C).
-
+**Why not Linear Regression:**
+ - Its unbounded predictions (wᵀx ∈ ℝ) can fall outside [0, 1], which isn't valid for probabilities.
+ - MSE loss gets distorted by extreme outliers.
+ - Logistic regression guarantees outputs are strictly constrained within (0, 1).
 #### Step 1 — Linear score + sigmoid
 
 Same weighted sum as §2.4, now called a **logit**:
 
 $$z = w^\top x$$
 
-> *In plain words:* one number that says “how class-1-ish is this $x$?” — still unbounded, so not yet a probability.
+>🧌 *one number that says “how class-1-ish is this $x$?” — still unbounded, so not yet a probability.*
 
-The **sigmoid** folds $z$ into $(0,1)$:
+The **sigmoid** converts this score into a probability:
 
 $$\sigma(z) = \frac{1}{1+e^{-z}} \in (0,1)$$
 
-> *In plain words:* a smooth S-curve. Large positive $z$ → almost 1; large negative $z$ → almost 0; $z=0$ → exactly $0.5$.
+>🧌 a smooth S-curve. Large positive $z$ → almost 1; large negative $z$ → almost 0; $z=0$ → exactly $0.5$
 
 Then:
-
 $$P(y=1\mid x) = \sigma(w^\top x),\qquad P(y=0\mid x) = 1 - \sigma(w^\top x)$$
 
 **Decision rule.** Predict class 1 if $\sigma(z)\ge 0.5$, else 0. Because $\sigma(z)=0.5$ exactly when $z=0$, the decision boundary is the hyperplane $w^\top x = 0$.
 
-**Variable breakdown**
+| Symbol               | Range              | Meaning                                  |
+| -------------------- | ------------------ | ---------------------------------------- |
+| $x$                  | $\mathbb{R}^{d+1}$ | features with a leading $1$ for the bias |
+| $w$                  | $\mathbb{R}^{d+1}$ | weights, including $w_0 = b$             |
+| $z = w^\top x$       | $\mathbb{R}$       | logit (linear score)                     |
+| $\sigma(z)$          | $(0,1)$            | sigmoid — maps logit to a probability    |
+| $y$                  | $\{0,1\}$          | true binary label                        |
+| $\hat y = \sigma(z)$ | $(0,1)$            | predicted $P(y=1\mid x)$                 |
+| $\alpha$             | $>0$               | learning rate                            |
 
-| Symbol | Range | Meaning |
-| --- | --- | --- |
-| $x$ | $\mathbb{R}^{d+1}$ | features with a leading $1$ for the bias |
-| $w$ | $\mathbb{R}^{d+1}$ | weights, including $w_0 = b$ |
-| $z = w^\top x$ | $\mathbb{R}$ | logit (linear score) |
-| $\sigma(z)$ | $(0,1)$ | sigmoid — maps logit to a probability |
-| $y$ | $\{0,1\}$ | true binary label |
-| $\hat y = \sigma(z)$ | $(0,1)$ | predicted $P(y=1\mid x)$ |
-| $\alpha$ | $>0$ | learning rate |
-
-#### Step 2 — Train with BCE
+#### Step 2 — Train with Binary Cross-Entropy Loss (BCE)
 
 Same loss as §2.2.1.3 C, averaged over $D$:
 
@@ -591,8 +597,7 @@ This is the Bernoulli negative log-likelihood: statistically matched to a model 
 #### Step 3 — Gradient + one GD update
 
 $$\nabla_w L(w) = \frac1n X^\top(\hat{\mathbf y} - \mathbf{y})$$
-
-> *In plain words:* same *shape* as the linear-regression gradient — residuals $\times$ features — except now $\hat y$ is a **probability**, not a real-valued prediction.
+>🧌 *same shape as the linear-regression gradient — residuals $\times$ features — except now $\hat y$ is a **probability**, not a real-valued prediction.*
 
 Then step downhill:
 
@@ -617,12 +622,12 @@ Start at $w^{(0)} = [0,\ -1,\ 1]^\top$, $\alpha = 0.5$.
 
 **1. Logits and probabilities.** $z_i = w^{(0)\top} x_i$, then $\hat y_i = \sigma(z_i)$.
 
-| $i$ | $z = 0\cdot 1 + (-1)x_1 + (1)x_2$ | $\hat y = \sigma(z)$ | $y$ |
-| --- | --- | --- | --- |
-| 1 | $-1+2 = +1$ | $\sigma(1)\approx 0.731$ | 1 |
-| 2 | $-2+1 = -1$ | $\sigma(-1)\approx 0.269$ | 1 |
-| 3 | $-3+4 = +1$ | $\sigma(1)\approx 0.731$ | 0 |
-| 4 | $-4+3 = -1$ | $\sigma(-1)\approx 0.269$ | 0 |
+| $i$ | $z = 0\cdot 1 + (-1)x_1 + (1)x_2$ | $\hat y = \sigma(z)$          | $y$   |
+| --- | --------------------------------- | ----------------------------- | ----- |
+| 1   | $-1+2 = +1$                       | $\sigma(1)\approx 0.731$      | 1     |
+| 2   | $-2+1 = -1$                       | **$\sigma(-1)\approx 0.269$** | **1** |
+| 3   | $-3+4 = +1$                       | **$\sigma(1)\approx 0.731$**      | **0**     |
+| 4   | $-4+3 = -1$                       | $\sigma(-1)\approx 0.269$     | 0     |
 
 Samples 2 and 3 are already in trouble: 2 is class 1 but $\hat y$ is only $0.269$; 3 is class 0 but $\hat y$ is $0.731$.
 
@@ -632,11 +637,51 @@ $$L_1 = -\ln 0.731 \approx 0.313,\quad L_2 = -\ln 0.269 \approx 1.313,\quad L_3 
 
 $$L = \frac{0.313+1.313+1.313+0.313}{4} \approx 0.813$$
 
-**3. Gradient.** Residual $e_i = \hat y_i - y_i$, then $\nabla_w L = \frac14\sum_i e_i x_i$:
+**3. Gradient.** Residual $e_i = \hat y_i - y_i$. Each residual is multiplied by that example's feature vector, then averaged:
 
-$$e = [-0.269,\ -0.731,\ +0.731,\ +0.269]$$
+$$\nabla_w L = \frac{1}{4}\sum_{i=1}^{4} e_i x_i$$
+
+$$
+\begin{align*}
+e_1 &= 0.731 - 1 = -0.269 \\
+e_2 &= 0.269 - 1 = -0.731 \\
+e_3 &= 0.731 - 0 = +0.731 \\
+e_4 &= 0.269 - 0 = +0.269
+\end{align*}
+$$
+
+Scale each $x_i = [1,\ x_1,\ x_2]^\top$ by its residual:
+
+$$
+\begin{align*}
+e_1 x_1 &= -0.269\begin{bmatrix}1\\1\\2\end{bmatrix}
+= \begin{bmatrix}-0.269\\-0.269\\-0.538\end{bmatrix} \\
+e_2 x_2 &= -0.731\begin{bmatrix}1\\2\\1\end{bmatrix}
+= \begin{bmatrix}-0.731\\-1.462\\-0.731\end{bmatrix} \\
+e_3 x_3 &= +0.731\begin{bmatrix}1\\3\\4\end{bmatrix}
+= \begin{bmatrix}+0.731\\+2.193\\+2.924\end{bmatrix} \\
+e_4 x_4 &= +0.269\begin{bmatrix}1\\4\\3\end{bmatrix}
+= \begin{bmatrix}+0.269\\+1.076\\+0.807\end{bmatrix}
+\end{align*}
+$$
+
+Add component-wise:
+
+$$
+\sum_i e_i x_i
+= \begin{bmatrix}
+(-0.269)+(-0.731)+0.731+0.269 \\
+(-0.269)+(-1.462)+2.193+1.076 \\
+(-0.538)+(-0.731)+2.924+0.807
+\end{bmatrix}
+= \begin{bmatrix}0.000\\1.538\\2.462\end{bmatrix}
+$$
+
+Then divide by $n=4$:
 
 $$\nabla_w L \approx \frac14\begin{bmatrix}0.000\\1.538\\2.462\end{bmatrix} = \begin{bmatrix}0.000\\0.3845\\0.6155\end{bmatrix}$$
+
+Those three numbers are $\partial L/\partial b$, $\partial L/\partial w_1$, $\partial L/\partial w_2$. The bias row sums to 0 because the four residuals cancel; $w_1$ and $w_2$ do not, so those weights move on the update.
 
 **4. Update** $w^{(1)} = w^{(0)} - 0.5\nabla_w L$:
 
@@ -650,15 +695,18 @@ $$5 - x_1 - x_2 = 0 \quad\Leftrightarrow\quad x_1 + x_2 = 5$$
 
 which cleanly separates class 1 from class 0. Dataset BCE drops from $0.813$ to $0.127$.
 
+![[linear_decision_boundaries.png]]
 #### Inference on a new point
 
-$x_{\text{new}} = [1,\ 1.5,\ 2]^\top$ under $w^*$:
+**Training is over**: $w^*$ is frozen. A **new** point $x_{\text{new}} = [1,\ 1.5,\ 2]^\top$ arrives (the leading $1$ is the bias slot). Ask: class 0 or 1?
 
-1. logit $z = 5 - 1.5 - 2 = 1.5$
-2. probability $\hat p = \sigma(1.5) \approx 0.818$
-3. class $\hat y = 1$ because $0.818 \ge 0.5$
-4. if the true label were 1, $L = -\ln 0.818 \approx 0.201$
+1. **Logit.** $z = w^{*\top} x = 5 - 1.5 - 2 = 1.5$. Same as $x_1+x_2=3.5$, which sits on the class-1 side of the line $x_1+x_2=5$, so $z>0$.
+2. **Probability.** $\hat p = \sigma(1.5) \approx 0.818$ — about 82% class 1.
+3. **Class.** $\hat y = 1$ because $0.818 \ge 0.5$. Inference stops here.
 
+If someone later said the true label was 1, the BCE hit would be $L = -\ln 0.818 \approx 0.201$ (small: the model was already confident and right). That last number is for scoring, not for predicting.
+
+![[logistic_regression_example.png]]
 #### Multi-class: softmax + categorical CE
 
 For $C>2$ classes, one logit **per class**:
@@ -681,13 +729,21 @@ Gradient on the logits is again a residual: $\partial L/\partial z_c = \hat y_c 
 
 **Pairing to remember:** binary = sigmoid + BCE; multi-class = softmax + CCE. Both still start from a linear score.
 
+
+![[linear_vs_logistic.png]]
+
 ---
 
 ## 2.6 Decision Trees (CART)
 
 **Main idea:** a **tree of IF–THEN questions** that recursively chops the feature space into boxes. Each **decision node** asks $x_j \le t$?; each **leaf** gives the prediction (majority class, or mean of $y$).
 
-**Why we need it:** no feature scaling, can mix classification and regression, captures non-linear splits and feature interactions, and you can *read* the model as nested rules. Complexity is **not** a fixed $\theta$ — it grows with how many splits the data needs (§2.3.0.1).
+**Why we need it:** 
+- No feature scaling needed
+- Works for both *classification and regression*
+- Captures non-linear splits and feature interactions
+- Readable as nested rules
+- Complexity isn't fixed — it grows with how many splits the data needs
 
 #### How CART grows a tree
 
@@ -710,108 +766,258 @@ A node is **pure** if everyone in it has the same label. Two common scores (both
 
 $$G = 1 - \sum_{c=1}^{C} p_c^2$$
 
-> *In plain words:* chance that two random draws from this node have **different** labels. $p_c$ = fraction of the node that is class $c$.
+> ***In plain words:*** chance that two random draws from this node have **different** labels. $p_c$ = fraction of the node that is class $c$.
 
 **Entropy:**
 
 $$H = -\sum_{c=1}^{C} p_c \ln p_c$$
 
-> *In plain words:* how surprising the labels in this node are. A 50/50 mix is the most mixed / highest entropy.
+> ***In plain words:*** how surprising the labels in this node are. A 50/50 mix is the most mixed / highest entropy.
 
 **Information gain** of a split = parent impurity minus the **size-weighted** impurity of the two children:
 
 $$\mathrm{IG} = I_{\text{parent}} - \left(\frac{n_L}{n}I_L + \frac{n_R}{n}I_R\right)$$
 
-> *In plain words:* how much “mixed-ness” did this question remove? CART picks the $(j,t)$ with the **largest** IG.
-
-**Variable breakdown**
-
-| Symbol | Meaning |
-| --- | --- |
-| $x_j$ | the feature being asked about |
-| $t$ | threshold on that feature |
-| $p_c$ | fraction of examples in the node that have class $c$ |
-| $I$ | impurity of a node (Gini or entropy) |
-| $n_L, n_R$ | how many examples went left / right |
-| $\mathrm{IG}$ | information gain — the split's score |
+> ***In plain words:*** how much “mixed-ness” did this question remove? CART picks the $(j,t)$ with the **largest** IG.
 
 #### Why it is non-parametric
-
-No fixed $w\in\mathbb{R}^{d+1}$. The “parameters” *are* the splits, and their number grows with $n$ (and with how wiggly you let the tree get). After training you still need the tree itself — you cannot throw $D$ away and keep only a short weight vector, though you also do not query every training point at inference the way $k$-NN does.
+- **No fixed weight vector** — "parameters" are the splits, growing with n and tree depth
+- Can't discard the data and keep just a short vector (unlike parametric models)
+- But don't need to query every point at inference either (unlike k-NN)
 
 **Key idea, one sentence:** learn a sequence of simple feature questions that partition $D$ into increasingly pure regions; the leaf you land in is the prediction.
 
 ---
 
-
 ## 2.7 k-Nearest Neighbors (k-NN)
 
-**Lazy / instance-based:** store all of $D$. At query $x_q$:
+**Main idea:** a **lazy, instance-based** model. Training is “store $D$.” At query time, look at the $k$ stored points closest to $x_q$ and copy their answers.
 
-1. Distances to every $x_i$
-2. Take the $k$ nearest, $N_k(x_q)$
-3. **Class:** majority vote. **Regress:** mean of neighbor $y_i$
+**Why we need it:** no weight vector, no linear-boundary assumption. Fine when the decision surface is curved or multi-modal and a line would fail.
+
+| Symbol | Range | Meaning |
+| --- | --- | --- |
+| $x_q$ | $\mathbb{R}^d$ | the new query |
+| $k$ | $\mathbb{N}_+$ | how many neighbors to ask |
+| $d(x_q,x_i)$ | $\mathbb{R}_{\ge 0}$ | distance from query to stored point $i$ |
+| $N_k(x_q)$ | size $k$ | indices of the $k$ nearest stored points |
+| $\hat y_q$ | class or $\mathbb{R}$ | the prediction |
+
+#### How it works
+
+Given $x_q$:
+
+1. Compute $d(x_q,x_i)$ to **every** stored $x_i$.
+2. Keep the $k$ smallest — that index set is $N_k(x_q)$.
+3. Aggregate their labels.
+
+**Classification — majority vote**
+
+$$\hat y_q = \arg\max_{c}\sum_{i\in N_k(x_q)}\mathbb{I}(y_i=c)$$
+
+| Symbol | Meaning |
+| --- | --- |
+| $\arg\max_c$ | pick the class with the most votes |
+| $\mathbb{I}(y_i=c)$ | $1$ if neighbor $i$ is class $c$, else $0$ |
+
+> *In plain words:* among the $k$ nearest points, which label shows up most?
+
+![[kd_ball_tree.png|579]]
+
+**Regression — local mean**
+
+$$\hat y_q = \frac1k\sum_{i\in N_k(x_q)} y_i$$
+
+> *In plain words:* average the $k$ nearby $y$-values.
 
 ### 2.7.1 Distance-Weighted Voting
 
-**Worked vote.** $P_1=(1,2,\mathrm{A})$, $P_2=(2,4,\mathrm{A})$, $P_3=(4,2,\mathrm{B})$, $P_4=(4,4,\mathrm{B})$, $P_5=(5,1,\mathrm{B})$, query $x_q=(3,2)$, Euclidean, $k=3$. Distances: $P_3=1$, $P_1=2$, then a $\sqrt5$ tie ($P_2$ taken). Unweighted → **A** (2–1). Weights $w_i=1/d_i^2$ (notes also add $\epsilon$ to avoid $d=0$): B gets $1.0$, A gets $0.25+0.20=0.45$ → **B**. The closest point flips the call.
+Equal votes treat a neighbor at distance $1$ the same as one at distance $10$. Weight closer points more:
+$$w_i = \frac{1}{d(x_q,x_i)^2 + \epsilon}$$
 
-### 2.7.2 Role of k & Hyperparameter Tuning
+| Symbol     | Meaning                                                         |
+| ---------- | --------------------------------------------------------------- |
+| $w_i$      | vote weight of neighbor $i$                                     |
+| $\epsilon$ | tiny constant (e.g. $10^{-5}$) so $d=0$ does not divide by zero |
+For regression (same idea for class: sum $w_i$ per class, pick the bigger sum):
 
-Small $k$ (e.g. $k=1$) → wiggly boundary, low bias, high variance. $k=n$ → oversmoothed, high bias (global majority). For binary class, odd $k$ (3, 5, 7) avoids 50–50 ties. Figures in the notes: $k=3$ majority **B**; $k=6$ majority **A**.
+$$\hat y_q = \frac{\sum_{i\in N_k(x_q)} w_i y_i}{\sum_{i\in N_k(x_q)} w_i}$$
+
+> *In plain words:* a weighted average — near neighbors pull harder.
+
+#### Worked example — unweighted vs weighted, $k=3$
+
+Five labeled points in 2D. The third entry is the **class** (A or B — two category names, not coordinates). Distances use only $(x_1,x_2)$.
+
+| Point | $x_1$ | $x_2$ | Class |
+| --- | --- | --- | --- |
+| $P_1$ | 1 | 2 | A |
+| $P_2$ | 2 | 4 | A |
+| $P_3$ | 4 | 2 | B |
+| $P_4$ | 4 | 4 | B |
+| $P_5$ | 5 | 1 | B |
+| $x_q$ (query) | 3 | 2 | ? |
+
+Metric: Euclidean. Ask the $k=3$ nearest stored points what class $x_q$ should get.
+
+**1. Distances** (query vs each row — class is ignored here)
+
+$$
+\begin{align*}
+d(x_q,P_1) &= \sqrt{(3-1)^2+(2-2)^2} = 2 \\
+d(x_q,P_2) &= \sqrt{(3-2)^2+(2-4)^2} = \sqrt5 \approx 2.236 \\
+d(x_q,P_3) &= \sqrt{(3-4)^2+(2-2)^2} = 1 \\
+d(x_q,P_4) &= \sqrt{(3-4)^2+(2-4)^2} = \sqrt5 \approx 2.236 \\
+d(x_q,P_5) &= \sqrt{(3-5)^2+(2-1)^2} = \sqrt5 \approx 2.236
+\end{align*}
+$$
+
+**2. $k=3$ neighbors.** Closest: $P_3$ (B) then $P_1$ (A). $P_2,P_4,P_5$ tie at $\sqrt5$; pick $P_2$ (A) so the next two votes can disagree.
+
+**3. Unweighted vote.** Each of those three gets one vote: A, A, B → A wins 2–1 → predict **A**.
+
+**4. Weighted vote** $w_i=1/d_i^2$ (closer = louder):
+
+$$
+w_{P_3}=1/1^2=1.00\ \text{(B)},\quad
+w_{P_1}=1/2^2=0.25\ \text{(A)},\quad
+w_{P_2}=1/(\sqrt5)^2=0.20\ \text{(A)}
+$$
+
+A’s total $0.25+0.20=0.45$, B’s total $1.00$ → predict **B**.
+
+$P_3$ is twice as close as $P_1$, so one nearby B outvotes two farther A’s.
+
+### 2.7.2 Role of $k$
+
+$k$ is the bias–variance knob:
+
+| k value                                     | Boundary     | Bias / Variance         | Behavior                                                                                         |
+| ------------------------------------------- | ------------ | ----------------------- | ------------------------------------------------------------------------------------------------ |
+| **Small** (e.g. k=1)                        | Wiggly       | Low bias, high variance | Follows noise; k=1 forms a Voronoi tessellation — every point copies its single nearest neighbor |
+| **Medium** (e.g. k=5)                       | Smoother     | Balanced                | Isolated noise points get outvoted                                                               |
+| **Large** (e.g. k=n or k=50 on a small set) | Oversmoothed | High bias               | Everyone gets the global majority                                                                |
+For **binary** class, pick odd $k$ ($3,5,7$) so a 50–50 tie cannot happen. The slide figures with $k=3$ vs $k=6$ on the same cloud: majority can flip just by asking more neighbors.
 
 ### 2.7.3 Distance Metrics
 
-What “near” means:
+“Near” is defined by the metric. For $x_a,x_b\in\mathbb{R}^d$:
 
-| Metric | Formula | Geometry / when |
-| --- | --- | --- |
-| Euclidean $L_2$ | $\sqrt{\sum (x_{aj}-x_{bj})^2}$ | Straight line; default if features comparable |
-| Manhattan $L_1$ | $\sum \lvert x_{aj}-x_{bj}\rvert$ | City blocks; high-d / sparse |
-| Minkowski $L_p$ | $(\sum \lvert\cdot\rvert^p)^{1/p}$ | $p=1$ L1, $p=2$ L2, $p\to\infty$ Chebyshev (max coord) |
-| Cosine | $1 - \frac{x_a\cdot x_b}{\lVert x_a\rVert\lVert x_b\rVert}$ | Angle, ignore magnitude (text) |
+| Metric          | Formula                                                         | Geometry / when                                        |
+| --------------- | --------------------------------------------------------------- | ------------------------------------------------------ |
+| Euclidean $L_2$ | $\sqrt{\sum_j (x_{aj}-x_{bj})^2}$                               | straight line; default if features are scaled          |
+| Manhattan $L_1$ | $\sum_j \lvert x_{aj}-x_{bj}\rvert$                             | city blocks; high-$d$ / sparse                         |
+| Minkowski $L_p$ | $\bigl(\sum_j \lvert x_{aj}-x_{bj}\rvert^p\bigr)^{1/p}$         | $p=1$ L1, $p=2$ L2, $p\to\infty$ Chebyshev (max coord) |
+| Cosine          | $1 - \frac{x_a\cdot x_b}{\lVert x_a\rVert_2\lVert x_b\rVert_2}$ | angle only — text, embeddings                          |
 
-**Scale features or salary swamps age.** Min-max to $[0,1]$, or $z$-score $(x-\mu)/\sigma$.
+![[distance_ab.png|632]]
+![[distance_cd.png|626]]
+
+**Scaling is important:** Distance uses raw numbers. Salary in tens of thousands vs age in tens → salary owns every neighbor list.
+
+Min-max to $[0,1]$:
+
+$$x_{\mathrm{scaled}} = \frac{x-x_{\min}}{x_{\max}-x_{\min}}$$
+
+Z-score (mean $0$, sd $1$):
+
+$$x_{\mathrm{scaled}} = \frac{x-\mu}{\sigma}$$
 
 ### 2.7.4 Computational Complexity & Spatial Indexing
 
-Brute force query $O(nd)$. **KD-tree** average $O(d\log n)$ for $d \le 20$; **ball tree** (nested hyperspheres) when KD-trees degrade to $O(nd)$.
+**Brute force**: every query scans all $n$ points in $d$ dimensions → $O(nd)$. Training is $O(1)$ (just store $D$); **inference is the expensive part**.
+
+For $d\lesssim 20$, index the points:
+
+- **KD-tree:** axis-aligned median splits. Average query $O(d\log n)$.
+- **Ball tree:** nested hyperspheres. Use when KD-trees fall back to $O(nd)$ in higher $d$.
+
+**Key idea, one sentence:** do not fit a formula — store the data, and at query time let the $k$ nearest labeled points vote (optionally weighted by $1/d^2$).
+
+![[Pasted image 20260917213516-chroma-2026-09-17T14-35-24-438Z.png]]
 
 ---
 
 ## 2.8 Support Vector Machines (SVM)
 
-Find the hyperplane $w^\top x + b = 0$ with **maximum margin**. Support vectors = the points that sit on the margin.
+**Main idea:** among all lines (hyperplanes) that separate two classes, pick the one with the **widest empty strip** (margin). The points that touch the strip’s edges are the **support vectors** — they alone define the boundary.
 
-Hard margin ($y_i \in \{-1,+1\}$):
+**Why:** a fat margin usually generalizes better than a skinny one that barely snakes between points. Kernels let the same idea work when no straight line separates the data.
 
-$$\min_{w,b}\ \tfrac12 \lVert w\rVert_2^2 \quad\text{s.t.}\quad y_i(w^\top x_i + b) \ge 1$$
+#### Hard margin
 
-**Soft margin:** allow slack; $C$ trades wide margin vs mistakes.
+Labels are $y_i\in\{-1,+1\}$ (not $0/1$). Boundary:
 
-**Kernel trick:** never compute $\Phi(x)$; use $K(x_a,x_b)=\langle\Phi(x_a),\Phi(x_b)\rangle$.
+$$w^\top x + b = 0$$
+
+Predict $\operatorname{sign}(w^\top x+b)$. The two margin planes are $w^\top x+b=\pm 1$. Their gap is $2/\lVert w\rVert_2$, so **smaller $\lVert w\rVert$ = wider margin**. Solve:
+
+$$\min_{w,b}\ \tfrac12\lVert w\rVert_2^2 \quad\text{s.t.}\quad y_i(w^\top x_i + b)\ge 1 \quad\forall i$$
+
+| Symbol | Meaning |
+| --- | --- |
+| $y_i(w^\top x_i+b)\ge 1$ | correct side **and** at least 1 unit from the plane |
+| $\tfrac12\lVert w\rVert_2^2$ | shrink $w$ → grow the gap |
+
+If any point is on the wrong side, this problem has **no solution** → use soft margin.
+
+#### Soft margin
+
+Allow slack $\xi_i\ge 0$ (how far a point may sit inside the margin or on the wrong side). Hyperparameter **$C$**: large $C$ → few mistakes, skinny margin; small $C$ → fatter margin, more violations.
+
+#### Kernel trick
+
+Map $x\mapsto\Phi(x)$ so a line in the new space is a curve in the original. Never compute $\Phi$; only inner products:
+
+$$K(x_a,x_b)=\langle\Phi(x_a),\Phi(x_b)\rangle$$
 
 - Linear: $x_a^\top x_b$
 - Polynomial: $(x_a^\top x_b + c)^d$
-- RBF: $\exp(-\gamma\lVert x_a-x_b\rVert_2^2)$
+- RBF: $\exp(-\gamma\lVert x_a-x_b\rVert_2^2)$ — “how close are they?”, local bumps
 
-Multi-class: one-vs-one or one-vs-rest.
+**$C>2$ classes:** one-vs-one (a classifier per pair) or one-vs-rest (one per class vs the rest).
+
+**Key idea, one sentence:** max-margin line (or kernel-curve), set by the support vectors; $C$ trades width vs errors.
+
+![[hard_soft_margin.png]]
 
 ---
 
 ## 2.9 Model Evaluation, Validation, and Generalization
 
-Need good **test** error, not memorized train error.
+**Main idea:** win on **unseen** data. $L=0$ on train can just mean you memorized $D$.
 
 ### 2.9.1 Generalization & Bias-Variance Tradeoff
 
-$$y = f(x)+\epsilon,\quad \epsilon\sim\mathcal{N}(0,\sigma^2)$$
+$$y = f(x)+\epsilon,\qquad \epsilon\sim\mathcal{N}(0,\sigma^2)$$
 
-Expected squared error:
+Each dart is a model trained on a **different** $D$; the bullseye is $f(x)$.
 
-$$\mathbb{E}\bigl[(y-\hat f(x))^2\bigr] = \underbrace{\mathrm{Bias}^2(\hat f)}_{\text{underfit}} + \underbrace{\mathrm{Var}(\hat f)}_{\text{overfit}} + \underbrace{\sigma^2}_{\text{irreducible}}$$
+![[bias.png]]
 
-High bias = systematically wrong (too simple). High variance = jumps when $D$ changes (too flexible).
+- **Bias** — how far the *average* model sits from $f$. Too simple → **underfit**.
+- **Variance** — how much the model *jumps* when $D$ changes. Too flexible → **overfit**.
+
+$$
+\mathbb{E}\bigl[(y-\hat f(x))^2\bigr]
+= \underbrace{\bigl(f-\mathbb{E}[\hat f]\bigr)^2}_{\mathrm{Bias}^2}
+ + \underbrace{\mathbb{E}\bigl[(\hat f-\mathbb{E}[\hat f])^2\bigr]}_{\mathrm{Var}}
+ + \underbrace{\sigma^2}_{\text{floor}}
+$$
+
+$\sigma^2$ is the unknown min loss from [[#2.2.1.2 Real-World Regression Problem: Gold Price Prediction & Unknown Minimum Loss]] — you cannot beat it.
+
+![[capacity_curve.png]]
+
+Train error falls forever; test error is **U-shaped**. The gap is the variance.
+
+| Symptom | Disease | Fix |
+| --- | --- | --- |
+| train & test both high, close | bias / underfit | more capacity, better features |
+| train low, test much higher | variance / overfit | more data, regularize ([[#2.10.2 Regularization]]), simpler model |
+| both near $\sigma^2$ | noise floor | stop |
+
+**Key idea, one sentence:** test error $=$ bias$^2$ $+$ variance $+$ $\sigma^2$; the train–test gap tells you which of the first two is the problem.
 
 ---
 
@@ -822,11 +1028,12 @@ High bias = systematically wrong (too simple). High variance = jumps when $D$ ch
 **Splits:** typical 70 / 15 / 15 train / val / test. **$K$-fold:** rotate the val fold; average $K$ scores. Do **not** tune on the test set.
 
 ### 2.10.2 Regularization
+Regularization reduces overfitting by adding a penalty to the training loss, encouraging simpler models:
+$$L_{\mathrm{reg}}(w)=L(w)+\lambda\Omega(w),$$
+where λ ≥ 0 controls the regularization strength.
 
-$L_{\mathrm{reg}}(w)=L(w)+\lambda\Omega(w)$:
-
-- **L1 (Lasso)** $\lVert w\rVert_1$ — sparsity
-- **L2 (Ridge)** $\lVert w\rVert_2^2$ — shrink large weights
+- **L1 (Lasso)** $\lVert w\rVert_1$ — which can encourage sparse weights.
+- **L2 (Ridge)** $\lVert w\rVert_2^2$ — which discourages large weights.
 
 ---
 
@@ -834,21 +1041,23 @@ $L_{\mathrm{reg}}(w)=L(w)+\lambda\Omega(w)$:
 
 ### 2.11.1 Classification Metrics Framework
 
+For binary classification tasks, model predictions are compared against ground-truth labels using a 2 × 2 Confusion Matrix:
+
 | | Pred $+$ | Pred $-$ |
 | --- | --- | --- |
 | Actual $+$ | TP | FN (type II) |
 | Actual $-$ | FP (type I) | TN |
 
-$$\mathrm{Acc}=\frac{\mathrm{TP}+\mathrm{TN}}{N},\quad
-\mathrm{Prec}=\frac{\mathrm{TP}}{\mathrm{TP}+\mathrm{FP}},\quad
-\mathrm{Rec}=\frac{\mathrm{TP}}{\mathrm{TP}+\mathrm{FN}},\quad
+$$\mathrm{Accuracy}=\frac{\mathrm{TP}+\mathrm{TN}}{N},\quad
+\mathrm{Precision}=\frac{\mathrm{TP}}{\mathrm{TP}+\mathrm{FP}},\quad
+\mathrm{Recall}=\frac{\mathrm{TP}}{\mathrm{TP}+\mathrm{FN}},\quad
 F_1=\frac{2PR}{P+R}$$
-
-ROC: TPR vs FPR as the threshold moves; AUC $\in[0.5,1]$.
 
 **Worked.** $N=100$: TP $40$, FN $10$, FP $5$, TN $45$. Acc $=85/100=0.85$, Prec $=40/45\approx0.889$, Rec $=40/50=0.80$, $F_1\approx0.842$.
 
 ### 2.11.2 Regression Metrics Framework
+
+In continuous output prediction tasks, performance is measured by quantifying residual prediction errors  $e_i = yi−ŷi:$
 
 $$\mathrm{MAE}=\frac1n\sum\lvert e_i\rvert,\quad
 \mathrm{MSE}=\frac1n\sum e_i^2,\quad
@@ -868,3 +1077,43 @@ $R^2=1$ is a perfect fit to the mean-centered variance; can be negative if worse
 - SVM = max margin; kernels for non-linear boundaries; $C$ = soft-margin tradeoff.
 - Evaluate with a held-out test set (or $K$-fold), regularize, and report the metric that matches the task (F1/recall vs MAE/$R^2$).
 - Chapter 1 wrap: implication $\neq$ converse; expert systems = KB + working memory + forward/backward engine.
+
+---
+
+## 2.13 Practice Questions
+
+1. **Parametric vs non-parametric.** Classify linear regression and $k$-NN. How does each model’s **inference** time scale with training size $n$?
+2. **Normal equations.** $X=\begin{bmatrix}1&0\\1&2\end{bmatrix}$, $y=\begin{bmatrix}1\\5\end{bmatrix}$. Compute $w^*$.
+3. **Prediction.** $\hat y=2x+1$. Predict at $x=3$. What do the $2$ and the $1$ mean?
+4. **Gradient descent.** Model $\hat y=wx$, one sample $(x,y)=(2,4)$, current $w=1$. Give $\hat y$, the error, and the gradient of squared error. Which way does GD move $w$?
+5. **Why MSE?** Why is MSE the usual linear-regression loss? What happens as the residual grows?
+6. **Sigmoid.** $w^\top x=2$. Compute $P(y=1\mid x)$. Class at threshold $0.5$?
+7. **Why not MSE+sigmoid?** Why is MSE a bad loss under a sigmoid? What does BCE fix?
+8. **Threshold.** Probabilities $[0.2,0.8,0.4,0.9]$, threshold $0.5$. Predicted labels?
+9. **Multi-class.** How do you go from binary logistic to $C>2$? Role of softmax and categorical CE?
+10. **Distance.** $x_1=(1,2)$, $x_2=(4,6)$. Euclidean distance? What does $k$-NN do with it?
+11. **Scaling.** Why do unscaled features wreck $k$-NN? Min-max vs z-score?
+12. **Vote.** Three neighbors $[A,A,B]$, $k=3$. Predicted class? If $k=1$ and the nearest is $B$?
+13. **Role of $k$.** What happens to bias/variance as $k$ grows? Too small vs too large?
+14. **SVM.** What are support vectors? Why the kernel trick?
+15. **Regularization.** Increase L2 $\lambda$: bias? variance?
+
+---
+
+## 2.14 Solutions
+
+1. Linear regression is **parametric** (fixed $d+1$ weights) → inference $O(d)$, independent of $n$. $k$-NN is **non-parametric** (stores $D$) → brute-force inference $O(nd)$.
+2. $$X^\top X=\begin{bmatrix}2&2\\2&4\end{bmatrix},\quad X^\top y=\begin{bmatrix}6\\10\end{bmatrix},\quad w^*=(X^\top X)^{-1}X^\top y=\begin{bmatrix}1\\2\end{bmatrix}$$ so $\hat y=1+2x$.
+3. $\hat y=2\cdot3+1=7$. Slope $2$: $\Delta x=1$ $\Rightarrow$ $\Delta\hat y=2$. Bias $1$: intercept, prediction when $x=0$.
+4. $\hat y=1\cdot2=2$, error $e=\hat y-y=-2$. For $L=\tfrac12(wx-y)^2$, $\nabla_w L=(wx-y)x=-4$. GD: $w\leftarrow w-\alpha(-4)$ **increases** $w$ (the model was too low).
+5. MSE $= \frac1n\sum(\hat y_i-y_i)^2$ is smooth and has a closed-form min (normal equations). Squaring **hits large residuals harder** than MAE.
+6. $\sigma(2)=\frac1{1+e^{-2}}\approx0.881>0.5$ $\Rightarrow$ class **$1$**.
+7. MSE+sigmoid is non-convex and the gradient **dies** when $\sigma$ saturates (confident but wrong). BCE matches a Bernoulli likelihood and keeps a useful gradient.
+8. $[0,1,0,1]$.
+9. One linear score per class $\to$ **softmax** (scores become a probability simplex) $\to$ train with **categorical CE**. Binary is the $C=2$ special case (sigmoid + BCE).
+10. $d=\sqrt{(4-1)^2+(6-2)^2}=5$. $k$-NN ranks stored points by this distance, then votes.
+11. A feature with a bigger numeric range **owns** every neighbor list. Min-max $\to[0,1]$; z-score $\to$ mean $0$, sd $1$.
+12. $k=3$: majority **A**. $k=1$ and nearest is $B$ $\to$ **B**.
+13. Small $k$: low bias, high variance (overfit). Large $k$: high bias, low variance (underfit / global majority).
+14. Support vectors are the points **on (or inside) the margin** — they alone set the boundary. Kernel $K(x_a,x_b)=\langle\Phi(x_a),\Phi(x_b)\rangle$ buys a curved boundary **without** computing $\Phi$.
+15. Larger $\lambda$ shrinks weights $\to$ **variance down, bias up** (less overfit, more underfit).

@@ -28,16 +28,21 @@ Can data be changed (an integrity breach) _without_ a confidentiality breach? Ye
 
 ## 2. "AAA" Services (plus related concepts)
 
+- Three **A**s: **Authentication**, **Authorization**, **Accounting**
+- Lecture splits Accounting → **Auditing** (logs) + **Accountability** (who is responsible)
+- Identity & non-repudiation are extra, not letters in the name
+- Order: identity → authenticate → authorize → audit → accountability
+
 ![[aaa.png|355]]
 
-| Concept             | What it means                                         | Examples                             |
-| ------------------- | ----------------------------------------------------- | ------------------------------------ |
-| **Identity**        | You claim **who you are**                             | Username                             |
-| **Authentication**  | System **proves** you are who you **claim**           | Password, MFA, biometrics            |
-| **Authorization**   | System decides **what you're allowed** to do          | RBAC, ACLs, file permissions         |
-| **Auditing**        | System **tracks** what you actually did               | Logs, audit trails                   |
-| **Accountability**  | Someone can be **held** **responsible** for an action | Compliance records                   |
-| **Non-repudiation** | You **can't deny** doing something                    | Digital signatures, transaction logs |
+| Concept              | What it means                                         | Examples                             |
+| -------------------- | ----------------------------------------------------- | ------------------------------------ |
+| **Identity**         | You claim **who you are**                             | Username                             |
+| ***Authentication*** | System **proves** you are who you **claim**           | Password, MFA, biometrics            |
+| ***Authorization***  | System decides **what you're allowed** to do          | RBAC, ACLs, file permissions         |
+| **Auditing**         | System **tracks** what you actually did               | Logs, audit trails                   |
+| ***Accountability*** | Someone can be **held** **responsible** for an action | Compliance records                   |
+| **Non-repudiation**  | You **can't deny** doing something                    | Digital signatures, transaction logs |
 
 ---
 
@@ -83,8 +88,6 @@ Can data be changed (an integrity breach) _without_ a confidentiality breach? Ye
 ### Defense in Depth
 - Don't rely on one security control, stack **multiple layers** so if one fails, others still protect you.
 - *Example layers (outer → inner):* Governance → Physical → Network → Identity → Detection & Response → Infrastructure → Application → Data
-  ![[Screenshot 2026-09-13 at 16.22.36-chroma-2026-09-13T09-22-42-875Z.png|406]]
-
 ### Multi-Factor Authentication (MFA)
 - Require more than one proof of identity (e.g. password + phone code).
 ### RBAC vs ABAC
@@ -113,12 +116,12 @@ This breaks out of the intended string and injects a destructive command, a clas
 ### Careless Command Execution
 
 - Everyone knows `rm -rf /` is dangerous — but the danger isn't always obvious:
-    
-    ```
-    rm -rf "C:\My Awesome Game"
-    ```
-    
-    If a program is installed directly into `C:\`, a "clean" uninstall script could wipe the entire drive. The lesson: **destructive operations need careful scoping and validation**, not just an intuitive sense of "this command looks safe."
+
+```
+rm -rf "C:\My Awesome Game
+```
+
+If a program is installed directly into `C:\`, a "clean" uninstall script could wipe the entire drive. The lesson: **destructive operations need careful scoping and validation**, not just an intuitive sense of "this command looks safe."
 
 ---
 
