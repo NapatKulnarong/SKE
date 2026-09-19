@@ -13,12 +13,32 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Software Development Security (01219325)/Lectures/5 - Risk Assessment Workshop.md",
+                "file": "Software Development Security (01219325)/Mocks/M6 - Threat Modeling.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "5 - Risk Assessment Workshop"
+              "title": "M6 - Threat Modeling"
+            }
+          }
+        ]
+      },
+      {
+        "id": "71be13c75bc6b3a4",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "13093896eb9d2bed",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Software Development Security (01219325)/Mocks/Answers/A7.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "A7"
             }
           }
         ]
@@ -83,7 +103,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 258.2271203994751
   },
   "right": {
     "id": "9ea7aa4702829111",
@@ -190,51 +210,51 @@
   },
   "active": "d0e75e6ac72dbc94",
   "lastOpenFiles": [
-    "Software Development Security (01219325)/Assets/research_project_org_chart.png",
+    "Software Development Security (01219325)/Mocks/M7 -  Software Security Design.md",
     "Software Development Security (01219325)/Mocks/M4 - Cryptography & Public Key Infrastructure.md",
-    "Software Development Security (01219325)/Lectures/4 - Cryptography & Public Key Infrastructure.md",
+    "Software Development Security (01219325)/Mocks/M5 - Risk Assessment Workshop.md",
+    "Software Development Security (01219325)/Mocks/M6 - Threat Modeling.md",
+    "Software Development Security (01219325)/Mocks/Answers/A4.md",
     "Software Development Security (01219325)/Mocks/Answers/A3.2.md",
-    "Software Development Security (01219325)/Mocks/M3.2 - Software Security Requirements & Security Standards.md",
-    "Software Development Security (01219325)/Lectures/3.2 - Software Security Requirements & Security Standards.md",
-    "Software Development Security (01219325)/Assets/threat_modeling_four_steps.png",
-    "Software Development Security (01219325)/Assets/threat_modeling_four_steps.svg",
-    "Software Development Security (01219325)/Mocks/M3.1 - Intro to Security Standards.md",
-    "Software Development Security (01219325)/Lectures/3.1 - Intro to Security Standards.md",
-    "Software Development Security (01219325)/Assets/isms_to_secure_coding_flow.png",
-    "Software Development Security (01219325)/Assets/isms_to_secure_coding_flow.jpg",
-    "Software Development Security (01219325)/Assets/threat_modeling_flow.jpg",
-    "Software Development Security (01219325)/Assets/ssdlc_pipeline.png",
-    "Software Development Security (01219325)/Assets/ssdlc_pipeline copy.png",
-    "Software Development Security (01219325)/Assets/ssdlc_pipeline copy.svg",
-    "Software Development Security (01219325)/Mocks/M5.md",
-    "Software Development Security (01219325)/Mocks/Answers/A3.1.md",
-    "Software Development Security (01219325)/Mocks/Answers/A2.md",
-    "Software Development Security (01219325)/Mocks/M2 - Laws Relevant to Information Security.md",
-    "Software Development Security (01219325)/Mocks/M1 — Principles of Information Security.md",
-    "Software Development Security (01219325)/Mocks/Answers/A1.md",
-    "Software Development Security (01219325)/Lectures/2 - Laws Relevant to Information Security.md",
-    "Software Development Security (01219325)/Lectures/5 - Risk Assessment Workshop.md",
+    "Software Development Security (01219325)/Mocks/Answers/A5.md",
+    "Software Development Security (01219325)/Mocks/Answers/A7.md",
+    "Software Development Security (01219325)/Lectures/7 - Software Security Design.md",
+    "Software Development Security (01219325)/Assets/tcb-security-perimeter.svg",
+    "Software Development Security (01219325)/Assets/tcb_security_perimeter.png",
+    "Software Development Security (01219325)/Assets/bell-lapadula.svg",
+    "Software Development Security (01219325)/Mocks/Answers/A6.md",
     "Software Development Security (01219325)/Lectures/6 - Threat Modeling.md",
+    "Software Development Security (01219325)/Mocks/M6.md",
     "Software Development Security (01219325)/Lectures/1 - Principles of Information Security.md",
-    "Software Development Security (01219325)/Mocks/Answers",
-    "Pasted image 20260917213516.png",
+    "Software Development Security (01219325)/Lectures/0 - Course Syllabus.md",
+    "Software Development Security (01219325)/Assets/clark-wilson.svg",
+    "Software Development Security (01219325)/Assets/biba.svg",
+    "Software Development Security (01219325)/Assets/take-grant-model.svg",
+    "Software Development Security (01219325)/Assets/confinement-flow.svg",
+    "Software Development Security (01219325)/Lectures/3.2 - Software Security Requirements & Security Standards.md",
+    "Software Development Security (01219325)/Lectures/3.1 - Intro to Security Standards.md",
+    "Software Development Security (01219325)/Lectures/4 - Cryptography & Public Key Infrastructure.md",
+    "Software Development Security (01219325)/Lectures/5 - Risk Assessment Workshop.md",
+    "Software Development Security (01219325)/Lectures/6X - Capstone Exercise.md",
+    "Software Development Security (01219325)/Assets/take_grant_model.png",
+    "Software Development Security (01219325)/Assets/clark_wilson_model.png",
+    "Software Development Security (01219325)/Assets/bell_lapadula_properties.png",
+    "Software Development Security (01219325)/References/7 - Software Security Design.pdf",
+    "Software Development Security (01219325)/Lectures/7 - Software Security Design.pdf",
+    "Software Development Security (01219325)/Lectures/Lec 7 Software Security Design.pdf",
     "Software Development Security (01219325)/References/Lecture 6_ Threat Modeling.pdf",
     "Software Development Security (01219325)/References/Lecture 5_ Risk Assessment Workshop.pdf",
-    "chroma/Pasted image 20260917213516-chroma-2026-09-17T14-35-24-438Z.png",
-    "Artificial Intelligence (01204461)/Lectures/3 - Unsupervised Learning, Clustering and Dimensionality Reduction.md",
-    "Artificial Intelligence (01204461)/Lectures/2 - Supervised Learning.md",
-    "Artificial Intelligence (01204461)/Lectures/5 - Convolutional Neural Networks & Computer Vision.md",
+    "Software Development Security (01219325)/References",
+    "Software Development Security (01219325)/Mocks/M3.2 - Software Security Requirements & Security Standards.md",
+    "Software Development Security (01219325)/Mocks/M3.1 - Intro to Security Standards.md",
+    "Software Development Security (01219325)/Mocks/M2 - Laws Relevant to Information Security.md",
+    "Software Development Security (01219325)/Mocks/Answers/A3.1.md",
+    "Software Development Security (01219325)/Mocks/Answers/A2.md",
+    "Software Development Security (01219325)/Mocks/Answers/A1.md",
+    "Software Development Security (01219325)/Mocks/Answers",
     "Artificial Intelligence (01204461)/Lectures/6 - Advanced Deep Learning Architectures.md",
-    "Artificial Intelligence (01204461)/Lectures/4 - Artificial Neural Networks & Deep Learning Foundations.md",
     "Artificial Intelligence (01204461)/Labs/Copy_of_Q_Learning.ipynb",
     "Artificial Intelligence (01204461)/Labs",
-    "_dino_q.py",
-    "Software Development Security (01219325)/Lectures/0 - Course Syllabus.md",
-    "Software Development Security (01219325)/Mocks/M4",
-    "Software Development Security (01219325)/Mocks/M2",
-    "Software Development Security (01219325)/Mocks",
-    "Artificial Intelligence (01204461)/References/01204461 Week 5.pdf",
-    "Artificial Intelligence (01204461)/Lectures/1 - Introduction, AI Agents, Environments, KnowledgeRepresentation, Memory Structures, and ExpertSystems.md",
-    "^e70b0d.md"
+    "_dino_q.py"
   ]
 }

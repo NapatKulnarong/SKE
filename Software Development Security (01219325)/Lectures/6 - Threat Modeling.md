@@ -17,7 +17,7 @@ This is the **conceptual foundation before the implementation labs**. The goal i
 
 ## 1. Security Existed Before the App
 
-![[security_existed_before_app.svg|680]]
+![[security_existed_before_app.svg|1050]]
 
 The *protection objective may stay the same* while the *threats, probabilities, and available controls change*.
 
@@ -29,7 +29,7 @@ The *protection objective may stay the same* while the *threats, probabilities, 
 
 ## 2. The Backbone of This Unit
 
-Keep returning to this chain. Every section below is one link in it.
+Keep returning to this chain. Every section below has one link in it.
 ![[security_engineering_lifecycle.svg|640]]
 
 ⚠️ The chain is a **loop, not a line**. Verification produces **residual risk** — what's left after your controls — which feeds back into the next iteration. A finished threat model is a snapshot, not a deliverable you file away.
@@ -56,7 +56,7 @@ Why the split matters in practice: threat modeling is **generative** and should 
 
 ## 4. Threats Are Not Just "Hackers"
 
-![[threat_sources.svg|640]]
+![[threat_sources.svg|1050]]
 
 This is why OWASP's threat modeling guidance explicitly includes **misuse cases, design assumptions, and security/privacy concerns** alongside threats. Three consequences worth internalizing:
 
@@ -71,7 +71,7 @@ This is why OWASP's threat modeling guidance explicitly includes **misuse cases,
 > *You cannot reason well about a system you have not described.*
 
 A minimal data flow diagram (DFD):
-![[threat_model_dfd.svg|640]]
+![[threat_model_dfd.svg|1050]]
 **What to put in the model:**
 
 | Element              | What it is                                        |
@@ -128,14 +128,14 @@ A **methodology-neutral loop** — run this *before* picking a technique like ST
 
 ### STRIDE as prompts, not a vocabulary test
 
-![[stride_prompts.svg|680]]
+![[stride_prompts.svg|1050]]
 STRIDE is one of several recognized approaches; the point is structured coverage, so you don't only find the threat categories you happen to find interesting.
 
 ---
 
 ## 7. From Threat to Requirement
 
-![[threat_to_requirement.svg|700]]
+![[threat_to_requirement.svg|1050]]
 **What makes that requirement a good one:**
 - It states **what must be true**, not which library to use so the design stays free.
 - It names **both halves** of the check (*who* is asking **and** *which object*). Verifying only the principal is exactly the bug: the user is authenticated, so the request succeeds.
