@@ -1,0 +1,526 @@
+<svg viewBox="0 0 1612 2018" xmlns="http://www.w3.org/2000/svg" font-family="sans-serif" xmlns:c2pa="http://c2pa.org/manifest"><metadata><c2pa:manifest>AAAWgmp1bWIAAAAeanVtZGMycGEAEQAQgAAAqgA4m3EDYzJwYQAAABZcanVtYgAAAEdqdW1kYzJtYQARABCAAACqADibcQN1cm46YzJwYTpkODE1NGUxNy0yYjBhLTQ2MzktOTcwYy1hMDgwMmYzZjRjZTgAAAADl2p1bWIAAAApanVtZGMyYXMAEQAQgAAAqgA4m3EDYzJwYS5hc3NlcnRpb25zAAAAALxqdW1iAAAARGp1bWRjYm9yABEAEIAAAKoAOJtxE2MycGEuaW5ncmVkaWVudC52MwAAAAAYYzJzaEhyw10wAzN4AXFE1eTiwPwAAABwY2JvcqNpZGM6Zm9ybWF0bWltYWdlL3N2Zyt4bWxqaW5zdGFuY2VJRHgseG1wOmlpZDo2OGQyNmM3NS03ZDk4LTQ3ZmQtOGU1OC03NWIzMjhhMThkZThscmVsYXRpb25zaGlwaHBhcmVudE9mAAAB4mp1bWIAAABBanVtZGNib3IAEQAQgAAAqgA4m3ETYzJwYS5hY3Rpb25zLnYyAAAAABhjMnNop1EXA/ger8+ANI99nfQ9KAAAAZljYm9yomdhY3Rpb25zgqJmYWN0aW9ua2MycGEub3BlbmVkanBhcmFtZXRlcnOha2luZ3JlZGllbnRzgaJjdXJseC1zZWxmI2p1bWJmPWMycGEuYXNzZXJ0aW9ucy9jMnBhLmluZ3JlZGllbnQudjNkaGFzaFggqe/wkQ8nwX2xRSsWl/8FoPmTEEYr77lPRbMylXz1YFSkZmFjdGlvbngdY29tLmFudGhyb3BpYy5jbGF1ZGUucHJvdmlkZWRqcGFyYW1ldGVyc6F4H2NvbS5hbnRocm9waWMub3JpZ2luLWNvbmZpZGVuY2VndW5rbm93bmtkZXNjcmlwdGlvbnhmQ2xhdWRlIHByb3ZpZGVkIHRoaXMgZmlsZSBhdCB0aGUgcmVxdWVzdCBvZiBhIHVzZXIgYW5kIG1heSBoYXZlIGNyZWF0ZWQgb3IgbW9kaWZpZWQgdGhlIGZpbGUgY29udGVudHMubXNvZnR3YXJlQWdlbnShZG5hbWVmQ2xhdWRlcmFsbEFjdGlvbnNJbmNsdWRlZPUAAADIanVtYgAAAEBqdW1kY2JvcgARABCAAACqADibcRNjMnBhLmhhc2guZGF0YQAAAAAYYzJzaLbSElVXIkxg5kw9UHDVvjwAAACAY2JvcqVjYWxnZnNoYTI1NmNwYWRNAAAAAAAAAAAAAAAAAGRoYXNoWCBWt4Q7Kndvck1xIv51YX1uxaiSsNX74cJJUgXZx0+i9mRuYW1lbmp1bWJmIG1hbmlmZXN0amV4Y2x1c2lvbnOBomVzdGFydBiYZmxlbmd0aBkeBAAAAj5qdW1iAAAAJ2p1bWRjMmNsABEAEIAAAKoAOJtxA2MycGEuY2xhaW0udjIAAAACD2Nib3KlY2FsZ2ZzaGEyNTZpc2lnbmF0dXJleE1zZWxmI2p1bWJmPS9jMnBhL3VybjpjMnBhOmQ4MTU0ZTE3LTJiMGEtNDYzOS05NzBjLWEwODAyZjNmNGNlOC9jMnBhLnNpZ25hdHVyZWppbnN0YW5jZUlEeCx4bXA6aWlkOjMwZWY1N2M4LWU4Y2YtNDY0Ny04NTFiLTk4MDFjNGUyYWUzYnJjcmVhdGVkX2Fzc2VydGlvbnODomN1cmx4LXNlbGYjanVtYmY9YzJwYS5hc3NlcnRpb25zL2MycGEuaW5ncmVkaWVudC52M2RoYXNoWCCp7/CRDyfBfbFFKxaX/wWg+ZMQRivvuU9FszKVfPVgVKJjdXJseCpzZWxmI2p1bWJmPWMycGEuYXNzZXJ0aW9ucy9jMnBhLmFjdGlvbnMudjJkaGFzaFgg255tkItGDeJ5R16meDa1FT5a5CZw/DyXQh1+arPtcvGiY3VybHgpc2VsZiNqdW1iZj1jMnBhLmFzc2VydGlvbnMvYzJwYS5oYXNoLmRhdGFkaGFzaFggbh83IjTadLhP0RbYADrYz7e5P8mt6mNRjQPzzgionMd0Y2xhaW1fZ2VuZXJhdG9yX2luZm+jZG5hbWVvQW50aHJvcGljIEZpbGVzZ3ZlcnNpb25lMS4wLjBrc3BlY1ZlcnNpb25lMi40LjAAABA4anVtYgAAAChqdW1kYzJjcwARABCAAACqADibcQNjMnBhLnNpZ25hdHVyZQAAABAIY2JvctKEWQISogEmGCFZAgowggIGMIIBjaADAgECAhRA5aAK7sI50L64g/oGQgU9Z1UTADAKBggqhkjOPQQDAzBJMRcwFQYDVQQKEw5BbnRocm9waWMsIFBCQzEuMCwGA1UEAxMlQW50aHJvcGljIENvbnRlbnQgQ3JlZGVudGlhbHMgUm9vdCBDQTAeFw0yNjA4MDcxODQzNTZaFw0yODA4MDYxOTQzNTZaMEQxFzAVBgNVBAoTDkFudGhyb3BpYywgUEJDMSkwJwYDVQQDEyBBbnRocm9waWMgQ2xhdWRlIENvbnRlbnQgU2lnbmluZzBZMBMGByqGSM49AgEGCCqGSM49AwEHA0IABJh6CmvLUBgFFNU0vUKlOVtE6djd17L5SuwX0LemFisBM3dkd/3cyjxFA3Qo5S46fX0/ihY0VZ7mfb9KF703t5OjWDBWMA4GA1UdDwEB/wQEAwIHgDAVBgNVHSUEDjAMBgorBgEEAYPoXgIBMAwGA1UdEwEB/wQCMAAwHwYDVR0jBBgwFoAUzlHiBIFOZFsj+OPEz5o+nMHXXMIwCgYIKoZIzj0EAwMDZwAwZAIwMXMdFJ4BetLLVY7ORuE9noqbbAZOZn/aArXyTwFAZfKrPzxF2vPoJNf1+UCdg1XGAjBwX1zd9WGqYkqmL5SFqw1QySjr1zJfpJM9+1rdDwSPLMOPOjKuiXjoU/pUUeG9RwmhY3BhZFkNngAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPZYQO4ja/xifzOqPlg/lMRFZkNCHoAKxiHvKguQHF5O8XjyecTKPT1/kwE6iMozQzTxy5tAOII6jPYyiSpZMzdj4so=</c2pa:manifest></metadata>
+<rect width="1612" height="2018" fill="#ffffff"/>
+<text x="806.0" y="34" text-anchor="middle" font-size="24" font-weight="bold" fill="#222">Software Development Security</text>
+<text x="806.0" y="56" text-anchor="middle" font-size="13" fill="#666">Seven branches, read I to VII: Vocabulary, Obligations, Decide, Design, Build, Prove, Choose</text>
+<rect x="30" y="70" width="370" height="938" rx="12" fill="#E6F1FB" stroke="#185FA5" stroke-width="2"/>
+<path d="M30,82 a12,12 0 0 1 12,-12 h346 a12,12 0 0 1 12,12 v30 h-370 z" fill="#185FA5"/>
+<text x="46" y="97" font-size="16" font-weight="bold" fill="#ffffff">I VOCABULARY</text>
+<rect x="44" y="131" width="9" height="9" rx="2" fill="#185FA5"/>
+<text x="60" y="140" font-size="13.5" font-weight="bold" fill="#0C447C">CIA</text>
+<circle cx="70" cy="155" r="2.4" fill="#185FA5"/>
+<text x="80" y="159" font-size="12" font-weight="600" fill="#0C447C">Confidentiality</text>
+<text x="92" y="177" font-size="11.5" fill="#555">– Encryption</text>
+<text x="92" y="195" font-size="11.5" fill="#555">– Access control</text>
+<text x="92" y="213" font-size="11.5" fill="#555">– Broken by disclosure</text>
+<circle cx="70" cy="228" r="2.4" fill="#185FA5"/>
+<text x="80" y="232" font-size="12" font-weight="600" fill="#0C447C">Integrity</text>
+<text x="92" y="250" font-size="11.5" fill="#555">– Hashing and checksums</text>
+<text x="92" y="268" font-size="11.5" fill="#555">– Digital signatures</text>
+<text x="92" y="286" font-size="11.5" fill="#555">– Broken by modification</text>
+<text x="92" y="304" font-size="11.5" fill="#555">– Depends on confidentiality</text>
+<text x="92" y="322" font-size="11.5" fill="#555">– But breaks without a breach</text>
+<circle cx="70" cy="337" r="2.4" fill="#185FA5"/>
+<text x="80" y="341" font-size="12" font-weight="600" fill="#0C447C">Availability</text>
+<text x="92" y="359" font-size="11.5" fill="#555">– BCP and HA and DR</text>
+<text x="92" y="377" font-size="11.5" fill="#555">– Broken by DoS</text>
+<text x="92" y="395" font-size="11.5" fill="#555">– The orphan pillar</text>
+<text x="92" y="413" font-size="11.5" fill="#555">– Crypto serves C and I only</text>
+<text x="92" y="431" font-size="11.5" fill="#555">– Only TCB and state machine touch A</text>
+<rect x="44" y="452" width="9" height="9" rx="2" fill="#185FA5"/>
+<text x="60" y="461" font-size="13.5" font-weight="bold" fill="#0C447C">Subject and Object</text>
+<circle cx="70" cy="476" r="2.4" fill="#185FA5"/>
+<text x="80" y="480" font-size="12" font-weight="normal" fill="#333">Subject requests</text>
+<circle cx="70" cy="495" r="2.4" fill="#185FA5"/>
+<text x="80" y="499" font-size="12" font-weight="normal" fill="#333">Object is requested</text>
+<circle cx="70" cy="514" r="2.4" fill="#185FA5"/>
+<text x="80" y="518" font-size="12" font-weight="normal" fill="#333">Roles are per request</text>
+<circle cx="70" cy="533" r="2.4" fill="#185FA5"/>
+<text x="80" y="537" font-size="12" font-weight="normal" fill="#333">Transitive trust bypasses</text>
+<rect x="44" y="558" width="9" height="9" rx="2" fill="#185FA5"/>
+<text x="60" y="567" font-size="13.5" font-weight="bold" fill="#0C447C">AAA</text>
+<circle cx="70" cy="582" r="2.4" fill="#185FA5"/>
+<text x="80" y="586" font-size="12" font-weight="600" fill="#0C447C">Authentication</text>
+<text x="92" y="604" font-size="11.5" fill="#555">– Password</text>
+<text x="92" y="622" font-size="11.5" fill="#555">– MFA</text>
+<text x="92" y="640" font-size="11.5" fill="#555">– Biometrics</text>
+<circle cx="70" cy="655" r="2.4" fill="#185FA5"/>
+<text x="80" y="659" font-size="12" font-weight="600" fill="#0C447C">Authorization</text>
+<text x="92" y="677" font-size="11.5" fill="#555">– RBAC by role</text>
+<text x="92" y="695" font-size="11.5" fill="#555">– ABAC by attribute</text>
+<text x="92" y="713" font-size="11.5" fill="#555">– ACL</text>
+<circle cx="70" cy="728" r="2.4" fill="#185FA5"/>
+<text x="80" y="732" font-size="12" font-weight="600" fill="#0C447C">Accounting</text>
+<text x="92" y="750" font-size="11.5" fill="#555">– Auditing means logs</text>
+<text x="92" y="768" font-size="11.5" fill="#555">– Accountability means who answers</text>
+<circle cx="70" cy="783" r="2.4" fill="#185FA5"/>
+<text x="80" y="787" font-size="12" font-weight="normal" fill="#333">Non-repudiation is not a letter</text>
+<circle cx="70" cy="802" r="2.4" fill="#185FA5"/>
+<text x="80" y="806" font-size="12" font-weight="normal" fill="#333">AuthN alone stops almost nothing</text>
+<circle cx="70" cy="821" r="2.4" fill="#185FA5"/>
+<text x="80" y="825" font-size="12" font-weight="normal" fill="#333">Authorization is not intent</text>
+<rect x="44" y="846" width="9" height="9" rx="2" fill="#185FA5"/>
+<text x="60" y="855" font-size="13.5" font-weight="bold" fill="#0C447C">Risk words</text>
+<circle cx="70" cy="870" r="2.4" fill="#185FA5"/>
+<text x="80" y="874" font-size="12" font-weight="normal" fill="#333">Threat</text>
+<circle cx="70" cy="889" r="2.4" fill="#185FA5"/>
+<text x="80" y="893" font-size="12" font-weight="normal" fill="#333">Vulnerability</text>
+<circle cx="70" cy="908" r="2.4" fill="#185FA5"/>
+<text x="80" y="912" font-size="12" font-weight="normal" fill="#333">Risk is significance in context</text>
+<circle cx="70" cy="927" r="2.4" fill="#185FA5"/>
+<text x="80" y="931" font-size="12" font-weight="normal" fill="#333">Control</text>
+<circle cx="70" cy="946" r="2.4" fill="#185FA5"/>
+<text x="80" y="950" font-size="12" font-weight="normal" fill="#333">Residual risk</text>
+<circle cx="70" cy="965" r="2.4" fill="#185FA5"/>
+<text x="80" y="969" font-size="12" font-weight="normal" fill="#333">Finding to Vulnerability to Scenario to Risk</text>
+<circle cx="70" cy="984" r="2.4" fill="#185FA5"/>
+<text x="80" y="988" font-size="12" font-weight="normal" fill="#333">Bug to Vulnerability to Exploit to Impact</text>
+<rect x="424" y="70" width="370" height="1774" rx="12" fill="#FAEEDA" stroke="#854F0B" stroke-width="2"/>
+<path d="M424,82 a12,12 0 0 1 12,-12 h346 a12,12 0 0 1 12,12 v30 h-370 z" fill="#854F0B"/>
+<text x="440" y="97" font-size="16" font-weight="bold" fill="#ffffff">II OBLIGES YOU</text>
+<rect x="438" y="131" width="9" height="9" rx="2" fill="#854F0B"/>
+<text x="454" y="140" font-size="13.5" font-weight="bold" fill="#633806">Law</text>
+<circle cx="464" cy="155" r="2.4" fill="#854F0B"/>
+<text x="474" y="159" font-size="12" font-weight="600" fill="#633806">Four questions</text>
+<text x="486" y="177" font-size="11.5" fill="#555">– Which regime reaches me</text>
+<text x="486" y="195" font-size="11.5" fill="#555">– Criminal or civil</text>
+<text x="486" y="213" font-size="11.5" fill="#555">– What must I do</text>
+<text x="486" y="231" font-size="11.5" fill="#555">– What makes my design risky</text>
+<circle cx="464" cy="246" r="2.4" fill="#854F0B"/>
+<text x="474" y="250" font-size="12" font-weight="600" fill="#633806">Thai hierarchy</text>
+<text x="486" y="268" font-size="11.5" fill="#555">– Constitution supreme</text>
+<text x="486" y="286" font-size="11.5" fill="#555">– Constitutional Act extends not overrides</text>
+<text x="486" y="304" font-size="11.5" fill="#555">– Act and Emergency Decree</text>
+<text x="486" y="322" font-size="11.5" fill="#555">– Palace Law sits outside</text>
+<circle cx="464" cy="337" r="2.4" fill="#854F0B"/>
+<text x="474" y="341" font-size="12" font-weight="normal" fill="#333">Criminal reads the letter</text>
+<circle cx="464" cy="356" r="2.4" fill="#854F0B"/>
+<text x="474" y="360" font-size="12" font-weight="normal" fill="#333">Civil reads the intention</text>
+<circle cx="464" cy="375" r="2.4" fill="#854F0B"/>
+<text x="474" y="379" font-size="12" font-weight="600" fill="#633806">Computer Crimes Act</text>
+<text x="486" y="397" font-size="11.5" fill="#555">– Access to system and to data</text>
+<text x="486" y="415" font-size="11.5" fill="#555">– Interception and wiretapping</text>
+<text x="486" y="433" font-size="11.5" fill="#555">– Damage and disruption and malware</text>
+<text x="486" y="451" font-size="11.5" fill="#555">– Content and false info and deepfakes</text>
+<text x="486" y="469" font-size="11.5" fill="#555">– Platform liability</text>
+<text x="486" y="487" font-size="11.5" fill="#555">– Does not cross borders</text>
+<circle cx="464" cy="502" r="2.4" fill="#854F0B"/>
+<text x="474" y="506" font-size="12" font-weight="600" fill="#633806">Cybersecurity Act 2562</text>
+<text x="486" y="524" font-size="11.5" fill="#555">– NCSC</text>
+<text x="486" y="542" font-size="11.5" fill="#555">– Critical information infrastructure</text>
+<circle cx="464" cy="557" r="2.4" fill="#854F0B"/>
+<text x="474" y="561" font-size="12" font-weight="600" fill="#633806">Intellectual property</text>
+<text x="486" y="579" font-size="11.5" fill="#555">– Copyright is automatic</text>
+<text x="486" y="597" font-size="11.5" fill="#555">– Patent rare for software</text>
+<text x="486" y="615" font-size="11.5" fill="#555">– Trademark</text>
+<text x="486" y="633" font-size="11.5" fill="#555">– Trade secret not clean-room RE</text>
+<text x="486" y="651" font-size="11.5" fill="#555">– GPL infects</text>
+<text x="486" y="669" font-size="11.5" fill="#555">– LGPL does not</text>
+<text x="486" y="687" font-size="11.5" fill="#555">– CC Share-Alike</text>
+<rect x="438" y="708" width="9" height="9" rx="2" fill="#854F0B"/>
+<text x="454" y="717" font-size="13.5" font-weight="bold" fill="#633806">Privacy</text>
+<circle cx="464" cy="732" r="2.4" fill="#854F0B"/>
+<text x="474" y="736" font-size="12" font-weight="600" fill="#633806">Three regimes</text>
+<text x="486" y="754" font-size="11.5" fill="#555">– GDPR follows the subject</text>
+<text x="486" y="772" font-size="11.5" fill="#555">– PDPA follows presence</text>
+<text x="486" y="790" font-size="11.5" fill="#555">– APPI weaker</text>
+<text x="486" y="808" font-size="11.5" fill="#555">– Ages sixteen and ten</text>
+<circle cx="464" cy="823" r="2.4" fill="#854F0B"/>
+<text x="474" y="827" font-size="12" font-weight="600" fill="#633806">GDPR rights</text>
+<text x="486" y="845" font-size="11.5" fill="#555">– Know</text>
+<text x="486" y="863" font-size="11.5" fill="#555">– Correct</text>
+<text x="486" y="881" font-size="11.5" fill="#555">– Remove</text>
+<text x="486" y="899" font-size="11.5" fill="#555">– Limit</text>
+<text x="486" y="917" font-size="11.5" fill="#555">– Move</text>
+<text x="486" y="935" font-size="11.5" fill="#555">– Contest automation</text>
+<text x="486" y="953" font-size="11.5" fill="#555">– Enforce</text>
+<circle cx="464" cy="968" r="2.4" fill="#854F0B"/>
+<text x="474" y="972" font-size="12" font-weight="normal" fill="#333">Erasure is a schema problem</text>
+<circle cx="464" cy="987" r="2.4" fill="#854F0B"/>
+<text x="474" y="991" font-size="12" font-weight="normal" fill="#333">Consent is purpose-bound</text>
+<circle cx="464" cy="1006" r="2.4" fill="#854F0B"/>
+<text x="474" y="1010" font-size="12" font-weight="600" fill="#633806">Definitions</text>
+<text x="486" y="1028" font-size="11.5" fill="#555">– Personal data</text>
+<text x="486" y="1046" font-size="11.5" fill="#555">– Processing</text>
+<text x="486" y="1064" font-size="11.5" fill="#555">– Consent freely given and specific</text>
+<circle cx="464" cy="1079" r="2.4" fill="#854F0B"/>
+<text x="474" y="1083" font-size="12" font-weight="600" fill="#633806">Sensitive data</text>
+<text x="486" y="1101" font-size="11.5" fill="#555">– Health data</text>
+<text x="486" y="1119" font-size="11.5" fill="#555">– Minors are the strictest</text>
+<circle cx="464" cy="1134" r="2.4" fill="#854F0B"/>
+<text x="474" y="1138" font-size="12" font-weight="600" fill="#633806">Roles</text>
+<text x="486" y="1156" font-size="11.5" fill="#555">– Controller decides why and how</text>
+<text x="486" y="1174" font-size="11.5" fill="#555">– Processor acts on instructions</text>
+<text x="486" y="1192" font-size="11.5" fill="#555">– DPO</text>
+<text x="486" y="1210" font-size="11.5" fill="#555">– Roles follow what you do</text>
+<text x="486" y="1228" font-size="11.5" fill="#555">– Unassigned roles are a risk</text>
+<circle cx="464" cy="1243" r="2.4" fill="#854F0B"/>
+<text x="474" y="1247" font-size="12" font-weight="600" fill="#633806">Privacy by design</text>
+<text x="486" y="1265" font-size="11.5" fill="#555">– Data minimization</text>
+<text x="486" y="1283" font-size="11.5" fill="#555">– Retention is a number</text>
+<text x="486" y="1301" font-size="11.5" fill="#555">– Consent form after design</text>
+<circle cx="464" cy="1316" r="2.4" fill="#854F0B"/>
+<text x="474" y="1320" font-size="12" font-weight="600" fill="#633806">Reidentification</text>
+<text x="486" y="1338" font-size="11.5" fill="#555">– Identified</text>
+<text x="486" y="1356" font-size="11.5" fill="#555">– Pseudonymized still regulated</text>
+<text x="486" y="1374" font-size="11.5" fill="#555">– Anonymized outside scope</text>
+<text x="486" y="1392" font-size="11.5" fill="#555">– Quasi-identifiers</text>
+<text x="486" y="1410" font-size="11.5" fill="#555">– Linkage attack</text>
+<text x="486" y="1428" font-size="11.5" fill="#555">– Targeted filtering</text>
+<text x="486" y="1446" font-size="11.5" fill="#555">– Small-cell inference</text>
+<text x="486" y="1464" font-size="11.5" fill="#555">– Suppress and coarsen</text>
+<text x="486" y="1482" font-size="11.5" fill="#555">– k-anonymity</text>
+<text x="486" y="1500" font-size="11.5" fill="#555">– Split the system</text>
+<text x="486" y="1518" font-size="11.5" fill="#555">– Dark patterns</text>
+<rect x="438" y="1539" width="9" height="9" rx="2" fill="#854F0B"/>
+<text x="454" y="1548" font-size="13.5" font-weight="bold" fill="#633806">Standards</text>
+<circle cx="464" cy="1563" r="2.4" fill="#854F0B"/>
+<text x="474" y="1567" font-size="12" font-weight="600" fill="#633806">ISO 27000</text>
+<text x="486" y="1585" font-size="11.5" fill="#555">– 27001 is certifiable</text>
+<text x="486" y="1603" font-size="11.5" fill="#555">– 27002 controls</text>
+<circle cx="464" cy="1618" r="2.4" fill="#854F0B"/>
+<text x="474" y="1622" font-size="12" font-weight="600" fill="#633806">NIST</text>
+<text x="486" y="1640" font-size="11.5" fill="#555">– 800-53 controls</text>
+<text x="486" y="1658" font-size="11.5" fill="#555">– 800-218 SSDF integrates</text>
+<circle cx="464" cy="1673" r="2.4" fill="#854F0B"/>
+<text x="474" y="1677" font-size="12" font-weight="600" fill="#633806">OWASP</text>
+<text x="486" y="1695" font-size="11.5" fill="#555">– Top 10</text>
+<text x="486" y="1713" font-size="11.5" fill="#555">– ASVS level two default</text>
+<text x="486" y="1731" font-size="11.5" fill="#555">– MASVS</text>
+<circle cx="464" cy="1746" r="2.4" fill="#854F0B"/>
+<text x="474" y="1750" font-size="12" font-weight="normal" fill="#333">PCI DSS twelve areas</text>
+<circle cx="464" cy="1765" r="2.4" fill="#854F0B"/>
+<text x="474" y="1769" font-size="12" font-weight="600" fill="#633806">Microsoft SDL</text>
+<text x="486" y="1787" font-size="11.5" fill="#555">– Twelve practices</text>
+<text x="486" y="1805" font-size="11.5" fill="#555">– SD3 plus C</text>
+<circle cx="464" cy="1820" r="2.4" fill="#854F0B"/>
+<text x="474" y="1824" font-size="12" font-weight="normal" fill="#333">Select then read then choose from risk</text>
+<rect x="818" y="70" width="370" height="1069" rx="12" fill="#EEEDFE" stroke="#534AB7" stroke-width="2"/>
+<path d="M818,82 a12,12 0 0 1 12,-12 h346 a12,12 0 0 1 12,12 v30 h-370 z" fill="#534AB7"/>
+<text x="834" y="97" font-size="16" font-weight="bold" fill="#ffffff">III DECIDE</text>
+<rect x="832" y="131" width="9" height="9" rx="2" fill="#534AB7"/>
+<text x="848" y="140" font-size="13.5" font-weight="bold" fill="#3C3489">Lifecycle</text>
+<circle cx="858" cy="155" r="2.4" fill="#534AB7"/>
+<text x="868" y="159" font-size="12" font-weight="normal" fill="#333">Requirements review</text>
+<circle cx="858" cy="174" r="2.4" fill="#534AB7"/>
+<text x="868" y="178" font-size="12" font-weight="normal" fill="#333">Design and threat model</text>
+<circle cx="858" cy="193" r="2.4" fill="#534AB7"/>
+<text x="868" y="197" font-size="12" font-weight="normal" fill="#333">Implement and code review</text>
+<circle cx="858" cy="212" r="2.4" fill="#534AB7"/>
+<text x="868" y="216" font-size="12" font-weight="normal" fill="#333">Test and pen test</text>
+<circle cx="858" cy="231" r="2.4" fill="#534AB7"/>
+<text x="868" y="235" font-size="12" font-weight="normal" fill="#333">Deploy and harden</text>
+<circle cx="858" cy="250" r="2.4" fill="#534AB7"/>
+<text x="868" y="254" font-size="12" font-weight="normal" fill="#333">Maintain and monitor</text>
+<circle cx="858" cy="269" r="2.4" fill="#534AB7"/>
+<text x="868" y="273" font-size="12" font-weight="normal" fill="#333">Design fixes 30 to 60 times cheaper</text>
+<circle cx="858" cy="288" r="2.4" fill="#534AB7"/>
+<text x="868" y="292" font-size="12" font-weight="normal" fill="#333">A loop not a line</text>
+<circle cx="858" cy="307" r="2.4" fill="#534AB7"/>
+<text x="868" y="311" font-size="12" font-weight="normal" fill="#333">Conflicting requirements are a finding</text>
+<rect x="832" y="332" width="9" height="9" rx="2" fill="#534AB7"/>
+<text x="848" y="341" font-size="13.5" font-weight="bold" fill="#3C3489">Risk</text>
+<circle cx="858" cy="356" r="2.4" fill="#534AB7"/>
+<text x="868" y="360" font-size="12" font-weight="normal" fill="#333">Likelihood times Exposure</text>
+<circle cx="858" cy="375" r="2.4" fill="#534AB7"/>
+<text x="868" y="379" font-size="12" font-weight="normal" fill="#333">A coarse judgement</text>
+<circle cx="858" cy="394" r="2.4" fill="#534AB7"/>
+<text x="868" y="398" font-size="12" font-weight="600" fill="#3C3489">Treatment</text>
+<text x="880" y="416" font-size="11.5" fill="#555">– Mitigate</text>
+<text x="880" y="434" font-size="11.5" fill="#555">– Accept and document</text>
+<text x="880" y="452" font-size="11.5" fill="#555">– Transfer</text>
+<text x="880" y="470" font-size="11.5" fill="#555">– Avoid</text>
+<circle cx="858" cy="485" r="2.4" fill="#534AB7"/>
+<text x="868" y="489" font-size="12" font-weight="normal" fill="#333">Controls are prevent and bound and recover</text>
+<circle cx="858" cy="504" r="2.4" fill="#534AB7"/>
+<text x="868" y="508" font-size="12" font-weight="normal" fill="#333">Treatment is not controls</text>
+<circle cx="858" cy="523" r="2.4" fill="#534AB7"/>
+<text x="868" y="527" font-size="12" font-weight="600" fill="#3C3489">Organizational risk</text>
+<text x="880" y="545" font-size="11.5" fill="#555">– Unclear roles</text>
+<text x="880" y="563" font-size="11.5" fill="#555">– Third party</text>
+<text x="880" y="581" font-size="11.5" fill="#555">– Cross-border</text>
+<text x="880" y="599" font-size="11.5" fill="#555">– Scope creep</text>
+<text x="880" y="617" font-size="11.5" fill="#555">– Answer is split the system</text>
+<rect x="832" y="638" width="9" height="9" rx="2" fill="#534AB7"/>
+<text x="848" y="647" font-size="13.5" font-weight="bold" fill="#3C3489">Threat modeling</text>
+<circle cx="858" cy="662" r="2.4" fill="#534AB7"/>
+<text x="868" y="666" font-size="12" font-weight="normal" fill="#333">Enumerates while risk prioritizes</text>
+<circle cx="858" cy="681" r="2.4" fill="#534AB7"/>
+<text x="868" y="685" font-size="12" font-weight="normal" fill="#333">Objective predates the software</text>
+<circle cx="858" cy="700" r="2.4" fill="#534AB7"/>
+<text x="868" y="704" font-size="12" font-weight="600" fill="#3C3489">Model the system</text>
+<text x="880" y="722" font-size="11.5" fill="#555">– Actors and flows and stores</text>
+<text x="880" y="740" font-size="11.5" fill="#555">– Entry points</text>
+<text x="880" y="758" font-size="11.5" fill="#555">– Trust boundaries</text>
+<text x="880" y="776" font-size="11.5" fill="#555">– Boundaries not boxes</text>
+<text x="880" y="794" font-size="11.5" fill="#555">– CWE-501</text>
+<text x="880" y="812" font-size="11.5" fill="#555">– Validation is the gate</text>
+<circle cx="858" cy="827" r="2.4" fill="#534AB7"/>
+<text x="868" y="831" font-size="12" font-weight="normal" fill="#333">Threats are not only attackers</text>
+<circle cx="858" cy="846" r="2.4" fill="#534AB7"/>
+<text x="868" y="850" font-size="12" font-weight="600" fill="#3C3489">STRIDE</text>
+<text x="880" y="868" font-size="11.5" fill="#555">– Spoofing breaks authentication</text>
+<text x="880" y="886" font-size="11.5" fill="#555">– Tampering breaks integrity</text>
+<text x="880" y="904" font-size="11.5" fill="#555">– Repudiation breaks accountability</text>
+<text x="880" y="922" font-size="11.5" fill="#555">– Disclosure breaks confidentiality</text>
+<text x="880" y="940" font-size="11.5" fill="#555">– DoS breaks availability</text>
+<text x="880" y="958" font-size="11.5" fill="#555">– Elevation breaks authorization</text>
+<text x="880" y="976" font-size="11.5" fill="#555">– A prompt not the method</text>
+<text x="880" y="994" font-size="11.5" fill="#555">– Finds but does not rank</text>
+<circle cx="858" cy="1009" r="2.4" fill="#534AB7"/>
+<text x="868" y="1013" font-size="12" font-weight="normal" fill="#333">Four questions equal four steps</text>
+<rect x="832" y="1034" width="9" height="9" rx="2" fill="#534AB7"/>
+<text x="848" y="1043" font-size="13.5" font-weight="bold" fill="#3C3489">Requirements</text>
+<circle cx="858" cy="1058" r="2.4" fill="#534AB7"/>
+<text x="868" y="1062" font-size="12" font-weight="normal" fill="#333">Positive and negative</text>
+<circle cx="858" cy="1077" r="2.4" fill="#534AB7"/>
+<text x="868" y="1081" font-size="12" font-weight="normal" fill="#333">Must be able to fail a test</text>
+<circle cx="858" cy="1096" r="2.4" fill="#534AB7"/>
+<text x="868" y="1100" font-size="12" font-weight="normal" fill="#333">Names principal and object</text>
+<circle cx="858" cy="1115" r="2.4" fill="#534AB7"/>
+<text x="868" y="1119" font-size="12" font-weight="normal" fill="#333">Ships a negative test</text>
+<rect x="1212" y="70" width="370" height="1358" rx="12" fill="#E1F5EE" stroke="#0F6E56" stroke-width="2"/>
+<path d="M1212,82 a12,12 0 0 1 12,-12 h346 a12,12 0 0 1 12,12 v30 h-370 z" fill="#0F6E56"/>
+<text x="1228" y="97" font-size="16" font-weight="bold" fill="#ffffff">IV DESIGN</text>
+<rect x="1226" y="131" width="9" height="9" rx="2" fill="#0F6E56"/>
+<text x="1242" y="140" font-size="13.5" font-weight="bold" fill="#085041">Family A limit reach</text>
+<circle cx="1252" cy="155" r="2.4" fill="#0F6E56"/>
+<text x="1262" y="159" font-size="12" font-weight="normal" fill="#333">Least privilege</text>
+<circle cx="1252" cy="174" r="2.4" fill="#0F6E56"/>
+<text x="1262" y="178" font-size="12" font-weight="normal" fill="#333">Fail-safe defaults</text>
+<circle cx="1252" cy="193" r="2.4" fill="#0F6E56"/>
+<text x="1262" y="197" font-size="12" font-weight="normal" fill="#333">Separation of duties needs collusion</text>
+<circle cx="1252" cy="212" r="2.4" fill="#0F6E56"/>
+<text x="1262" y="216" font-size="12" font-weight="normal" fill="#333">Separation of privilege needs many checks</text>
+<circle cx="1252" cy="231" r="2.4" fill="#0F6E56"/>
+<text x="1262" y="235" font-size="12" font-weight="normal" fill="#333">Least common mechanism</text>
+<circle cx="1252" cy="250" r="2.4" fill="#0F6E56"/>
+<text x="1262" y="254" font-size="12" font-weight="normal" fill="#333">Minimize attack surface</text>
+<circle cx="1252" cy="269" r="2.4" fill="#0F6E56"/>
+<text x="1262" y="273" font-size="12" font-weight="normal" fill="#333">Abstraction</text>
+<rect x="1226" y="294" width="9" height="9" rx="2" fill="#0F6E56"/>
+<text x="1242" y="303" font-size="13.5" font-weight="bold" fill="#085041">Family B check everything</text>
+<circle cx="1252" cy="318" r="2.4" fill="#0F6E56"/>
+<text x="1262" y="322" font-size="12" font-weight="normal" fill="#333">Complete mediation</text>
+<circle cx="1252" cy="337" r="2.4" fill="#0F6E56"/>
+<text x="1262" y="341" font-size="12" font-weight="normal" fill="#333">Zero trust</text>
+<circle cx="1252" cy="356" r="2.4" fill="#0F6E56"/>
+<text x="1262" y="360" font-size="12" font-weight="normal" fill="#333">Trust boundaries</text>
+<circle cx="1252" cy="375" r="2.4" fill="#0F6E56"/>
+<text x="1262" y="379" font-size="12" font-weight="normal" fill="#333">Castle and moat died</text>
+<rect x="1226" y="400" width="9" height="9" rx="2" fill="#0F6E56"/>
+<text x="1242" y="409" font-size="13.5" font-weight="bold" fill="#085041">Family C small and open</text>
+<circle cx="1252" cy="424" r="2.4" fill="#0F6E56"/>
+<text x="1262" y="428" font-size="12" font-weight="normal" fill="#333">Economy of mechanism cuts complexity</text>
+<circle cx="1252" cy="443" r="2.4" fill="#0F6E56"/>
+<text x="1262" y="447" font-size="12" font-weight="normal" fill="#333">Rule of least power cuts capability</text>
+<circle cx="1252" cy="462" r="2.4" fill="#0F6E56"/>
+<text x="1262" y="466" font-size="12" font-weight="normal" fill="#333">KISS and DRY and YAGNI</text>
+<circle cx="1252" cy="481" r="2.4" fill="#0F6E56"/>
+<text x="1262" y="485" font-size="12" font-weight="normal" fill="#333">Open design</text>
+<circle cx="1252" cy="500" r="2.4" fill="#0F6E56"/>
+<text x="1262" y="504" font-size="12" font-weight="normal" fill="#333">Data hiding is not obscurity</text>
+<rect x="1226" y="525" width="9" height="9" rx="2" fill="#0F6E56"/>
+<text x="1242" y="534" font-size="13.5" font-weight="bold" fill="#085041">Family D degrade safely</text>
+<circle cx="1252" cy="549" r="2.4" fill="#0F6E56"/>
+<text x="1262" y="553" font-size="12" font-weight="normal" fill="#333">Fail securely</text>
+<circle cx="1252" cy="568" r="2.4" fill="#0F6E56"/>
+<text x="1262" y="572" font-size="12" font-weight="normal" fill="#333">Defense in depth independent layers</text>
+<circle cx="1252" cy="587" r="2.4" fill="#0F6E56"/>
+<text x="1262" y="591" font-size="12" font-weight="normal" fill="#333">Prevent and bound and recover</text>
+<circle cx="1252" cy="606" r="2.4" fill="#0F6E56"/>
+<text x="1262" y="610" font-size="12" font-weight="normal" fill="#333">Weakest link</text>
+<circle cx="1252" cy="625" r="2.4" fill="#0F6E56"/>
+<text x="1262" y="629" font-size="12" font-weight="normal" fill="#333">Failure management is handling plus validation</text>
+<rect x="1226" y="650" width="9" height="9" rx="2" fill="#0F6E56"/>
+<text x="1242" y="659" font-size="13.5" font-weight="bold" fill="#085041">Family E human workable</text>
+<circle cx="1252" cy="674" r="2.4" fill="#0F6E56"/>
+<text x="1262" y="678" font-size="12" font-weight="normal" fill="#333">Psychological acceptability</text>
+<circle cx="1252" cy="693" r="2.4" fill="#0F6E56"/>
+<text x="1262" y="697" font-size="12" font-weight="normal" fill="#333">Blocks user enumeration</text>
+<circle cx="1252" cy="712" r="2.4" fill="#0F6E56"/>
+<text x="1262" y="716" font-size="12" font-weight="normal" fill="#333">Strategic friction</text>
+<circle cx="1252" cy="731" r="2.4" fill="#0F6E56"/>
+<text x="1262" y="735" font-size="12" font-weight="normal" fill="#333">Secure defaults</text>
+<rect x="1226" y="756" width="9" height="9" rx="2" fill="#0F6E56"/>
+<text x="1242" y="765" font-size="13.5" font-weight="bold" fill="#085041">Fail and default family</text>
+<circle cx="1252" cy="780" r="2.4" fill="#0F6E56"/>
+<text x="1262" y="784" font-size="12" font-weight="normal" fill="#333">Secure defaults is configuration</text>
+<circle cx="1252" cy="799" r="2.4" fill="#0F6E56"/>
+<text x="1262" y="803" font-size="12" font-weight="normal" fill="#333">Fail-safe defaults is access</text>
+<circle cx="1252" cy="818" r="2.4" fill="#0F6E56"/>
+<text x="1262" y="822" font-size="12" font-weight="normal" fill="#333">Fail securely is how it breaks</text>
+<circle cx="1252" cy="837" r="2.4" fill="#0F6E56"/>
+<text x="1262" y="841" font-size="12" font-weight="normal" fill="#333">Fail-open prioritizes availability</text>
+<circle cx="1252" cy="856" r="2.4" fill="#0F6E56"/>
+<text x="1262" y="860" font-size="12" font-weight="normal" fill="#333">Fail-closed prioritizes C and I</text>
+<circle cx="1252" cy="875" r="2.4" fill="#0F6E56"/>
+<text x="1262" y="879" font-size="12" font-weight="normal" fill="#333">Fail-safe flips in the physical world</text>
+<circle cx="1252" cy="894" r="2.4" fill="#0F6E56"/>
+<text x="1262" y="898" font-size="12" font-weight="normal" fill="#333">Fail-soft stays alive</text>
+<rect x="1226" y="919" width="9" height="9" rx="2" fill="#0F6E56"/>
+<text x="1242" y="928" font-size="13.5" font-weight="bold" fill="#085041">Formal models</text>
+<circle cx="1252" cy="943" r="2.4" fill="#0F6E56"/>
+<text x="1262" y="947" font-size="12" font-weight="600" fill="#085041">TCB</text>
+<text x="1274" y="965" font-size="11.5" fill="#555">– Security perimeter</text>
+<text x="1274" y="983" font-size="11.5" fill="#555">– Trusted path</text>
+<text x="1274" y="1001" font-size="11.5" fill="#555">– Reference monitor checks</text>
+<text x="1274" y="1019" font-size="11.5" fill="#555">– Security kernel implements</text>
+<circle cx="1252" cy="1034" r="2.4" fill="#0F6E56"/>
+<text x="1262" y="1038" font-size="12" font-weight="normal" fill="#333">State machine by induction</text>
+<circle cx="1252" cy="1053" r="2.4" fill="#0F6E56"/>
+<text x="1262" y="1057" font-size="12" font-weight="normal" fill="#333">Information flow</text>
+<circle cx="1252" cy="1072" r="2.4" fill="#0F6E56"/>
+<text x="1262" y="1076" font-size="12" font-weight="normal" fill="#333">Take-Grant traces rights</text>
+<circle cx="1252" cy="1091" r="2.4" fill="#0F6E56"/>
+<text x="1262" y="1095" font-size="12" font-weight="600" fill="#085041">Access control matrix</text>
+<text x="1274" y="1113" font-size="11.5" fill="#555">– ACL per object</text>
+<text x="1274" y="1131" font-size="11.5" fill="#555">– Capability list per subject</text>
+<circle cx="1252" cy="1146" r="2.4" fill="#0F6E56"/>
+<text x="1262" y="1150" font-size="12" font-weight="normal" fill="#333">Bell-LaPadula no read up no write down</text>
+<circle cx="1252" cy="1165" r="2.4" fill="#0F6E56"/>
+<text x="1262" y="1169" font-size="12" font-weight="normal" fill="#333">Biba no read down no write up</text>
+<circle cx="1252" cy="1184" r="2.4" fill="#0F6E56"/>
+<text x="1262" y="1188" font-size="12" font-weight="normal" fill="#333">Clark-Wilson through programs</text>
+<circle cx="1252" cy="1203" r="2.4" fill="#0F6E56"/>
+<text x="1262" y="1207" font-size="12" font-weight="normal" fill="#333">Brewer-Nash conflict of interest</text>
+<rect x="1226" y="1228" width="9" height="9" rx="2" fill="#0F6E56"/>
+<text x="1242" y="1237" font-size="13.5" font-weight="bold" fill="#085041">Platform enforcement</text>
+<circle cx="1252" cy="1252" r="2.4" fill="#0F6E56"/>
+<text x="1262" y="1256" font-size="12" font-weight="normal" fill="#333">Bounds</text>
+<circle cx="1252" cy="1271" r="2.4" fill="#0F6E56"/>
+<text x="1262" y="1275" font-size="12" font-weight="normal" fill="#333">Confinement is sandboxing</text>
+<circle cx="1252" cy="1290" r="2.4" fill="#0F6E56"/>
+<text x="1262" y="1294" font-size="12" font-weight="normal" fill="#333">Isolation is the result</text>
+<circle cx="1252" cy="1309" r="2.4" fill="#0F6E56"/>
+<text x="1262" y="1313" font-size="12" font-weight="normal" fill="#333">Trust is present assurance is reliable</text>
+<circle cx="1252" cy="1328" r="2.4" fill="#0F6E56"/>
+<text x="1262" y="1332" font-size="12" font-weight="normal" fill="#333">Memory protection</text>
+<circle cx="1252" cy="1347" r="2.4" fill="#0F6E56"/>
+<text x="1262" y="1351" font-size="12" font-weight="normal" fill="#333">Virtualization</text>
+<circle cx="1252" cy="1366" r="2.4" fill="#0F6E56"/>
+<text x="1262" y="1370" font-size="12" font-weight="normal" fill="#333">TPM</text>
+<circle cx="1252" cy="1385" r="2.4" fill="#0F6E56"/>
+<text x="1262" y="1389" font-size="12" font-weight="normal" fill="#333">Constrained interfaces</text>
+<circle cx="1252" cy="1404" r="2.4" fill="#0F6E56"/>
+<text x="1262" y="1408" font-size="12" font-weight="normal" fill="#333">Fault tolerance is redundancy</text>
+<rect x="30" y="1032" width="370" height="942" rx="12" fill="#FAECE7" stroke="#993C1D" stroke-width="2"/>
+<path d="M30,1044 a12,12 0 0 1 12,-12 h346 a12,12 0 0 1 12,12 v30 h-370 z" fill="#993C1D"/>
+<text x="46" y="1059" font-size="16" font-weight="bold" fill="#ffffff">V BUILD</text>
+<rect x="44" y="1093" width="9" height="9" rx="2" fill="#993C1D"/>
+<text x="60" y="1102" font-size="13.5" font-weight="bold" fill="#712B13">Secure coding</text>
+<circle cx="70" cy="1117" r="2.4" fill="#993C1D"/>
+<text x="80" y="1121" font-size="12" font-weight="600" fill="#712B13">Validate input</text>
+<text x="92" y="1139" font-size="11.5" fill="#555">– Server-side</text>
+<text x="92" y="1157" font-size="11.5" fill="#555">– Allowlists</text>
+<text x="92" y="1175" font-size="11.5" fill="#555">– Data separate from commands</text>
+<text x="92" y="1193" font-size="11.5" fill="#555">– SQL injection and XSS and command injection</text>
+<circle cx="70" cy="1208" r="2.4" fill="#993C1D"/>
+<text x="80" y="1212" font-size="12" font-weight="normal" fill="#333">Authorization server-side</text>
+<circle cx="70" cy="1227" r="2.4" fill="#993C1D"/>
+<text x="80" y="1231" font-size="12" font-weight="600" fill="#712B13">Protect sensitive data</text>
+<text x="92" y="1249" font-size="11.5" fill="#555">– TLS in transit</text>
+<text x="92" y="1267" font-size="11.5" fill="#555">– Hash and salt</text>
+<text x="92" y="1285" font-size="11.5" fill="#555">– Secret management</text>
+<text x="92" y="1303" font-size="11.5" fill="#555">– Never roll your own crypto</text>
+<circle cx="70" cy="1318" r="2.4" fill="#993C1D"/>
+<text x="80" y="1322" font-size="12" font-weight="normal" fill="#333">Sessions and errors and logs</text>
+<circle cx="70" cy="1337" r="2.4" fill="#993C1D"/>
+<text x="80" y="1341" font-size="12" font-weight="normal" fill="#333">Dependencies are inherited risk</text>
+<rect x="44" y="1362" width="9" height="9" rx="2" fill="#993C1D"/>
+<text x="60" y="1371" font-size="13.5" font-weight="bold" fill="#712B13">Destructive operations</text>
+<circle cx="70" cy="1386" r="2.4" fill="#993C1D"/>
+<text x="80" y="1390" font-size="12" font-weight="normal" fill="#333">Authorization is not intent</text>
+<circle cx="70" cy="1405" r="2.4" fill="#993C1D"/>
+<text x="80" y="1409" font-size="12" font-weight="normal" fill="#333">LIMIT 1 is a guardrail not proof</text>
+<circle cx="70" cy="1424" r="2.4" fill="#993C1D"/>
+<text x="80" y="1428" font-size="12" font-weight="normal" fill="#333">Bound the damage</text>
+<circle cx="70" cy="1443" r="2.4" fill="#993C1D"/>
+<text x="80" y="1447" font-size="12" font-weight="normal" fill="#333">Show scope before irreversible</text>
+<circle cx="70" cy="1462" r="2.4" fill="#993C1D"/>
+<text x="80" y="1466" font-size="12" font-weight="normal" fill="#333">Two-person control</text>
+<rect x="44" y="1487" width="9" height="9" rx="2" fill="#993C1D"/>
+<text x="60" y="1496" font-size="13.5" font-weight="bold" fill="#712B13">Cryptography</text>
+<circle cx="70" cy="1511" r="2.4" fill="#993C1D"/>
+<text x="80" y="1515" font-size="12" font-weight="normal" fill="#333">Serves C and I never A</text>
+<circle cx="70" cy="1530" r="2.4" fill="#993C1D"/>
+<text x="80" y="1534" font-size="12" font-weight="600" fill="#712B13">Classical</text>
+<text x="92" y="1552" font-size="11.5" fill="#555">– Caesar and ROT13</text>
+<text x="92" y="1570" font-size="11.5" fill="#555">– Vigenere polyalphabetic</text>
+<circle cx="70" cy="1585" r="2.4" fill="#993C1D"/>
+<text x="80" y="1589" font-size="12" font-weight="600" fill="#712B13">Symmetric</text>
+<text x="92" y="1607" font-size="11.5" fill="#555">– AES</text>
+<text x="92" y="1625" font-size="11.5" fill="#555">– Block versus stream</text>
+<text x="92" y="1643" font-size="11.5" fill="#555">– DES broken at 56-bit</text>
+<text x="92" y="1661" font-size="11.5" fill="#555">– Exchange is the hard part</text>
+<circle cx="70" cy="1676" r="2.4" fill="#993C1D"/>
+<text x="80" y="1680" font-size="12" font-weight="normal" fill="#333">Diffie-Hellman 1976</text>
+<circle cx="70" cy="1695" r="2.4" fill="#993C1D"/>
+<text x="80" y="1699" font-size="12" font-weight="600" fill="#712B13">Asymmetric</text>
+<text x="92" y="1717" font-size="11.5" fill="#555">– RSA factoring</text>
+<text x="92" y="1735" font-size="11.5" fill="#555">– ECC discrete log</text>
+<text x="92" y="1753" font-size="11.5" fill="#555">– Solves key distribution</text>
+<text x="92" y="1771" font-size="11.5" fill="#555">– Shor breaks RSA</text>
+<circle cx="70" cy="1786" r="2.4" fill="#993C1D"/>
+<text x="80" y="1790" font-size="12" font-weight="normal" fill="#333">Hybrid is the standard pattern</text>
+<circle cx="70" cy="1805" r="2.4" fill="#993C1D"/>
+<text x="80" y="1809" font-size="12" font-weight="600" fill="#712B13">Digital signatures</text>
+<text x="92" y="1827" font-size="11.5" fill="#555">– Private signs public verifies</text>
+<text x="92" y="1845" font-size="11.5" fill="#555">– Authenticity not secrecy</text>
+<text x="92" y="1863" font-size="11.5" fill="#555">– Proves the key not the identity</text>
+<circle cx="70" cy="1878" r="2.4" fill="#993C1D"/>
+<text x="80" y="1882" font-size="12" font-weight="600" fill="#712B13">PKI</text>
+<text x="92" y="1900" font-size="11.5" fill="#555">– Certificate Authority</text>
+<text x="92" y="1918" font-size="11.5" fill="#555">– Root self-signed</text>
+<text x="92" y="1936" font-size="11.5" fill="#555">– Subordinate vouched for</text>
+<text x="92" y="1954" font-size="11.5" fill="#555">– Revocation</text>
+<rect x="818" y="1163" width="370" height="378" rx="12" fill="#EAF3DE" stroke="#3B6D11" stroke-width="2"/>
+<path d="M818,1175 a12,12 0 0 1 12,-12 h346 a12,12 0 0 1 12,12 v30 h-370 z" fill="#3B6D11"/>
+<text x="834" y="1190" font-size="16" font-weight="bold" fill="#ffffff">VI PROVE</text>
+<rect x="832" y="1224" width="9" height="9" rx="2" fill="#3B6D11"/>
+<text x="848" y="1233" font-size="13.5" font-weight="bold" fill="#27500A">Six mechanisms</text>
+<circle cx="858" cy="1248" r="2.4" fill="#3B6D11"/>
+<text x="868" y="1252" font-size="12" font-weight="normal" fill="#333">Review proves the requirement</text>
+<circle cx="858" cy="1267" r="2.4" fill="#3B6D11"/>
+<text x="868" y="1271" font-size="12" font-weight="normal" fill="#333">Security tests prove the requirement</text>
+<circle cx="858" cy="1286" r="2.4" fill="#3B6D11"/>
+<text x="868" y="1290" font-size="12" font-weight="normal" fill="#333">SAST finds patterns</text>
+<circle cx="858" cy="1305" r="2.4" fill="#3B6D11"/>
+<text x="868" y="1309" font-size="12" font-weight="normal" fill="#333">SCA finds dependencies</text>
+<circle cx="858" cy="1324" r="2.4" fill="#3B6D11"/>
+<text x="868" y="1328" font-size="12" font-weight="normal" fill="#333">DAST finds runtime</text>
+<circle cx="858" cy="1343" r="2.4" fill="#3B6D11"/>
+<text x="868" y="1347" font-size="12" font-weight="normal" fill="#333">Pen test finds attack paths</text>
+<circle cx="858" cy="1362" r="2.4" fill="#3B6D11"/>
+<text x="868" y="1366" font-size="12" font-weight="normal" fill="#333">Only two of six prove yours</text>
+<rect x="832" y="1387" width="9" height="9" rx="2" fill="#3B6D11"/>
+<text x="848" y="1396" font-size="13.5" font-weight="bold" fill="#27500A">Static versus dynamic</text>
+<rect x="832" y="1417" width="9" height="9" rx="2" fill="#3B6D11"/>
+<text x="848" y="1426" font-size="13.5" font-weight="bold" fill="#27500A">Triage</text>
+<circle cx="858" cy="1441" r="2.4" fill="#3B6D11"/>
+<text x="868" y="1445" font-size="12" font-weight="normal" fill="#333">Validate the finding</text>
+<circle cx="858" cy="1460" r="2.4" fill="#3B6D11"/>
+<text x="868" y="1464" font-size="12" font-weight="normal" fill="#333">Check reachability</text>
+<circle cx="858" cy="1479" r="2.4" fill="#3B6D11"/>
+<text x="868" y="1483" font-size="12" font-weight="normal" fill="#333">Score in context</text>
+<circle cx="858" cy="1498" r="2.4" fill="#3B6D11"/>
+<text x="868" y="1502" font-size="12" font-weight="normal" fill="#333">Treat or accept or escalate</text>
+<circle cx="858" cy="1517" r="2.4" fill="#3B6D11"/>
+<text x="868" y="1521" font-size="12" font-weight="normal" fill="#333">Reassess residual risk</text>
+<rect x="1212" y="1452" width="370" height="270" rx="12" fill="#FBEAF0" stroke="#993556" stroke-width="2"/>
+<path d="M1212,1464 a12,12 0 0 1 12,-12 h346 a12,12 0 0 1 12,12 v30 h-370 z" fill="#993556"/>
+<text x="1228" y="1479" font-size="16" font-weight="bold" fill="#ffffff">VII CHOOSE</text>
+<rect x="1226" y="1513" width="9" height="9" rx="2" fill="#993556"/>
+<text x="1242" y="1522" font-size="13.5" font-weight="bold" fill="#72243E">Cryptographic choice</text>
+<rect x="1226" y="1543" width="9" height="9" rx="2" fill="#993556"/>
+<text x="1242" y="1552" font-size="13.5" font-weight="bold" fill="#72243E">Verification choice</text>
+<rect x="1226" y="1573" width="9" height="9" rx="2" fill="#993556"/>
+<text x="1242" y="1582" font-size="13.5" font-weight="bold" fill="#72243E">Access control choice</text>
+<rect x="1226" y="1603" width="9" height="9" rx="2" fill="#993556"/>
+<text x="1242" y="1612" font-size="13.5" font-weight="bold" fill="#72243E">Formal model choice</text>
+<rect x="1226" y="1633" width="9" height="9" rx="2" fill="#993556"/>
+<text x="1242" y="1642" font-size="13.5" font-weight="bold" fill="#72243E">Standard choice</text>
+<rect x="1226" y="1663" width="9" height="9" rx="2" fill="#993556"/>
+<text x="1242" y="1672" font-size="13.5" font-weight="bold" fill="#72243E">Treatment choice</text>
+<rect x="1226" y="1693" width="9" height="9" rx="2" fill="#993556"/>
+<text x="1242" y="1702" font-size="13.5" font-weight="bold" fill="#72243E">Privacy technique choice</text>
+</svg>
