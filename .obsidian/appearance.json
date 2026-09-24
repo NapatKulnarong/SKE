@@ -1,6 +1,6 @@
 {
   "cssTheme": "ObOrange",
-  "theme": "system",
-  "accentColor": "",
+  "theme": "moonstone",
+  "accentColor": "#89cbe1",
   "textFontFamily": "Helvetica Neue"
 }

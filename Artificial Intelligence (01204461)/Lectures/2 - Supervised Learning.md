@@ -45,7 +45,7 @@
 11. [[#2.11 Comprehensive Evaluation Metrics]]
     1. [[#2.11.1 Classification Metrics Framework]]
     2. [[#2.11.2 Regression Metrics Framework]]
-12. [[#2.12 Chapter Summary]]
+12. [[#Exam cheatsheet — Unit 2 (copy onto A4)]]
 13. [[#2.13 Practice Questions]]
 14. [[#2.14 Solutions]]
 
@@ -240,10 +240,10 @@ $$L_{\text{MSE-scaled}}(h(x), y) = \tfrac12\bigl(h(x)-y\bigr)^2$$
 
 **Variable breakdown** (beyond the shared symbols)
 
-| Symbol | Meaning |
-| --- | --- |
-| $(h(x)-y)^2 = e^2$ | squared residual — always $\ge 0$, and **large errors grow quadratically** |
-| $\tfrac12$ | constant chosen only so the $2$ cancels when differentiating: $\frac{d}{de}\bigl(\tfrac12 e^2\bigr) = e$ |
+| Symbol             | Meaning                                                                                                  |
+| ------------------ | -------------------------------------------------------------------------------------------------------- |
+| $(h(x)-y)^2 = e^2$ | squared residual — always $\ge 0$, and **large errors grow quadratically**                               |
+| $\tfrac12$         | constant chosen only so the $2$ cancels when differentiating: $\frac{d}{de}\bigl(\tfrac12 e^2\bigr) = e$ |
 
 Dataset form (the scaled one, used throughout this chapter):
 
@@ -347,8 +347,6 @@ Averaging gives the **misclassification rate**, i.e. $1 - \text{accuracy}$.
 ## 2.3 Supervised Learning: Regression and Classification
 
 ![[supervised_learning_pipeline 1.svg|640]]
-![[Screenshot 2026-09-17 at 14.01.49.png|314]] ![[Screenshot 2026-09-17 at 14.02.05.png|315]]
-
 ### 2.3.0.1 Parametric vs. Non-Parametric Models
 
 |                    | Parametric                          | Non-parametric                        |
@@ -434,8 +432,6 @@ $$\nabla_w L(w) = \frac1n X^\top\bigl(Xw - \mathbf{y}\bigr)$$
 >🧌 *one number per weight, telling you which way that weight should move. Read it right-to-left: get the residuals, then weight each residual by the feature that caused it.*
 
 >*The gradient is the slope of the loss*
-
-![[Screenshot 2026-09-17 at 14.56.56-chroma-2026-09-17T07-57-17-300Z.png]]
 
 #### Step 3 — Finding the optimal weights $w^*$
 
@@ -1068,52 +1064,84 @@ $R^2=1$ is a perfect fit to the mean-centered variance; can be negative if worse
 
 ---
 
-## 2.12 Chapter Summary
+## Exam cheatsheet — Unit 2 (copy onto A4)
 
-- Supervised learning: labeled $D\sim P(X,Y)$ i.i.d.; classification vs regression is the type of $y$.
-- Minimize **empirical** risk; true risk and the noise floor are unknown. $L=0$ on train is often overfit.
-- Linear regression: normal equations or GD on MSE. Logistic: sigmoid + BCE (softmax + CCE if $C>2$).
-- Trees and $k$-NN are non-parametric; $k$-NN **must** scale features; $k$ is a bias–variance knob.
-- SVM = max margin; kernels for non-linear boundaries; $C$ = soft-margin tradeoff.
-- Evaluate with a held-out test set (or $K$-fold), regularize, and report the metric that matches the task (F1/recall vs MAE/$R^2$).
-- Chapter 1 wrap: implication $\neq$ converse; expert systems = KB + working memory + forward/backward engine.
+*MCQ + written. **Traps** in italics. GD residual is $\hat y-y$; metrics often use $e=y-\hat y$.*
 
----
+**Setup**
+- $D=\{(x_i,y_i)\}_{i=1}^n$, $x_i\in\mathbb R^d$. **$x_i$** = the whole vector · **$x_{ij}$** = feature $j$ of example $i$.
+- Assume **i.i.d.** from unknown $P(X,Y)$; broken by duplicates or training on Bangkok and testing on Chiang Mai.
+- **Classification:** $\mathcal Y$ discrete — binary $\{0,1\}$ · multi-class = *exactly one* of $C>2$ · multi-label = *several at once*. **Regression:** $\mathcal Y\subseteq\mathbb R$ (or $\mathbb R^m$).
+- **True risk** = average error over all of $P$ (uncomputable). 
+- **Empirical risk** $R_{\mathrm{emp}}(w)=\frac1n\sum L(h_w(x_i),y_i)$; $w^*=\arg\min_w L_D(w)$.
+- *Train $L=0$ does not mean true $L=0$* — that gap is **overfitting**. Noise floor: $y=f(x)+\epsilon$, $\epsilon\sim\mathcal N(0,\sigma^2)$ ⇒ $\mathcal L_{\min}=\sigma^2>0$.
+- **GD** $w\leftarrow w-\alpha\nabla_w R_{\mathrm{emp}}$ needs a slope; $\alpha$ too big diverges, too small crawls.
 
-## 2.13 Practice Questions
+**Loss functions**
+- Residual $e=\hat y-y$
+- **MSE** $\tfrac12 e^2$, dataset $\frac1{2n}\sum e_i^2$ — smooth, closed-form min, fits the **conditional mean**; triple $|e|$ and the penalty grows **9×**, so outliers dominate. $\tfrac12$ so $\frac{d}{de}(\tfrac12 e^2)=e$.
+- **MAE** $|e|$ — fits the **median**, robust; corner at $e=0$ needs subgradient $\operatorname{sign}(e)$ or Huber.
+- **BCE** $-[y\ln\hat y+(1-y)\ln(1-\hat y)]$ — needs $\hat y\in(0,1)$; confident-and-wrong → ∞.
+- **0–1** $\mathbb I(\hat y\neq y)$ — **report only** (a step, $\nabla=0$ almost everywhere). 
 
-1. **Parametric vs non-parametric.** Classify linear regression and $k$-NN. How does each model’s **inference** time scale with training size $n$?
-2. **Normal equations.** $X=\begin{bmatrix}1&0\\1&2\end{bmatrix}$, $y=\begin{bmatrix}1\\5\end{bmatrix}$. Compute $w^*$.
-3. **Prediction.** $\hat y=2x+1$. Predict at $x=3$. What do the $2$ and the $1$ mean?
-4. **Gradient descent.** Model $\hat y=wx$, one sample $(x,y)=(2,4)$, current $w=1$. Give $\hat y$, the error, and the gradient of squared error. Which way does GD move $w$?
-5. **Why MSE?** Why is MSE the usual linear-regression loss? What happens as the residual grows?
-6. **Sigmoid.** $w^\top x=2$. Compute $P(y=1\mid x)$. Class at threshold $0.5$?
-7. **Why not MSE+sigmoid?** Why is MSE a bad loss under a sigmoid? What does BCE fix?
-8. **Threshold.** Probabilities $[0.2,0.8,0.4,0.9]$, threshold $0.5$. Predicted labels?
-9. **Multi-class.** How do you go from binary logistic to $C>2$? Role of softmax and categorical CE?
-10. **Distance.** $x_1=(1,2)$, $x_2=(4,6)$. Euclidean distance? What does $k$-NN do with it?
-11. **Scaling.** Why do unscaled features wreck $k$-NN? Min-max vs z-score?
-12. **Vote.** Three neighbors $[A,A,B]$, $k=3$. Predicted class? If $k=1$ and the nearest is $B$?
-13. **Role of $k$.** What happens to bias/variance as $k$ grows? Too small vs too large?
-14. **SVM.** What are support vectors? Why the kernel trick?
-15. **Regularization.** Increase L2 $\lambda$: bias? variance?
+**Parametric vs non-parametric Models**
+- **Parametric** (linear, logist, nets): fixed $\theta\in\mathbb R^k$, can **throw $D$**, inference $O(d)$ — **independent of $n$**.
+- **Non-parametric** ($k$-NN, trees, **kernel SVM**): size **grows with $n$**, must **keep $D$** (or support vectors).
 
----
+**Linear regression**
+- Model $h=w^\top x+b$; **bias trick** pads $x_0=1$, $w_0=b$ ⇒ $h=w^\top x$. Design matrix $X\in\mathbb R^{n\times(d+1)}$: **row per example**, first column all 1s.
+- $w_j$ = change in $\hat y$ when feature $j$ rises by 1 (others fixed); $b$ = prediction at $x=0$.
+- Loss $L=\tfrac1{2n}\|Xw-y\|_2^2$, gradient $\nabla_w L=\tfrac1n X^\top(Xw-y)$; MSE is **convex** (one bowl).
+- **Normal equations:** $X^\top Xw=X^\top y$ ⇒ $w^*=(X^\top X)^{-1}X^\top y$. *Needs $X^\top X$ invertible; slow for large $d$.*
+- **GD:** $w\leftarrow w-\alpha\cdot\frac1n X^\top(Xw-y)$. Batch = all $n$ · mini-batch = a chunk · SGD = 1 sample.
+- **2×2 inverse:** $\begin{bmatrix}a&b\\c&d\end{bmatrix}^{-1}=\frac1{ad-bc}\begin{bmatrix}d&-b\\-c&a\end{bmatrix}$.
+- **Hand recipe:** write $X^\top$ → compute $X^\top X$ and $X^\top y$ → det → inverse → multiply. Sanity check with slope $\Delta y/\Delta x$ if only 2 points.
+- **Worked:** $X=\begin{bmatrix}1&0\\1&2\end{bmatrix}$, $y=\begin{bmatrix}1\\5\end{bmatrix}$ ⇒ $X^\top X=\begin{bmatrix}2&2\\2&4\end{bmatrix}$, $X^\top y=\begin{bmatrix}6\\10\end{bmatrix}$, det 4, $w^*=\begin{bmatrix}1\\2\end{bmatrix}$, so $\hat y=1+2x$; at $x=3$, $\hat y=7$.
+- **One-sample GD:** $\hat y=wx$, $(x,y)=(2,4)$, $w=1$ ⇒ $\hat y=2$, $e=\hat y-y=-2$, $\nabla_w L=(wx-y)x=-4$, so $w\leftarrow w-\alpha(-4)$ **increases** $w$.
+- 1-D gradients: $\partial L/\partial b=\frac1n\sum(\hat y-y)$ (average error) · $\partial L/\partial w=\frac1n\sum(\hat y-y)x$ (error weighted by $x$). Least squares signature: $\sum(y-\hat y)=0$.
 
-## 2.14 Solutions
+**Logistic regression** (*classification, despite the name*)
+- Raw $w^\top x$ is unbounded, so not a probability; **MSE + sigmoid** is **non-convex** with a **dying gradient** when σ saturates. Use **sigmoid + BCE**.
+- $\sigma(z)=\frac1{1+e^{-z}}\in(0,1)$, $\sigma(-z)=1-\sigma(z)$. Values: $\sigma(0)=0.5$, $\sigma(1)\approx0.731$, $\sigma(2)\approx0.881$.
+- $P(y=1\mid x)=\sigma(w^\top x)$. Predict class 1 iff $\sigma\ge0.5$ iff **$z\ge0$**; boundary is the hyperplane $w^\top x=0$.
+- **Examples:** $z=2$ ⇒ $\hat p\approx0.881$ ⇒ class 1. Threshold 0.5 on $[0.2,0.8,0.4,0.9]$ ⇒ $[0,1,0,1]$.
+- BCE per row: $y=1$ ⇒ $-\ln\hat y$; $y=0$ ⇒ $-\ln(1-\hat y)$. **No closed form** — iterate $\nabla_w L=\frac1n X^\top(\hat y-y)$, then $w\leftarrow w-\alpha\nabla L$.
+- **One GD step:** logits → σ → residuals $e_i=\hat y_i-y_i$ → $\frac1n\sum e_i x_i$ → subtract $\alpha\nabla$. New point: $z=w^{*\top}x$, apply σ, threshold.
+- **Multi-class:** one logit per class $z_c=w_c^\top x$ → **softmax** $e^{z_c}/\sum_k e^{z_k}$ (sums to 1) → train **categorical CE** $-\ln\hat y_{\mathrm{true}}$ with one-hot targets; $\partial L/\partial z_c=\hat y_c-y_c$.
+- **Pairing:** binary = sigmoid + BCE · multi-class = softmax + CCE. Both start from a linear score.
 
-1. Linear regression is **parametric** (fixed $d+1$ weights) → inference $O(d)$, independent of $n$. $k$-NN is **non-parametric** (stores $D$) → brute-force inference $O(nd)$.
-2. $$X^\top X=\begin{bmatrix}2&2\\2&4\end{bmatrix},\quad X^\top y=\begin{bmatrix}6\\10\end{bmatrix},\quad w^*=(X^\top X)^{-1}X^\top y=\begin{bmatrix}1\\2\end{bmatrix}$$ so $\hat y=1+2x$.
-3. $\hat y=2\cdot3+1=7$. Slope $2$: $\Delta x=1$ $\Rightarrow$ $\Delta\hat y=2$. Bias $1$: intercept, prediction when $x=0$.
-4. $\hat y=1\cdot2=2$, error $e=\hat y-y=-2$. For $L=\tfrac12(wx-y)^2$, $\nabla_w L=(wx-y)x=-4$. GD: $w\leftarrow w-\alpha(-4)$ **increases** $w$ (the model was too low).
-5. MSE $= \frac1n\sum(\hat y_i-y_i)^2$ is smooth and has a closed-form min (normal equations). Squaring **hits large residuals harder** than MAE.
-6. $\sigma(2)=\frac1{1+e^{-2}}\approx0.881>0.5$ $\Rightarrow$ class **$1$**.
-7. MSE+sigmoid is non-convex and the gradient **dies** when $\sigma$ saturates (confident but wrong). BCE matches a Bernoulli likelihood and keeps a useful gradient.
-8. $[0,1,0,1]$.
-9. One linear score per class $\to$ **softmax** (scores become a probability simplex) $\to$ train with **categorical CE**. Binary is the $C=2$ special case (sigmoid + BCE).
-10. $d=\sqrt{(4-1)^2+(6-2)^2}=5$. $k$-NN ranks stored points by this distance, then votes.
-11. A feature with a bigger numeric range **owns** every neighbor list. Min-max $\to[0,1]$; z-score $\to$ mean $0$, sd $1$.
-12. $k=3$: majority **A**. $k=1$ and nearest is $B$ $\to$ **B**.
-13. Small $k$: low bias, high variance (overfit). Large $k$: high bias, low variance (underfit / global majority).
-14. Support vectors are the points **on (or inside) the margin** — they alone set the boundary. Kernel $K(x_a,x_b)=\langle\Phi(x_a),\Phi(x_b)\rangle$ buys a curved boundary **without** computing $\Phi$.
-15. Larger $\lambda$ shrinks weights $\to$ **variance down, bias up** (less overfit, more underfit).
+**Decision trees (CART)**
+- Recursively ask $x_j\le t$ (left) vs $>t$ (right); leaf predicts **majority class** or **mean $y$**. No feature scaling needed; non-parametric because the splits grow with the data.
+- **Gini** $G=1-\sum_c p_c^2$ · **Entropy** $H=-\sum_c p_c\ln p_c$ — both 0 when pure; a 50/50 binary node gives $G=0.5$.
+- **Information gain** $\mathrm{IG}=I_{\mathrm{parent}}-\left(\frac{n_L}{n}I_L+\frac{n_R}{n}I_R\right)$; CART keeps the split with **max IG** (size-weighted children).
+- Stop when pure, too small, or max depth.
+
+**k-NN**
+- **Lazy:** training = store $D$; at query time compute all distances, keep the $k$ nearest, then **vote** (class) or **average** (regression). Use odd $k$ for binary to avoid ties.
+- **Metrics:** $L_2=\sqrt{\sum(x_a-x_b)^2}$ · $L_1=\sum|x_a-x_b|$ · Minkowski $L_p$ · cosine $1-\frac{x_a\cdot x_b}{\|x_a\|\|x_b\|}$ (angle only — text, embeddings).
+- **Example:** $(1,2)$ vs $(4,6)$ ⇒ $\sqrt{9+16}=5$.
+- **Must scale** — the biggest-range feature owns every neighbor list. Min-max $\frac{x-x_{\min}}{x_{\max}-x_{\min}}\to[0,1]$ · z-score $\frac{x-\mu}{\sigma}$ → mean 0, sd 1.
+- **$k$ is the bias–variance knob:** small $k$ = low bias, **high variance**, overfits noise ($k=1$ is a Voronoi tessellation); large $k$ = **high bias**, low variance, drifts to the global majority.
+- **Weighted voting** $w_i=1/(d_i^2+\epsilon)$ sums weights per class and **can flip** the plain majority — one neighbor at distance 1 (weight 1.00) beats two at $\sqrt5$ and 2 (0.20 + 0.25).
+- Inference $O(nd)$ brute force; KD-tree ≈ $O(d\log n)$ for $d\lesssim20$, ball tree in higher $d$. Training is $O(1)$.
+
+**SVM**
+- Labels are $\{-1,+1\}$. Boundary $w^\top x+b=0$, predict $\operatorname{sign}$; margin planes at $\pm1$ with width $2/\|w\|_2$.
+- **Hard margin:** $\min\tfrac12\|w\|_2^2$ s.t. $y_i(w^\top x_i+b)\ge1$ — smaller $\|w\|$ = wider margin; **no solution** if not linearly separable.
+- **Support vectors** = points **on or inside** the margin; they **alone** determine the boundary.
+- **Soft margin** adds slack $\xi_i\ge0$: **large $C$** = few mistakes, skinny margin · **small $C$** = fatter margin, more violations.
+- **Kernel trick** $K(x_a,x_b)=\langle\Phi(x_a),\Phi(x_b)\rangle$ buys a curved boundary **without computing $\Phi$**: linear $x_a^\top x_b$ · polynomial $(x_a^\top x_b+c)^d$ · **RBF** $e^{-\gamma\|x_a-x_b\|^2}$. Multi-class via one-vs-one or one-vs-rest.
+
+**Generalization & regularization**
+- Test error = **bias² + variance + $\sigma^2$**; train error falls forever while test error is **U-shaped**, and the train–test gap is the variance.
+- Train and test **both high and close** = underfit → more capacity / better features. Train **low**, test **much higher** = overfit → more data, regularize, simpler model. Both near $\sigma^2$ ⇒ stop.
+- Split ≈ 70/15/15, or **$K$-fold** (rotate the validation fold, average $K$ scores). *Never tune on the test set.*
+- $L_{\mathrm{reg}}=L+\lambda\Omega(w)$: **L1 (Lasso)** $\|w\|_1$ encourages sparsity · **L2 (Ridge)** $\|w\|_2^2$ discourages large weights.
+- Raising $\lambda$ ⇒ **variance down, bias up** (less overfit, more underfit).
+
+**Metrics**
+- Confusion matrix: **TP** correct positive · **FN** miss (type II) · **FP** false alarm (type I) · **TN** correct negative.
+- $\mathrm{Acc}=\frac{TP+TN}{N}$ · $\mathrm{Precision}=\frac{TP}{TP+FP}$ · $\mathrm{Recall}=\frac{TP}{TP+FN}$ · $F_1=\frac{2PR}{P+R}$.
+- **Worked** ($N=100$, TP 40, FN 10, FP 5, TN 45): Acc $0.85$ · P $40/45\approx0.889$ · R $40/50=0.80$ · $F_1\approx0.842$.
+- Regression: $\mathrm{MAE}=\frac1n\sum|e|$ · $\mathrm{MSE}=\frac1n\sum e^2$ · $\mathrm{RMSE}=\sqrt{\mathrm{MSE}}$ · $R^2=1-\frac{\sum e^2}{\sum(y-\bar y)^2}$.
+- $R^2=1$ is perfect against the mean baseline and **can go negative** if the model is worse than predicting $\bar y$.

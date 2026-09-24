@@ -1,0 +1,39 @@
+<svg width="100%" viewBox="0 0 720 280" role="img" xmlns="http://www.w3.org/2000/svg" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif">
+<title>Same facts, different lead</title>
+<desc>One shared set of facts in the center, radiating to five audience rooms with different leads.</desc>
+<defs>
+  <marker id="ar2" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse">
+    <path d="M2 1L8 5L2 9" fill="none" stroke="rgb(120,120,126)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+  </marker>
+</defs>
+
+<text x="360" y="26" text-anchor="middle" font-size="15" font-weight="600" fill="rgb(40,40,40)">Same facts, different lead</text>
+
+<rect x="270" y="110" width="180" height="70" rx="12" fill="rgb(245,245,245)" stroke="rgb(100,100,105)" stroke-width="1.5"/>
+<text x="360" y="138" text-anchor="middle" font-size="14" font-weight="600" fill="rgb(40,40,40)">The facts</text>
+<text x="360" y="160" text-anchor="middle" font-size="11" fill="rgb(82,81,78)">truth stays the same</text>
+
+<rect x="24" y="48" width="150" height="54" rx="8" fill="rgb(238,237,254)" stroke="rgb(83,74,183)" stroke-width="1"/>
+<text x="99" y="70" text-anchor="middle" font-size="12" font-weight="600" fill="rgb(60,52,137)">Beginner / public</text>
+<text x="99" y="88" text-anchor="middle" font-size="10" fill="rgb(83,74,183)">analogy, one sentence</text>
+<line x1="174" y1="90" x2="268" y2="130" stroke="rgb(160,160,165)" stroke-width="1.2" marker-end="url(#ar2)"/>
+
+<rect x="546" y="48" width="150" height="54" rx="8" fill="rgb(225,245,238)" stroke="rgb(15,110,86)" stroke-width="1"/>
+<text x="621" y="70" text-anchor="middle" font-size="12" font-weight="600" fill="rgb(8,80,65)">Peer engineers</text>
+<text x="621" y="88" text-anchor="middle" font-size="10" fill="rgb(15,110,86)">types, gotchas, stack</text>
+<line x1="546" y1="90" x2="452" y2="130" stroke="rgb(160,160,165)" stroke-width="1.2" marker-end="url(#ar2)"/>
+
+<rect x="24" y="168" width="150" height="54" rx="8" fill="rgb(250,238,218)" stroke="rgb(133,79,11)" stroke-width="1"/>
+<text x="99" y="190" text-anchor="middle" font-size="12" font-weight="600" fill="rgb(99,56,6)">PM / cross-team</text>
+<text x="99" y="208" text-anchor="middle" font-size="10" fill="rgb(133,79,11)">dates, decisions</text>
+<line x1="174" y1="186" x2="268" y2="160" stroke="rgb(160,160,165)" stroke-width="1.2" marker-end="url(#ar2)"/>
+
+<rect x="546" y="168" width="150" height="54" rx="8" fill="rgb(250,236,231)" stroke="rgb(153,60,29)" stroke-width="1"/>
+<text x="621" y="190" text-anchor="middle" font-size="12" font-weight="600" fill="rgb(113,43,19)">Exec / customer</text>
+<text x="621" y="208" text-anchor="middle" font-size="10" fill="rgb(153,60,29)">time, money, risk</text>
+<line x1="546" y1="186" x2="452" y2="160" stroke="rgb(160,160,165)" stroke-width="1.2" marker-end="url(#ar2)"/>
+
+<rect x="275" y="214" width="170" height="48" rx="8" fill="rgb(232,240,250)" stroke="rgb(45,85,140)" stroke-width="1"/>
+<text x="360" y="234" text-anchor="middle" font-size="12" font-weight="600" fill="rgb(28,62,105)">Conference experts</text>
+<text x="360" y="252" text-anchor="middle" font-size="10" fill="rgb(45,85,140)">novelty, method, limits</text>
+</svg>

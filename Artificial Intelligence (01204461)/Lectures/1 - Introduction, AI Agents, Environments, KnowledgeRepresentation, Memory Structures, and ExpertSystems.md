@@ -1,5 +1,5 @@
 **Sources:** `References/01204461 Week 1.pdf`; `References/01204461 Week 2.pdf` pages 70–86 (Chapter 1 finish)  
-Logistics: [[0 - Course Syllabus]]
+Logistics: [[Artificial Intelligence (01204461)/Lectures/0 - Course Syllabus]]
 
 ## Outline
 
@@ -460,37 +460,133 @@ $$\mathrm{KB}=\{\mathrm{EngineWon’tStart}\to\mathrm{CheckBattery},\;
 
 ## Practice questions
 
-From Week 2 pp. 83–85 (answers in the PDF).
+From Week 2 pp. 83–85 (sol. pp. 84–85).
 
-1. **Four definitions of AI.** List thinking/acting × humanly/rationally. Why does modern CE focus on **acting rationally**?  
-   *Acting rationally is well-defined (expected utility), works across domains, and is easier to evaluate than copying human quirks.*
+1. **Four defs of AI** (thinking/acting × humanly/rationally). Why does modern CE use **acting rationally**?
+	1️⃣ Thinking Humanly · Acting Humanly (Turing Test) · Thinking Rationally (Laws of Thought) · Acting Rationally (rational agents) 2️⃣ acting rationally: expected utility is well-defined, works across domains, easier to eval than copying human quirks
 
-2. **PEAS** for an autonomous vacuum.  
-   *P:* cleanliness, energy, time, no furniture damage. *E:* floors, legs, stairs, dust, pets, people. *A:* wheels, suction, brush, alarms. *S:* bumper, cliff IR, dirt sensor, encoders, battery.
+2. **PEAS** for an autonomous vacuum.
+	1️⃣ **P** cleanliness, energy, time, no furniture damage 2️⃣ **E** floors, legs, stairs, dust, pets, humans 3️⃣ **A** wheels, suction, brush, cliff/obstacle alarm 4️⃣ **S** bumper, cliff IR, dirt sensor, encoders, battery
 
-3. **Six axes** for (a) chess with a clock, (b) automated medical diagnosis.  
-   *(a)* full, deterministic, sequential, **semi-dynamic**, discrete, multi-agent.  
-   *(b)* partial, stochastic, sequential, dynamic, **continuous** in the solutions / **discrete** in the Week 1 table.
+3. **Six axes** for (a) chess w/ clock, (b) automated medical diagnosis.
+	1️⃣ **(a)** fully obs, deterministic, sequential, **semi-dynamic** (clock), discrete, **multi-agent** 2️⃣ **(b)** partial, stochastic, sequential, dynamic, **continuous**, **single-agent** (pt vs disease). *Week 1 table said discrete; Week 2 sol says continuous.*
 
-4. **Classical AI vs ML.** Humans write IF–THEN vs the system learns rules from data.
+4. **Classical AI vs ML** — how are rules made?
+	1️⃣ classical: humans write IF–THEN 2️⃣ ML: system learns rules from data
 
-5. **Proposition + five connectives.** Statement that is T/F; $\neg$ NOT, $\land$ AND, $\lor$ OR, $\to$ IMPLIES, $\leftrightarrow$ IFF.
+5. **Proposition + 5 connectives.**
+	1️⃣ proposition = stmt that’s T/F (e.g. Rain) 2️⃣ $\neg$ NOT · $\land$ AND · $\lor$ OR · $\to$ IMPLIES · $\leftrightarrow$ IFF
 
-6. **Turing Test.** Text interrogation of hidden human vs program; **acting humanly**.
+6. **Turing Test** — setup + which AI def.
+	1️⃣ text Imitation Game: interrogator vs hidden human + AI; pass if can’t tell them apart 2️⃣ **Acting Humanly**
 
-7. **Working memory vs KB.** WM = short-term case facts (`PatientFever = True`). KB / production memory = lasting IF–THEN expertise.
+7. **Working memory vs KB** in an expert system.
+	1️⃣ **WM** = short-term case facts (`PatientFever = True`) 2️⃣ **KB / production mem** = lasting IF–THEN expertise
 
-8. **Chaining.** Forward = data-driven, good for **real-time monitoring**. Backward = goal-driven, good for **diagnosis** (only query facts that support the hypothesis).
+8. **Chaining.** Forward vs backward; better for (a) real-time monitoring, (b) diagnosis?
+	1️⃣ **fwd** = data-driven (facts → conclusions); **(a) monitoring** — sensors keep firing rules 2️⃣ **bwd** = goal-driven (hypothesis → needed facts); **(b) diagnosis** — only query facts that prove/refute the disease
 
 ---
 
-## Takeaways (1.12)
+## Exam cheatsheet — Unit 1 (copy onto A4)
 
-- AI here = **rational agents** that perceive and act to maximize expected performance — not “copy humans.”
-- Classical AI **writes rules and searches**; ML **learns** $T$ from $E$ as judged by $P$.
-- Specify the job with **PEAS**, then classify the environment; that choice picks the agent architecture.
-- Rational $\neq$ all-knowing; the agent uses current information and should learn.
-- KR: propositions + connectives, or **semantic networks** (inheritance, overrides).
-- **KB** = lasting facts/rules; **working memory** = this case. Engine: KB rules + WM facts → new facts **in WM** (not a rewrite of the KB).
-- Expert systems = KB + working memory + inference engine. **Forward** = data-driven; **backward** = goal-driven.
-- **Entailment** ($\models$) is “must be true”; **modus ponens** is the basic inference step. $A \to B$ is not $B \to A$.
+*MCQ + written. **Traps** in italics.*
+
+**AI & the four definitions** (Thinking/Acting × Humanlike/Rational)
+- **AI** = perceive, reason, learn, and **act to maximize expected performance** given available info.
+- **Think + Human** = cognitive modeling (psychology) · **Act + Human** = **Turing Test**
+- **Think + Rational** = laws of thought (**formal logic**) · **Act + Rational** = **rational agent** (max expected utility)
+- **Why CE uses acting rationally:** utility is math-defined, domain-general, scorable; humans are biased/forgetful (planes ≠ birds).
+- *Acting rationally ⊃ thinking rationally* — must still act under uncertainty and time limits when no proof is possible.
+
+**Turing Test (1950)**
+- **Imitation Game:** interrogator **text-chats** a hidden human + hidden program; **passes** if he can't reliably tell which is which.
+- Tests **Acting Humanly** (behavior, not internals).
+- **Total TT** (adds physical/perceptual) needs 6: **NLP · KR · automated reasoning · ML · vision · robotics**.
+
+**Classical AI vs ML**
+- **Classical:** humans **write** IF–THEN rules, machine **searches** (states = nodes, actions = edges; BFS/DFS/A*, minimax + alpha–beta). Fails 3 ways: hard to build · rigid · **can't adapt**.
+- **ML (Mitchell 1997):** learns task $T$ from experience $E$ measured by $P$ — *if more $E$ raises $P$, it learned*. Rules are **discovered**, not typed.
+- **AI ⊃ ML:** also KR, search, planning, vision, NLP, robotics. Branches: symbolic → expert systems → ML → deep learning → GenAI.
+- **Expert system** = **3 parts:** (1) **KB** = permanent IF–THEN rules of the domain (doen't change during a consult); (2) **working mem.** = facts about **this** case only; (3) **inference engine** = matches rules to those facts & writes new conclusions into working mem. **MYCIN**: ~600 infection rules + certainty factors → antibiotic. *Engine never rewrites the KB — still cannot learn.*
+
+**History / milestones** (name ↔ year)
+- 1943 McCulloch–Pitts neuron · 1950 Turing Test · **1956 Dartmouth coins "AI"** · 1956–69 Logic Theorist, Checkers, Perceptron.
+- 🥶 **1st winter 66–74** = weak compute + hype · **1970–86 expert systems** (MYCIN, DENDRAL, XCON) + backprop 1986 · 🥶 **2nd winter 87–93** = maintenance cost, Lisp collapse.
+- **Deep Blue 1997** beats Kasparov — search + custom chips, **not learned** · **AlexNet 2012** starts the DL boom.
+- **AlphaGo 2016** (4–1 Lee Sedol): policy + value nets + **MCTS** + RL self-play; Go $|S|\approx10^{170}$, branch $\approx250$ · **AlphaZero**: rules only, **no human games**.
+- **Shift:** symbolic (50s–80s) breaks on noise/scale → deep learning (2010s–) = data + GPUs + learned representations.
+
+**Agents**
+```
+         ┌──────────────── the loop ────────────────┐
+ENV → sensor → percept → f(P*) → action → actuator → effector → ENV
+      (bumper) ("wall")  decide  ("turn")  (motor)   (wheels)
+```
+- $P^*$ = every percept so far. **Actuator** powers, **effector** touches the world.
+- **Agent function** $f:P^*\to A$ maps **every percept history** to an action; **agent program** = code implementing $f$ on an architecture.
+- **Rational agent** picks the action **maximizing expected perf. given percepts + knowledge.
+- *Rational ≠ omniscient* : no future K; **learn** & **gather info** when it improves later decisions.
+
+**PEAS** — draw the boundary *before* building
+- **P**erformance measure = objective **score** of success (*not* a goal sentence) · **E**nvironment = where it operates · **A**ctuators = how it **acts** · **S**ensors = how it **perceives**. *Never swap A ↔ S.*
+- **Vacuum:** P cleanliness, energy, time, no damage/noise · E rooms, furniture, carpet/tile, dirt, pets · A wheels, suction, brush · S bumper, cliff IR, dirt sensor, encoders.
+- **Taxi:** P safety, speed, legal, comfort, fuel · E streets, traffic, pedestrians, weather · A steering, throttle, brake, signals, horn · S cameras, LiDAR, radar, GPS, speedometer, IMU.
+- **Chess** win/score · board + opponent · piece moves · board state. **Med dx** accuracy/outcome · patients, records · tests, treatments · labs, symptoms. **Web search** relevance, latency · pages, queries · ranked results · index, feedback.
+
+**Six environment axes** (easy ↔ hard)
+- **Fully vs partially observable** — whole state visible? chess vs poker
+- **Deterministic vs stochastic** — next state certain given the action? Sudoku vs driving
+- **Episodic vs sequential** — does this decision affect later ones? image classification vs chess
+- **Static vs dynamic** — world changes while it thinks? crossword vs taxi; **semi-dynamic** = only the clock moves
+- **Discrete vs continuous** — symbols vs real-valued time/state/action? chess vs robot control
+- **Single vs multi-agent** — others in the way? Sudoku vs soccer
+- **Easy** = full + deterministic + static + discrete + single · **Hard** = partial + stochastic + sequential + dynamic + continuous + multi
+
+**Classifying environments** (write all 6 axes)
+- **Crossword:** full · deterministic · episodic · static · discrete · single
+- **Chess + clock:** full · deterministic · sequential · **semi-dynamic** (clock runs, board sits) · discrete · **multi** — *untimed chess is static*
+- **Poker:** partial · stochastic · sequential · static · discrete · multi
+- **Taxi:** partial · stochastic · sequential · dynamic · continuous · multi
+- **Medical dx:** partial · stochastic · sequential · dynamic · *W1 table says **discrete**, W2 solution says **continuous*** · **single** (patient vs disease)
+
+**Agent types** (ladder) & capability tiers
+- **Simple reflex:** **current percept** + condition–action rules, no memory. Fine in fully observable simple worlds; **fails when history matters**.
+- **Model-based reflex:** internal **state** for what it can't see now (partial observability).
+- **Goal-based:** search/plan toward a desired state. **Utility-based:** score outcomes, pick the **best among competing goals** (speed vs safety).
+- **Learning:** **critic + learning element + problem generator**; improves from feedback — what real systems use.
+- Match to environment: reflex only if fully observable + predictable, else add model → goals → utility → learning.
+- **ANI** = one task, **everything today** · **AGI** = hypothetical human-level, any domain · **ASI** = hypothetical superhuman.
+
+**KR & propositional logic**
+- **Syntax** = well-formed grammar (`Raining ∧ Wet` ✓, `Raining ∧ ∧ Wet` ✗). **Semantics** = meaning + truth in a model. *Syntax says nothing about truth.*
+- **KB** = stored facts + rules. **Tell**(KB, α) adds; **Ask**(KB, α) retrieves **or infers** (`Rain→Wet` + `Rain` answers `Wet`).
+- **Proposition** = atomic T/F claim. Connectives: $\neg$ NOT · $\land$ AND · $\lor$ OR (**inclusive**) · $\to$ IF–THEN · $\leftrightarrow$ IFF.
+- **Truth values** for rows FF, FT, TF, TT: $\land$ = F F F T · $\lor$ = F T T T · $\to$ = **T T F T** · $\leftrightarrow$ = T F F T.
+- **$P\to Q$ is false only when $P$ = T and $Q$ = F**; equals $\neg P\lor Q$. *$A\to B$ is not $B\to A$.*
+
+**Entailment vs inference**
+- **Entailment** $\mathrm{KB}\models\alpha$ = **semantic**: in **every** model where KB is true, α is true ("must be true").
+- **Inference** $\mathrm{KB}\vdash\alpha$ = **syntactic**: α is derived by applying inference rules.
+- **Modus ponens:** from $\alpha\to\beta$ and $\alpha$, infer $\beta$ (Rain→WetRoad + Rain ⊢ WetRoad).
+- **Written recipe:** list all $2^n$ assignments → keep rows where **every** KB sentence is true → entailed iff α is true in **all** surviving rows (one row with α false ⇒ not entailed).
+- **Example:** $\mathrm{KB}=\{A\to B,\ A\}$ → only model is $A$ = T, $B$ = T → $\mathrm{KB}\models B$.
+
+**Structured KR**
+- **Semantic net** (เครือข่ายความหมาย): **nodes** = concepts/objects, **links** = relations (`is-a`, `has-prop`).
+- **Inheritance** travels up `is-a`: Tweety → Canary → Bird → Animal, and Bird `has-prop` Flies ⇒ Tweety flies.
+- **Override** beats the default: Ostrich `cannot` fly. **Frames** = the other structured KR (slot–filler).
+
+**Memory: KB vs working memory**
+- **KB** = **lasting** domain K ($F\land C\to L$); survives across patients; **not rewritten** during a consult.
+- **Working memory** = facts about **this case** ($F$, $C$ for this patient); changes every query.
+- **Inference engine** matches KB rules to WM facts & writes **new facts into WM** ($L$ = Flu). *WM never builds or updates the KB.*
+- Analogy: KB = **cookbook** · WM = **what's in the fridge today** · engine = **the cook**.
+
+**Expert systems & chaining**
+- **Parts:** KB + inference engine + user interface (+ **explanation** of why). Narrow domains: diagnosis, troubleshooting, finance. Facts + rules → engine → new conclusion.
+- **Forward = data-driven:** start from **known facts**, fire matching rules, add conclusions to WM, repeat → for **real-time monitoring**.
+- **Backward = goal-driven:** start from **goal**, find a rule concluding it, prove its premises → for **diagnosis**.
+- **Forward ex:** Rain; Rain→WetRoad; WetRoad→Slippery ⇒ Slippery. **Car:** EngineWon'tStart + BatteryLow ⇒ CheckBattery → RechargeBattery → EngineCanStart.
+- **Backward ex:** goal Slippery ← needs WetRoad ← needs Rain (known) ⇒ proved. **Med:** goal Rest ← Flu ← Fever ∧ Cough (known).
+- **Write-up:** forward = "from facts $X$ fire rule $R$, get $Y$"; backward = "to prove $G$ use $R$, now prove its premises". Stop at the goal/known facts, or fail if no rule applies.

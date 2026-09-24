@@ -1,0 +1,21 @@
+<svg width="100%" viewBox="0 0 680 180" role="img" xmlns="http://www.w3.org/2000/svg" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif">
+<title>Self-intro formats</title>
+<desc>Three formats compared: resume for one role, CV for full record, presentation for a live one-story first impression.</desc>
+
+<text x="340" y="28" text-anchor="middle" font-size="15" font-weight="600" fill="rgb(40,40,40)">Same person, three formats</text>
+
+<rect x="24" y="52" width="190" height="100" rx="12" fill="rgb(245,245,245)" stroke="rgb(140,140,145)" stroke-width="1"/>
+<text x="119" y="80" text-anchor="middle" font-size="14" font-weight="600" fill="rgb(60,60,65)">Resume</text>
+<text x="119" y="104" text-anchor="middle" font-size="12" fill="rgb(90,90,95)">One role</text>
+<text x="119" y="128" text-anchor="middle" font-size="11" fill="rgb(110,112,118)">~1 page, selective</text>
+
+<rect x="245" y="52" width="190" height="100" rx="12" fill="rgb(245,245,245)" stroke="rgb(140,140,145)" stroke-width="1"/>
+<text x="340" y="80" text-anchor="middle" font-size="14" font-weight="600" fill="rgb(60,60,65)">CV</text>
+<text x="340" y="104" text-anchor="middle" font-size="12" fill="rgb(90,90,95)">Full record</text>
+<text x="340" y="128" text-anchor="middle" font-size="11" fill="rgb(110,112,118)">Longer, comprehensive</text>
+
+<rect x="466" y="52" width="190" height="100" rx="12" fill="rgb(225,245,238)" stroke="rgb(15,110,86)" stroke-width="1.5"/>
+<text x="561" y="80" text-anchor="middle" font-size="14" font-weight="600" fill="rgb(8,80,65)">Presentation</text>
+<text x="561" y="104" text-anchor="middle" font-size="12" fill="rgb(15,110,86)">First impression</text>
+<text x="561" y="128" text-anchor="middle" font-size="11" fill="rgb(8,80,65)">1-2 min, one story</text>
+</svg>

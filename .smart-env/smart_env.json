@@ -21,9 +21,10 @@
     ".DS_Store",
     "/References/*",
     "/Communication Skill for SKE/References/*",
-    "/Artificial Intelligence (01204461)/References/*"
+    "/Artificial Intelligence (01204461)/References/*",
+    ".smart-env"
   ],
-  "gitignore_exclusions_updated_at": 1789546188683,
+  "gitignore_exclusions_updated_at": 1789998539622,
   "language": "en",
   "re_import_wait_time": 13,
   "smart_chat_threads": {

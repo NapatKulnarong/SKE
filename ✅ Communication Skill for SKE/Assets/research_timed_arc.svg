@@ -1,0 +1,41 @@
+<svg width="100%" viewBox="0 0 760 220" role="img" xmlns="http://www.w3.org/2000/svg" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif">
+<title>Research talk timed arc</title>
+<desc>Seven timed segments of a research talk from intro through Q and A with minute budgets.</desc>
+
+<text x="380" y="26" text-anchor="middle" font-size="15" font-weight="600" fill="rgb(40,40,40)">Research talk: timed arc</text>
+
+<g font-size="10">
+  <rect x="20" y="56" width="70" height="56" rx="6" fill="rgb(238,237,254)" stroke="rgb(83,74,183)"/>
+  <text x="55" y="80" text-anchor="middle" font-weight="600" fill="rgb(60,52,137)">Intro</text>
+  <text x="55" y="98" text-anchor="middle" fill="rgb(83,74,183)">2-3 min</text>
+
+  <rect x="96" y="56" width="100" height="56" rx="6" fill="rgb(232,240,250)" stroke="rgb(45,85,140)"/>
+  <text x="146" y="80" text-anchor="middle" font-weight="600" fill="rgb(28,62,105)">Background</text>
+  <text x="146" y="98" text-anchor="middle" fill="rgb(45,85,140)">3-5 &#183; gap</text>
+
+  <rect x="202" y="56" width="120" height="56" rx="6" fill="rgb(225,245,238)" stroke="rgb(15,110,86)"/>
+  <text x="262" y="80" text-anchor="middle" font-weight="600" fill="rgb(8,80,65)">Methods</text>
+  <text x="262" y="98" text-anchor="middle" fill="rgb(15,110,86)">5-7 min</text>
+
+  <rect x="328" y="56" width="120" height="56" rx="6" fill="rgb(225,245,238)" stroke="rgb(15,110,86)"/>
+  <text x="388" y="80" text-anchor="middle" font-weight="600" fill="rgb(8,80,65)">Results</text>
+  <text x="388" y="98" text-anchor="middle" fill="rgb(15,110,86)">5-7 &#183; graphs</text>
+
+  <rect x="454" y="56" width="100" height="56" rx="6" fill="rgb(250,238,218)" stroke="rgb(133,79,11)"/>
+  <text x="504" y="80" text-anchor="middle" font-weight="600" fill="rgb(99,56,6)">Discussion</text>
+  <text x="504" y="98" text-anchor="middle" fill="rgb(133,79,11)">3-5 &#183; limits</text>
+
+  <rect x="560" y="56" width="70" height="56" rx="6" fill="rgb(238,237,254)" stroke="rgb(83,74,183)"/>
+  <text x="595" y="80" text-anchor="middle" font-weight="600" fill="rgb(60,52,137)">Close</text>
+  <text x="595" y="98" text-anchor="middle" fill="rgb(83,74,183)">2-3 min</text>
+
+  <rect x="636" y="56" width="100" height="56" rx="6" fill="rgb(250,236,231)" stroke="rgb(153,60,29)"/>
+  <text x="686" y="80" text-anchor="middle" font-weight="600" fill="rgb(113,43,19)">Q&amp;A</text>
+  <text x="686" y="98" text-anchor="middle" fill="rgb(153,60,29)">2-5 &#183; budget</text>
+</g>
+
+<text x="380" y="144" text-anchor="middle" font-size="12" fill="rgb(82,81,78)">hook - gap - method - story of results - so what - Q&amp;A</text>
+
+<rect x="120" y="164" width="520" height="36" rx="8" fill="rgb(252,252,253)" stroke="rgb(214,214,218)"/>
+<text x="380" y="186" text-anchor="middle" font-size="12" fill="rgb(60,60,65)">Talk = guided tour, not the paper read out loud</text>
+</svg>

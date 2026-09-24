@@ -1,0 +1,142 @@
+<svg width="100%" viewBox="0 0 1020 620" role="img" xmlns="http://www.w3.org/2000/svg" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif">
+<title>Perceptron learning rule as head-to-tail vector addition</title>
+<desc>Three panels sharing one coordinate system. In each, x is drawn as an arrow from the origin to the data point and w as an arrow perpendicular to the decision wall. When the prediction is correct nothing is added. On a missed positive, eta times x is added head to tail onto the old w, rotating the wall toward the point. On a false alarm, eta times x is subtracted, rotating the wall away from the point.</desc>
+
+<defs>
+  <marker id="plr-ax" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+    <path d="M2 1L8 5L2 9" fill="none" stroke="rgb(150,152,158)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+  </marker>
+  <marker id="plr-w" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5.5" markerHeight="5.5" orient="auto-start-reverse">
+    <path d="M1.5 1L8.5 5L1.5 9Z" fill="rgb(28,62,105)"/>
+  </marker>
+  <marker id="plr-x" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5.5" markerHeight="5.5" orient="auto-start-reverse">
+    <path d="M1.5 1L8.5 5L1.5 9Z" fill="rgb(83,74,183)"/>
+  </marker>
+  <marker id="plr-e" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5.5" markerHeight="5.5" orient="auto-start-reverse">
+    <path d="M1.5 1L8.5 5L1.5 9Z" fill="rgb(176,120,24)"/>
+  </marker>
+  <marker id="plr-o" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5.5" markerHeight="5.5" orient="auto-start-reverse">
+    <path d="M1.5 1L8.5 5L1.5 9Z" fill="rgb(160,162,168)"/>
+  </marker>
+</defs>
+
+<text x="510" y="30" text-anchor="middle" font-size="17" font-weight="bold" fill="rgb(40,40,40)">Perceptron learning rule:  w &#8592; w + &#951;(y &#8722; &#375;) x</text>
+
+<!-- ==================== KEY STRIP ==================== -->
+<rect x="20" y="44" width="980" height="50" rx="10" fill="rgb(244,244,245)"/>
+<text x="510" y="65" text-anchor="middle" font-size="12.5" fill="rgb(60,60,65)"><tspan font-weight="bold" fill="rgb(83,74,183)">x</tspan> = the arrow from the origin to the data point.   <tspan font-weight="bold" fill="rgb(28,62,105)">w</tspan> = the arrow sticking out perpendicular to the wall.   Both live in the same space.</text>
+<text x="510" y="85" text-anchor="middle" font-size="12.5" fill="rgb(60,60,65)">So <tspan font-weight="bold">w + &#951;x</tspan> is ordinary head-to-tail vector addition &#8212; you do <tspan font-style="italic">not</tspan> scale w, you glue a copy of x onto its tip.   (b = 0 here, so every wall passes through the origin.)</text>
+
+<!-- ==================== PANEL 1: CORRECT ==================== -->
+<rect x="20" y="104" width="320" height="444" rx="12" fill="rgb(252,252,253)" stroke="rgb(214,214,218)" stroke-width="1"/>
+<rect x="20" y="104" width="320" height="4" rx="2" fill="rgb(15,110,86)"/>
+<text x="40" y="132" font-size="15" font-weight="bold" fill="rgb(8,80,65)">1. Correct</text>
+<text x="40" y="152" font-size="12" font-style="italic" fill="rgb(110,112,118)">y = 1,  &#375; = 1   &#8594;   y &#8722; &#375; = 0</text>
+
+<line x1="60" y1="310" x2="305" y2="310" stroke="rgb(150,152,158)" stroke-width="1.2" marker-end="url(#plr-ax)"/>
+<line x1="160" y1="415" x2="160" y2="165" stroke="rgb(150,152,158)" stroke-width="1.2" marker-end="url(#plr-ax)"/>
+<text x="310" y="306" font-size="11" font-style="italic" fill="rgb(130,132,138)">x&#8321;</text>
+<text x="150" y="162" text-anchor="end" font-size="11" font-style="italic" fill="rgb(130,132,138)">x&#8322;</text>
+
+<line x1="90" y1="170" x2="210" y2="410" stroke="rgb(45,85,140)" stroke-width="2.4" stroke-linecap="round"/>
+<text x="106" y="188" font-size="11" fill="rgb(45,85,140)">wall  (z = 0)</text>
+<text x="118" y="402" text-anchor="middle" font-size="10" fill="rgb(150,152,158)">&#375; = 0 side</text>
+<text x="252" y="402" text-anchor="middle" font-size="10" fill="rgb(150,152,158)">&#375; = 1 side</text>
+
+<line x1="160" y1="310" x2="280" y2="230" stroke="rgb(83,74,183)" stroke-width="2" marker-end="url(#plr-x)"/>
+<circle cx="280" cy="230" r="5.5" fill="rgb(83,74,183)"/>
+<text x="288" y="226" font-size="11" font-weight="bold" fill="rgb(83,74,183)">x (y=1)</text>
+
+<line x1="160" y1="310" x2="240" y2="270" stroke="rgb(28,62,105)" stroke-width="2.6" marker-end="url(#plr-w)"/>
+<text x="246" y="264" font-size="12" font-weight="bold" font-style="italic" fill="rgb(28,62,105)">w</text>
+
+<rect x="196" y="344" width="132" height="24" rx="6" fill="rgb(226,245,238)"/>
+<text x="262" y="360" text-anchor="middle" font-size="11" font-weight="bold" fill="rgb(8,80,65)">nothing to add</text>
+
+<rect x="38" y="426" width="284" height="104" rx="8" fill="rgb(226,245,238)"/>
+<text x="180" y="450" text-anchor="middle" font-size="13" font-weight="bold" fill="rgb(8,80,65)">w and b do not move</text>
+<text x="180" y="474" text-anchor="middle" font-size="11.5" fill="rgb(8,80,65)">w = (2, 1)&#8202;,   x = (3, 2)</text>
+<text x="180" y="494" text-anchor="middle" font-size="11.5" fill="rgb(8,80,65)">z = w &#183; x = 6 + 2 = 8 &#8805; 0   &#8594;   &#375; = 1</text>
+<text x="180" y="514" text-anchor="middle" font-size="11.5" font-weight="bold" fill="rgb(8,80,65)">&#951;(y &#8722; &#375;) = 0,  so w + 0&#183;x = w  &#10003;</text>
+
+<!-- ==================== PANEL 2: FALSE NEGATIVE ==================== -->
+<rect x="350" y="104" width="320" height="444" rx="12" fill="rgb(252,252,253)" stroke="rgb(214,214,218)" stroke-width="1"/>
+<rect x="350" y="104" width="320" height="4" rx="2" fill="rgb(45,85,140)"/>
+<text x="370" y="132" font-size="15" font-weight="bold" fill="rgb(28,62,105)">2. Missed a positive</text>
+<text x="370" y="152" font-size="12" font-style="italic" fill="rgb(110,112,118)">y = 1,  &#375; = 0   &#8594;   y &#8722; &#375; = +1</text>
+
+<line x1="390" y1="310" x2="635" y2="310" stroke="rgb(150,152,158)" stroke-width="1.2" marker-end="url(#plr-ax)"/>
+<line x1="490" y1="415" x2="490" y2="165" stroke="rgb(150,152,158)" stroke-width="1.2" marker-end="url(#plr-ax)"/>
+<text x="640" y="306" font-size="11" font-style="italic" fill="rgb(130,132,138)">x&#8321;</text>
+<text x="480" y="162" text-anchor="end" font-size="11" font-style="italic" fill="rgb(130,132,138)">x&#8322;</text>
+
+<line x1="390" y1="410" x2="630" y2="170" stroke="rgb(170,175,182)" stroke-width="2" stroke-dasharray="6 4" stroke-linecap="round"/>
+<text x="406" y="396" font-size="11" fill="rgb(150,152,158)">old wall</text>
+
+<line x1="455" y1="170" x2="515" y2="410" stroke="rgb(45,85,140)" stroke-width="2.6" stroke-linecap="round"/>
+<text x="452" y="186" text-anchor="end" font-size="11" font-weight="bold" fill="rgb(45,85,140)">new wall</text>
+
+<line x1="490" y1="310" x2="570" y2="190" stroke="rgb(83,74,183)" stroke-width="2" marker-end="url(#plr-x)"/>
+<circle cx="570" cy="190" r="5.5" fill="rgb(83,74,183)"/>
+<text x="556" y="180" text-anchor="end" font-size="11" font-weight="bold" fill="rgb(83,74,183)">x (y=1)</text>
+<circle cx="530" cy="250" r="4" fill="rgb(176,120,24)"/>
+<text x="538" y="247" font-size="10" fill="rgb(176,120,24)">&#951;x is half of x</text>
+
+<line x1="490" y1="310" x2="530" y2="350" stroke="rgb(160,162,168)" stroke-width="2.2" stroke-dasharray="5 3" marker-end="url(#plr-o)"/>
+<text x="536" y="364" font-size="11" font-style="italic" fill="rgb(150,152,158)">old w</text>
+
+<line x1="530" y1="350" x2="570" y2="290" stroke="rgb(176,120,24)" stroke-width="2.6" marker-end="url(#plr-e)"/>
+<text x="566" y="334" font-size="12" font-weight="bold" fill="rgb(176,120,24)">+ &#951;x</text>
+
+<line x1="490" y1="310" x2="570" y2="290" stroke="rgb(28,62,105)" stroke-width="2.6" marker-end="url(#plr-w)"/>
+<text x="578" y="284" font-size="12" font-weight="bold" font-style="italic" fill="rgb(28,62,105)">new w</text>
+
+<rect x="368" y="426" width="284" height="104" rx="8" fill="rgb(235,241,250)"/>
+<text x="510" y="450" text-anchor="middle" font-size="13" font-weight="bold" fill="rgb(28,62,105)">w &#8592; w + &#951;x     (rotate toward x)</text>
+<text x="510" y="474" text-anchor="middle" font-size="11.5" fill="rgb(28,62,105)">w = (1, &#8722;1)&#8202;,   x = (2, 3)&#8202;,   &#951; = 0.5</text>
+<text x="510" y="494" text-anchor="middle" font-size="11.5" fill="rgb(28,62,105)">(1, &#8722;1) + 0.5(2, 3) = (1+1, &#8722;1+1.5) = (2, 0.5)</text>
+<text x="510" y="514" text-anchor="middle" font-size="11.5" font-weight="bold" fill="rgb(28,62,105)">z: &#8722;1 &#10007;   &#8594;   +5.5 &#10003;</text>
+
+<!-- ==================== PANEL 3: FALSE POSITIVE ==================== -->
+<rect x="680" y="104" width="320" height="444" rx="12" fill="rgb(252,252,253)" stroke="rgb(214,214,218)" stroke-width="1"/>
+<rect x="680" y="104" width="320" height="4" rx="2" fill="rgb(153,60,29)"/>
+<text x="700" y="132" font-size="15" font-weight="bold" fill="rgb(133,50,22)">3. False alarm</text>
+<text x="700" y="152" font-size="12" font-style="italic" fill="rgb(110,112,118)">y = 0,  &#375; = 1   &#8594;   y &#8722; &#375; = &#8722;1</text>
+
+<line x1="720" y1="310" x2="965" y2="310" stroke="rgb(150,152,158)" stroke-width="1.2" marker-end="url(#plr-ax)"/>
+<line x1="820" y1="415" x2="820" y2="165" stroke="rgb(150,152,158)" stroke-width="1.2" marker-end="url(#plr-ax)"/>
+<text x="970" y="306" font-size="11" font-style="italic" fill="rgb(130,132,138)">x&#8321;</text>
+<text x="810" y="162" text-anchor="end" font-size="11" font-style="italic" fill="rgb(130,132,138)">x&#8322;</text>
+
+<line x1="720" y1="210" x2="920" y2="410" stroke="rgb(170,175,182)" stroke-width="2" stroke-dasharray="6 4" stroke-linecap="round"/>
+<text x="726" y="206" font-size="11" fill="rgb(150,152,158)">old wall</text>
+
+<line x1="720" y1="410" x2="960" y2="170" stroke="rgb(45,85,140)" stroke-width="2.6" stroke-linecap="round"/>
+<text x="936" y="184" text-anchor="end" font-size="11" font-weight="bold" fill="rgb(45,85,140)">new wall</text>
+
+<line x1="820" y1="310" x2="940" y2="270" stroke="rgb(83,74,183)" stroke-width="2" marker-end="url(#plr-x)"/>
+<circle cx="940" cy="270" r="5.5" fill="rgb(83,74,183)"/>
+<text x="950" y="266" font-size="11" font-weight="bold" fill="rgb(83,74,183)">x (y=0)</text>
+<circle cx="880" cy="290" r="4" fill="rgb(176,120,24)"/>
+<text x="884" y="304" font-size="10" fill="rgb(176,120,24)">&#951;x is half of x</text>
+
+<line x1="820" y1="310" x2="860" y2="270" stroke="rgb(160,162,168)" stroke-width="2.2" stroke-dasharray="5 3" marker-end="url(#plr-o)"/>
+<text x="866" y="280" font-size="11" font-style="italic" fill="rgb(150,152,158)">old w</text>
+
+<line x1="860" y1="270" x2="800" y2="290" stroke="rgb(176,120,24)" stroke-width="2.6" marker-end="url(#plr-e)"/>
+<text x="820" y="248" text-anchor="middle" font-size="12" font-weight="bold" fill="rgb(176,120,24)">&#8722; &#951;x</text>
+
+<line x1="820" y1="310" x2="800" y2="290" stroke="rgb(28,62,105)" stroke-width="2.6" marker-end="url(#plr-w)"/>
+<text x="778" y="282" text-anchor="end" font-size="12" font-weight="bold" font-style="italic" fill="rgb(28,62,105)">new w</text>
+
+<rect x="698" y="426" width="284" height="104" rx="8" fill="rgb(250,236,231)"/>
+<text x="840" y="450" text-anchor="middle" font-size="13" font-weight="bold" fill="rgb(133,50,22)">w &#8592; w &#8722; &#951;x     (rotate away from x)</text>
+<text x="840" y="474" text-anchor="middle" font-size="11.5" fill="rgb(133,50,22)">w = (1, 1)&#8202;,   x = (3, 1)&#8202;,   &#951; = 0.5</text>
+<text x="840" y="494" text-anchor="middle" font-size="11.5" fill="rgb(133,50,22)">(1, 1) &#8722; 0.5(3, 1) = (1&#8722;1.5, 1&#8722;0.5) = (&#8722;0.5, 0.5)</text>
+<text x="840" y="514" text-anchor="middle" font-size="11.5" font-weight="bold" fill="rgb(133,50,22)">z: +4 &#10007;   &#8594;   &#8722;1 &#10003;</text>
+
+<!-- ==================== FOOTER ==================== -->
+<rect x="20" y="560" width="980" height="48" rx="10" fill="rgb(244,244,245)"/>
+<text x="510" y="580" text-anchor="middle" font-size="11.5" fill="rgb(80,80,80)"><tspan font-weight="bold" fill="rgb(28,62,105)">blue</tspan> = w, normal to the wall  &#183;  <tspan font-weight="bold" fill="rgb(83,74,183)">indigo</tspan> = x, origin to the data point  &#183;  <tspan font-weight="bold" fill="rgb(176,120,24)">gold</tspan> = &#951;x, the piece you add or subtract  &#183;  <tspan font-weight="bold" fill="rgb(150,152,158)">gray dashed</tspan> = where w was before</text>
+<text x="510" y="598" text-anchor="middle" font-size="11.5" fill="rgb(80,80,80)">&#951; only sets how long the gold arrow is.  (y &#8722; &#375;) is 0, +1, or &#8722;1 &#8212; that one number decides stay, add, or subtract.  Meanwhile b &#8592; b + &#951;(y &#8722; &#375;) slides the wall.</text>
+</svg>

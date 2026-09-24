@@ -1,0 +1,30 @@
+<svg width="100%" viewBox="0 0 560 280" role="img" xmlns="http://www.w3.org/2000/svg" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif">
+<title>LSRW grid</title>
+<desc>Two-by-two grid of Listening, Speaking, Reading, Writing across receptive vs productive and auditory vs textual axes.</desc>
+
+<text x="280" y="28" text-anchor="middle" font-size="15" font-weight="600" fill="rgb(40,40,40)">LSRW = two axes</text>
+
+<text x="220" y="62" text-anchor="middle" font-size="12" font-weight="500" fill="rgb(82,81,78)">Receptive (take in)</text>
+<text x="400" y="62" text-anchor="middle" font-size="12" font-weight="500" fill="rgb(82,81,78)">Productive (put out)</text>
+
+<text x="52" y="120" text-anchor="middle" font-size="12" font-weight="500" fill="rgb(82,81,78)" transform="rotate(-90 52 120)">Auditory</text>
+<text x="52" y="210" text-anchor="middle" font-size="12" font-weight="500" fill="rgb(82,81,78)" transform="rotate(-90 52 210)">Textual</text>
+
+<rect x="110" y="78" width="170" height="78" rx="10" fill="rgb(225,245,238)" stroke="rgb(15,110,86)" stroke-width="1.5"/>
+<text x="195" y="110" text-anchor="middle" font-size="15" font-weight="600" fill="rgb(8,80,65)">Listening</text>
+<text x="195" y="132" text-anchor="middle" font-size="11" fill="rgb(15,110,86)">this half trains</text>
+
+<rect x="310" y="78" width="170" height="78" rx="10" fill="rgb(225,245,238)" stroke="rgb(15,110,86)" stroke-width="1.5"/>
+<text x="395" y="110" text-anchor="middle" font-size="15" font-weight="600" fill="rgb(8,80,65)">Speaking</text>
+<text x="395" y="132" text-anchor="middle" font-size="11" fill="rgb(15,110,86)">this half trains</text>
+
+<rect x="110" y="172" width="170" height="78" rx="10" fill="rgb(238,237,254)" stroke="rgb(83,74,183)" stroke-width="1"/>
+<text x="195" y="204" text-anchor="middle" font-size="15" font-weight="600" fill="rgb(60,52,137)">Reading</text>
+<text x="195" y="226" text-anchor="middle" font-size="11" fill="rgb(83,74,183)">other track</text>
+
+<rect x="310" y="172" width="170" height="78" rx="10" fill="rgb(238,237,254)" stroke="rgb(83,74,183)" stroke-width="1"/>
+<text x="395" y="204" text-anchor="middle" font-size="15" font-weight="600" fill="rgb(60,52,137)">Writing</text>
+<text x="395" y="226" text-anchor="middle" font-size="11" fill="rgb(83,74,183)">other track</text>
+
+<text x="280" y="270" text-anchor="middle" font-size="11" fill="rgb(110,112,118)">Teal = speaking and listening half | Purple = writing and reading track</text>
+</svg>

@@ -3,3 +3,8 @@
 /References/*
 /Communication Skill for SKE/References/*
 /Artificial Intelligence (01204461)/References/*
+
+
+
+# Ignore Smart Environment folder
+.smart-env

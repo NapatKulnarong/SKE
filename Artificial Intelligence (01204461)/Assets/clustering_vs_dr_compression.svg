@@ -1,0 +1,147 @@
+<svg width="100%" viewBox="0 0 940 400" role="img" xmlns="http://www.w3.org/2000/svg" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif">
+<title>Clustering compresses rows; dimensionality reduction compresses columns</title>
+<desc>Two panels each showing a 6 by 4 data table being compressed. On the left, clustering collapses 6 rows into 3 groups while keeping all 4 feature columns. On the right, dimensionality reduction collapses 4 feature columns into 2 new components while keeping all 6 rows.</desc>
+
+<defs>
+  <marker id="ar" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+    <path d="M2 1L8 5L2 9" fill="none" stroke="rgb(120,120,126)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+  </marker>
+</defs>
+
+<text x="470" y="32" text-anchor="middle" font-size="16" font-weight="bold" fill="rgb(40,40,40)">Two directions of compression</text>
+
+<!-- ============ PANEL A: CLUSTERING ============ -->
+<rect x="24" y="56" width="438" height="260" rx="12" fill="rgb(252,252,253)" stroke="rgb(214,214,218)" stroke-width="1"/>
+<rect x="24" y="56" width="438" height="4" rx="2" fill="rgb(45,85,140)"/>
+<text x="46" y="88" font-size="16" font-weight="bold" fill="rgb(28,62,105)">Clustering</text>
+<text x="46" y="107" font-size="12" font-style="italic" fill="rgb(110,112,118)">squeezes the table vertically</text>
+
+<!-- column headers: before -->
+<text x="124" y="144" text-anchor="middle" font-size="9" fill="rgb(130,132,138)">x1</text>
+<text x="150" y="144" text-anchor="middle" font-size="9" fill="rgb(130,132,138)">x2</text>
+<text x="176" y="144" text-anchor="middle" font-size="9" fill="rgb(130,132,138)">x3</text>
+<text x="202" y="144" text-anchor="middle" font-size="9" fill="rgb(130,132,138)">x4</text>
+
+<!-- before grid: 6 rows x 4 cols, colored in 3 natural groups -->
+<g stroke-width="0.7">
+  <rect x="112" y="151" width="24" height="17" fill="rgb(215,228,245)" stroke="rgb(45,85,140)"/>
+  <rect x="138" y="151" width="24" height="17" fill="rgb(215,228,245)" stroke="rgb(45,85,140)"/>
+  <rect x="164" y="151" width="24" height="17" fill="rgb(215,228,245)" stroke="rgb(45,85,140)"/>
+  <rect x="190" y="151" width="24" height="17" fill="rgb(215,228,245)" stroke="rgb(45,85,140)"/>
+
+  <rect x="112" y="170" width="24" height="17" fill="rgb(215,228,245)" stroke="rgb(45,85,140)"/>
+  <rect x="138" y="170" width="24" height="17" fill="rgb(215,228,245)" stroke="rgb(45,85,140)"/>
+  <rect x="164" y="170" width="24" height="17" fill="rgb(215,228,245)" stroke="rgb(45,85,140)"/>
+  <rect x="190" y="170" width="24" height="17" fill="rgb(215,228,245)" stroke="rgb(45,85,140)"/>
+
+  <rect x="112" y="189" width="24" height="17" fill="rgb(250,235,205)" stroke="rgb(176,120,24)"/>
+  <rect x="138" y="189" width="24" height="17" fill="rgb(250,235,205)" stroke="rgb(176,120,24)"/>
+  <rect x="164" y="189" width="24" height="17" fill="rgb(250,235,205)" stroke="rgb(176,120,24)"/>
+  <rect x="190" y="189" width="24" height="17" fill="rgb(250,235,205)" stroke="rgb(176,120,24)"/>
+
+  <rect x="112" y="208" width="24" height="17" fill="rgb(250,235,205)" stroke="rgb(176,120,24)"/>
+  <rect x="138" y="208" width="24" height="17" fill="rgb(250,235,205)" stroke="rgb(176,120,24)"/>
+  <rect x="164" y="208" width="24" height="17" fill="rgb(250,235,205)" stroke="rgb(176,120,24)"/>
+  <rect x="190" y="208" width="24" height="17" fill="rgb(250,235,205)" stroke="rgb(176,120,24)"/>
+
+  <rect x="112" y="227" width="24" height="17" fill="rgb(226,224,250)" stroke="rgb(83,74,183)"/>
+  <rect x="138" y="227" width="24" height="17" fill="rgb(226,224,250)" stroke="rgb(83,74,183)"/>
+  <rect x="164" y="227" width="24" height="17" fill="rgb(226,224,250)" stroke="rgb(83,74,183)"/>
+  <rect x="190" y="227" width="24" height="17" fill="rgb(226,224,250)" stroke="rgb(83,74,183)"/>
+
+  <rect x="112" y="246" width="24" height="17" fill="rgb(226,224,250)" stroke="rgb(83,74,183)"/>
+  <rect x="138" y="246" width="24" height="17" fill="rgb(226,224,250)" stroke="rgb(83,74,183)"/>
+  <rect x="164" y="246" width="24" height="17" fill="rgb(226,224,250)" stroke="rgb(83,74,183)"/>
+  <rect x="190" y="246" width="24" height="17" fill="rgb(226,224,250)" stroke="rgb(83,74,183)"/>
+</g>
+
+<text x="243" y="199" text-anchor="middle" font-size="9" font-style="italic" fill="rgb(110,112,118)">group</text>
+<line x1="223" y1="207" x2="261" y2="207" stroke="rgb(120,120,126)" stroke-width="1.4" marker-end="url(#ar)"/>
+
+<!-- ghost of the original footprint: height shrank, width did not -->
+<rect x="271" y="150" width="104" height="114" fill="none" stroke="rgb(198,200,206)" stroke-width="1" stroke-dasharray="3 3"/>
+
+<!-- column headers: after (identical -> columns unchanged) -->
+<text x="284" y="144" text-anchor="middle" font-size="9" fill="rgb(130,132,138)">x1</text>
+<text x="310" y="144" text-anchor="middle" font-size="9" fill="rgb(130,132,138)">x2</text>
+<text x="336" y="144" text-anchor="middle" font-size="9" fill="rgb(130,132,138)">x3</text>
+<text x="362" y="144" text-anchor="middle" font-size="9" fill="rgb(130,132,138)">x4</text>
+
+<g stroke-width="0.7">
+  <rect x="272" y="180" width="24" height="17" fill="rgb(215,228,245)" stroke="rgb(45,85,140)"/>
+  <rect x="298" y="180" width="24" height="17" fill="rgb(215,228,245)" stroke="rgb(45,85,140)"/>
+  <rect x="324" y="180" width="24" height="17" fill="rgb(215,228,245)" stroke="rgb(45,85,140)"/>
+  <rect x="350" y="180" width="24" height="17" fill="rgb(215,228,245)" stroke="rgb(45,85,140)"/>
+
+  <rect x="272" y="199" width="24" height="17" fill="rgb(250,235,205)" stroke="rgb(176,120,24)"/>
+  <rect x="298" y="199" width="24" height="17" fill="rgb(250,235,205)" stroke="rgb(176,120,24)"/>
+  <rect x="324" y="199" width="24" height="17" fill="rgb(250,235,205)" stroke="rgb(176,120,24)"/>
+  <rect x="350" y="199" width="24" height="17" fill="rgb(250,235,205)" stroke="rgb(176,120,24)"/>
+
+  <rect x="272" y="218" width="24" height="17" fill="rgb(226,224,250)" stroke="rgb(83,74,183)"/>
+  <rect x="298" y="218" width="24" height="17" fill="rgb(226,224,250)" stroke="rgb(83,74,183)"/>
+  <rect x="324" y="218" width="24" height="17" fill="rgb(226,224,250)" stroke="rgb(83,74,183)"/>
+  <rect x="350" y="218" width="24" height="17" fill="rgb(226,224,250)" stroke="rgb(83,74,183)"/>
+</g>
+
+<text x="379" y="193" font-size="9" fill="rgb(45,85,140)">C1</text>
+<text x="379" y="212" font-size="9" fill="rgb(176,120,24)">C2</text>
+<text x="379" y="231" font-size="9" fill="rgb(83,74,183)">C3</text>
+
+<text x="163" y="284" text-anchor="middle" font-size="11" fill="rgb(90,92,98)">6 points</text>
+<text x="323" y="284" text-anchor="middle" font-size="11" fill="rgb(90,92,98)">3 groups</text>
+<text x="243" y="304" text-anchor="middle" font-size="11" font-style="italic" fill="rgb(28,62,105)">rows collapse &#183; columns unchanged</text>
+
+<!-- ============ PANEL B: DIMENSIONALITY REDUCTION ============ -->
+<rect x="478" y="56" width="438" height="260" rx="12" fill="rgb(252,252,253)" stroke="rgb(214,214,218)" stroke-width="1"/>
+<rect x="478" y="56" width="438" height="4" rx="2" fill="rgb(15,110,86)"/>
+<text x="500" y="88" font-size="16" font-weight="bold" fill="rgb(8,80,65)">Dimensionality reduction</text>
+<text x="500" y="107" font-size="12" font-style="italic" fill="rgb(110,112,118)">squeezes the table horizontally</text>
+
+<text x="578" y="144" text-anchor="middle" font-size="9" fill="rgb(130,132,138)">x1</text>
+<text x="604" y="144" text-anchor="middle" font-size="9" fill="rgb(130,132,138)">x2</text>
+<text x="630" y="144" text-anchor="middle" font-size="9" fill="rgb(130,132,138)">x3</text>
+<text x="656" y="144" text-anchor="middle" font-size="9" fill="rgb(130,132,138)">x4</text>
+
+<!-- before grid: 6 rows x 4 cols, all neutral -->
+<g stroke-width="0.7" fill="rgb(234,236,239)" stroke="rgb(170,175,182)">
+  <rect x="566" y="151" width="24" height="17"/><rect x="592" y="151" width="24" height="17"/>
+  <rect x="618" y="151" width="24" height="17"/><rect x="644" y="151" width="24" height="17"/>
+  <rect x="566" y="170" width="24" height="17"/><rect x="592" y="170" width="24" height="17"/>
+  <rect x="618" y="170" width="24" height="17"/><rect x="644" y="170" width="24" height="17"/>
+  <rect x="566" y="189" width="24" height="17"/><rect x="592" y="189" width="24" height="17"/>
+  <rect x="618" y="189" width="24" height="17"/><rect x="644" y="189" width="24" height="17"/>
+  <rect x="566" y="208" width="24" height="17"/><rect x="592" y="208" width="24" height="17"/>
+  <rect x="618" y="208" width="24" height="17"/><rect x="644" y="208" width="24" height="17"/>
+  <rect x="566" y="227" width="24" height="17"/><rect x="592" y="227" width="24" height="17"/>
+  <rect x="618" y="227" width="24" height="17"/><rect x="644" y="227" width="24" height="17"/>
+  <rect x="566" y="246" width="24" height="17"/><rect x="592" y="246" width="24" height="17"/>
+  <rect x="618" y="246" width="24" height="17"/><rect x="644" y="246" width="24" height="17"/>
+</g>
+
+<text x="697" y="199" text-anchor="middle" font-size="9" font-style="italic" fill="rgb(110,112,118)">recombine</text>
+<line x1="677" y1="207" x2="715" y2="207" stroke="rgb(120,120,126)" stroke-width="1.4" marker-end="url(#ar)"/>
+
+<!-- ghost of the original footprint: width shrank, height did not -->
+<rect x="725" y="150" width="104" height="114" fill="none" stroke="rgb(198,200,206)" stroke-width="1" stroke-dasharray="3 3"/>
+
+<text x="764" y="144" text-anchor="middle" font-size="9" font-weight="bold" fill="rgb(15,110,86)">z1</text>
+<text x="790" y="144" text-anchor="middle" font-size="9" font-weight="bold" fill="rgb(15,110,86)">z2</text>
+
+<g stroke-width="0.7" fill="rgb(210,238,226)" stroke="rgb(15,110,86)">
+  <rect x="752" y="151" width="24" height="17"/><rect x="778" y="151" width="24" height="17"/>
+  <rect x="752" y="170" width="24" height="17"/><rect x="778" y="170" width="24" height="17"/>
+  <rect x="752" y="189" width="24" height="17"/><rect x="778" y="189" width="24" height="17"/>
+  <rect x="752" y="208" width="24" height="17"/><rect x="778" y="208" width="24" height="17"/>
+  <rect x="752" y="227" width="24" height="17"/><rect x="778" y="227" width="24" height="17"/>
+  <rect x="752" y="246" width="24" height="17"/><rect x="778" y="246" width="24" height="17"/>
+</g>
+
+<text x="617" y="284" text-anchor="middle" font-size="11" fill="rgb(90,92,98)">4 features</text>
+<text x="777" y="284" text-anchor="middle" font-size="11" fill="rgb(90,92,98)">2 components</text>
+<text x="697" y="304" text-anchor="middle" font-size="11" font-style="italic" fill="rgb(8,80,65)">columns collapse &#183; rows unchanged</text>
+
+<!-- ============ FOOTER ============ -->
+<rect x="24" y="334" width="892" height="46" rx="10" fill="rgb(244,244,244)"/>
+<text x="470" y="362" text-anchor="middle" font-size="13" fill="rgb(80,80,80)">Both are compression &#8212; you are throwing away detail you decided is not worth keeping.</text>
+</svg>

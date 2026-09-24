@@ -1,0 +1,38 @@
+<svg width="100%" viewBox="0 0 760 160" role="img" xmlns="http://www.w3.org/2000/svg" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif">
+<title>Seven pitch slides</title>
+<desc>Seven one-idea pitch slides in order: title, problem, solution, demo, value, differentiation, roadmap and CTA.</desc>
+
+<text x="380" y="24" text-anchor="middle" font-size="15" font-weight="600" fill="rgb(40,40,40)">Seven slides, one idea each</text>
+
+<g font-size="10">
+  <rect x="12" y="48" width="96" height="70" rx="8" fill="rgb(245,245,245)" stroke="rgb(140,140,145)"/>
+  <text x="60" y="72" text-anchor="middle" font-weight="600" fill="rgb(60,60,65)">1 Title</text>
+  <text x="60" y="94" text-anchor="middle" fill="rgb(100,100,105)">name + benefit</text>
+
+  <rect x="118" y="48" width="96" height="70" rx="8" fill="rgb(250,236,231)" stroke="rgb(153,60,29)"/>
+  <text x="166" y="72" text-anchor="middle" font-weight="600" fill="rgb(113,43,19)">2 Problem</text>
+  <text x="166" y="94" text-anchor="middle" fill="rgb(153,60,29)">metric / story</text>
+
+  <rect x="224" y="48" width="96" height="70" rx="8" fill="rgb(238,237,254)" stroke="rgb(83,74,183)"/>
+  <text x="272" y="72" text-anchor="middle" font-weight="600" fill="rgb(60,52,137)">3 Solution</text>
+  <text x="272" y="94" text-anchor="middle" fill="rgb(83,74,183)">one sentence</text>
+
+  <rect x="330" y="48" width="96" height="70" rx="8" fill="rgb(232,240,250)" stroke="rgb(45,85,140)"/>
+  <text x="378" y="72" text-anchor="middle" font-weight="600" fill="rgb(28,62,105)">4 Demo</text>
+  <text x="378" y="94" text-anchor="middle" fill="rgb(45,85,140)">3-5 steps</text>
+
+  <rect x="436" y="48" width="96" height="70" rx="8" fill="rgb(225,245,238)" stroke="rgb(15,110,86)"/>
+  <text x="484" y="72" text-anchor="middle" font-weight="600" fill="rgb(8,80,65)">5 Value</text>
+  <text x="484" y="94" text-anchor="middle" fill="rgb(15,110,86)">numbers</text>
+
+  <rect x="542" y="48" width="96" height="70" rx="8" fill="rgb(250,238,218)" stroke="rgb(133,79,11)"/>
+  <text x="590" y="72" text-anchor="middle" font-weight="600" fill="rgb(99,56,6)">6 Diff</text>
+  <text x="590" y="94" text-anchor="middle" fill="rgb(133,79,11)">your edge</text>
+
+  <rect x="648" y="48" width="100" height="70" rx="8" fill="rgb(225,245,238)" stroke="rgb(15,110,86)" stroke-width="1.5"/>
+  <text x="698" y="72" text-anchor="middle" font-weight="600" fill="rgb(8,80,65)">7 CTA</text>
+  <text x="698" y="94" text-anchor="middle" fill="rgb(15,110,86)">ask + roadmap</text>
+</g>
+
+<text x="380" y="144" text-anchor="middle" font-size="12" fill="rgb(82,81,78)">Every slide: what should they remember?</text>
+</svg>
